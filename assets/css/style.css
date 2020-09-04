@@ -35,8 +35,6 @@
     flex-direction: column;
     display: grid;
     margin-top: 1vw;
-    
-    
     position: relative;
     border: 2px solid gray;
     border-radius: 4vw;
@@ -105,4 +103,11 @@
   visibility: visible;
   opacity: 1;
   transition: opacity 2s linear;
+}
+
+.grid {
+    display: flex;
+    flex-wrap:wrap;
+    height: 500px;
+    width: 500px;
 }
