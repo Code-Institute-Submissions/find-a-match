@@ -1,7 +1,6 @@
 
 
 // Main Menu New Game Button
-// 
 $('.new-game-button').click(function() {
      $(".main-menu-screen").toggleClass("hidden");
  });
