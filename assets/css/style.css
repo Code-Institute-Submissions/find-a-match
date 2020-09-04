@@ -15,8 +15,8 @@
     height: 50vh;
 }
 
+.logo,
 .main-menu-logo {
-
     margin-top: 1.5vw;
     background: url(../images/logo.png) no-repeat center center;
     -webkit-background-size: cover;
@@ -24,8 +24,7 @@
     -o-background-size: cover;
     background-size: contain;
     font-family: 'Goblin One', cursive;
-    font-size: 8vw;
-    margin: 2px;
+    font-size: 5vw;
     margin-bottom: 2vw;
     color: black;
     text-shadow: 1px 1px 13px #ffe400, 1px 1px 13px #ffffff; 
