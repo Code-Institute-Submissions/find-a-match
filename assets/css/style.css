@@ -1,3 +1,89 @@
-h1 {
-   color: red;
+/* Main Menu */
+.main-menu-screen {
+    background: url("../images/theme-red.jpg") repeat center center; 
+    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
+    z-index: 5;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+#main-menu,
+#settings-menu-container {
+    width: 50vw;
+    height: 50vh;
+}
+
+.main-menu-logo {
+
+    margin-top: 1.5vw;
+    background: url(../images/logo.png) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+    font-family: 'Goblin One', cursive;
+    font-size: 8vw;
+    margin: 2px;
+    margin-bottom: 2vw;
+    color: black;
+    text-shadow: 1px 1px 13px #ffe400, 1px 1px 13px #ffffff; 
+}
+
+.main-menu {
+    background-color: black;
+    flex-direction: column;
+    display: grid;
+    margin-top: 1vw;
+    
+    
+    position: relative;
+    border: 2px solid gray;
+    border-radius: 4vw;
+    box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
+}
+
+.main-menu-items-container {
+    color: #ffe92d;
+    text-align: center;
+    display: inline;
+    align-self: center;
+}
+
+.main-menu-item-settings {
+    color: #ffe92d;
+    text-align: center;
+    padding-top: 1vw;
+    display: inline;
+}
+
+/* Main Menu Button Container */
+.button-container {
+    width: 30vw;
+    font-size: 3vh;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.new-game-button,
+.settings-button,
+.instruction-button {
+    background-color: #580200;
+    font-family: 'Goblin One', cursive;
+    border-radius: 1vw;
+    box-shadow: inset 0px 0px 20px 1px #000000;
+    border: 2px solid gray;
+    text-shadow: 0px 0px 20px #000000;
+}
+
+.new-game-button:hover,
+.settings-button:hover,
+.instruction-button:hover {
+    color: black;
+    text-shadow: 0px 0px 0px #000000;
+    background-color: red;
+    box-shadow: 0px 0px 12px 1px #ff0909, inset 0px 0px 20px 6px #000000;
+}
+/* /main menu button container */
+/* /main menu */
