@@ -62,7 +62,9 @@
 
 .new-game-button,
 .settings-button,
-.instruction-button {
+.instruction-button,
+.go-back,
+.restart-game {
     background-color: #580200;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
@@ -73,11 +75,13 @@
 
 .new-game-button:hover,
 .settings-button:hover,
-.instruction-button:hover {
+.instruction-button:hover,
+.go-back:hover,
+.restart-game:hover  {
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
-    box-shadow: 0px 0px 12px 1px #ff0909, inset 0px 0px 20px 6px #000000;
+    box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
 }
 /* /main menu button container */
 /* /main menu */
@@ -107,7 +111,7 @@
 .match-indicator,
 .score-counter {
     background-color: #000000;
-    color: red;
+    color: yellow;
     width: 15vw;
     border: #adadad solid 2px;
     border-radius: 5px;
@@ -144,7 +148,45 @@
     box-shadow: #191919 5px 5px 5px 0px;
 }
 
+/* If fliped cards match */
 .match {
     box-shadow: none;
     visibility: hidden;
+}
+
+/* When player find all cards */
+.end-screen-container {
+    position: fixed;
+    height: 100%;
+    background-color: #000000e0;
+    top: 0px;
+}
+
+.end-screen {
+    margin-top: auto;
+    position: fixed;
+    top: 26%;
+    left: 22%;
+    height: 20vw;
+    background-color: black;
+    border: 2px solid gray;
+    width: 64vw;
+    border-radius: 10px;
+    color: yellow;
+    box-shadow: 1px 1px 20px 1px #ffca00;
+}
+
+.win-message {
+    height: 3vw;
+    font-family: 'Goblin One', cursive;
+    margin: 2vw;
+    font-size: 1.5vw;
+    box-shadow: 0 0 6px 2px red;
+    color: yellow;
+    padding-top: 0.5vw;
+    border-radius: 10px;
+}
+.end-game-buttons {
+    position: absolute;
+    top: 50%;
 }

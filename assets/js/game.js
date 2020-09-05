@@ -52,6 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 ]
 
+/* function resetGame() {
+       
+};
+ */
 // Shuffle the cards
 cardArray.sort(() => 0.5 - Math.random())
 
@@ -141,7 +145,9 @@ function checkForMatch() {
     }
 };
 
+
 createBoard()
+
 });
 
 // Main Menu New Game Button
@@ -152,3 +158,4 @@ $('.new-game-button').click(function() {
 $('.new-game-button').click(function() {
     $(".game-screen").removeClass("hidden").addClass('visible');
 });
+
