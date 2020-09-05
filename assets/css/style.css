@@ -58,7 +58,6 @@
     width: 30vw;
     font-size: 3vh;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .new-game-button,
@@ -103,6 +102,21 @@
   transition: opacity 2s linear;
 }
 
+
+/* Score-Match counters */
+.match-indicator,
+.score-counter {
+    background-color: #000000;
+    color: red;
+    width: 15vw;
+    border: #adadad solid 2px;
+    border-radius: 5px;
+    font-family: 'Goblin One', cursive;
+    box-shadow: 1px 1px 20px 2px black;
+    font-size: 1vw;
+}
+
+/* Cards grid position */
 .grid {
    display: grid;
     height: 100%;
@@ -117,6 +131,7 @@
     perspective: 1000px;
 }
 
+/* Cards style */
 .cards {
     height: 10vw;
     width: 15vw;
@@ -128,3 +143,4 @@
     border-radius: 5px;
     box-shadow: #191919 5px 5px 5px 0px;
 }
+

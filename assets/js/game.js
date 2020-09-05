@@ -68,7 +68,7 @@ const cardsWon = []
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         let card = document.createElement('img')
-        card.setAttribute('src', 'assets/images/cards/back-of-card.png')
+        card.setAttribute('src', 'assets/images/card-back.png')
         card.setAttribute('data-id', i)
         card.setAttribute('class', `cards`)
         grid.appendChild(card)
