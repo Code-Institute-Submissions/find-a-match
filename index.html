@@ -37,14 +37,27 @@
 <!-- /main Menu  -->
 
 <div class="container-fluid game-screen">
-    <div class="row">
-        <div class="col-12 text-center logo">Find-a-Match</div>
-        <div class="col-6 text-center score">Score<span id="score"></span></div>
-        <div class="col-6 text-center win-lose">Win/Lose</div>
-        <div class="col-12 grid">
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-12 text-center logo">Find-a-Match</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-6 text-center score">
+					<div class="container">
+						<span id="score">Score: 0</span></div>
+				</div>
+				<div class="col-6 text-center win-lose  match-no-match">
+                    <div class="container">
+                        <span id="match-no-match">Is a Match?</span>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div class="col-12 mt-3">
+			<div class="grid mx-auto"></div>
+		</div>
+	</div>
 </div>
+
 
 
 	<!-- Optional JavaScript -->

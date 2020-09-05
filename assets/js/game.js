@@ -52,15 +52,39 @@ document.addEventListener('DOMContentLoaded', () => {
         name: 'QS',
         img: 'assets/images/cards/QS.png'
     },
-    {
-        name: 'back-of-cards',
-        img: 'assets/images/cards/back-of-cards.png'
-    },
 ]
 
+cardArray.sort(() => 0.5 - Math.random())
+
+const grid = document.querySelector('.grid')
 
 
-//
+const resultDisplay = document.querySelector('.score')
+const matchDisplay = document.querySelector('.match-no-match')
+var cardsChosen = []
+var cardsChosenId = []
+const cardsWon = []
+
+function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+        let card = document.createElement('img')
+        card.setAttribute('src', 'assets/images/cards/back-of-card.png')
+        card.setAttribute('data-id', i)
+        card.setAttribute('class', `cards`)
+        grid.appendChild(card)
+    }
+}
+
+
+  //check for matches
+  
+  createBoard()
+
+
+
+
+})
+
 
     // Main Menu New Game Button
     $('.new-game-button').click(function() {
@@ -70,5 +94,3 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.new-game-button').click(function() {
         $(".game-screen").removeClass("hidden").addClass('visible');
     });
-
-})

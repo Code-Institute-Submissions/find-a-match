@@ -18,14 +18,12 @@
 .logo,
 .main-menu-logo {
     margin-top: 1.5vw;
-    background: url(../images/logo.png) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: contain;
     font-family: 'Goblin One', cursive;
     font-size: 5vw;
-    margin-bottom: 2vw;
     color: black;
     text-shadow: 1px 1px 13px #ffe400, 1px 1px 13px #ffffff; 
 }
@@ -106,8 +104,27 @@
 }
 
 .grid {
+   display: grid;
+    height: 100%;
+    width: 117vh;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 1em;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.cards {
+    height: 10vw;
+    width: 15vw;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap:wrap;
-    height: 500px;
-    width: 500px;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: #191919 5px 5px 5px 0px;
 }
