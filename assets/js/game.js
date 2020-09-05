@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Cards Faces
+    // Card Array
     const cardArray = [
-        {
+    {
         name: 'AH',
         img: 'assets/images/cards/AH.png'
     },
@@ -56,15 +57,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 cardArray.sort(() => 0.5 - Math.random())
 
-const grid = document.querySelector('.grid')
 
+// Grid element
+const grid = document.querySelector('.grid')
 
 const resultDisplay = document.querySelector('.score')
 const matchDisplay = document.querySelector('.match-no-match')
-var cardsChosen = []
-var cardsChosenId = []
+let cardsChosen = []
+let cardsChosenId = []
 const cardsWon = []
 
+
+
+
+//Create Board
+//Loop over card array for each create img element
+//Set attribute src, id and class
+//Append to grid
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         let card = document.createElement('img')
@@ -72,13 +81,28 @@ function createBoard() {
         card.setAttribute('data-id', i)
         card.setAttribute('class', `cards`)
         grid.appendChild(card)
+        console.log(card)
+        console.log(cardArray.length)
     }
 }
 
+// Flip Card
+// Set cards Id
+// Add card images
+// If player choose two cards check for match
+function flipCard() {
+    let cardId = this.getAttribute('data-id')
+    console.log(cardId)
+    cardsChosen.push(cardArray[cardId].name)
+    cardsChosenId.push(cardId)
+    this.setAttribute('src', cardArray[cardId].img)
+    if (cardsChosen.length === 2) {
+        setTimeout(checkForMatch, 500)
+    }
+    
+}
 
-  //check for matches
-  
-  createBoard()
+createBoard()
 
 
 
