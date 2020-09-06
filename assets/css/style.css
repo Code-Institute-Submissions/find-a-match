@@ -96,6 +96,17 @@
 /* /main menu button container */
 /* /main menu */
 
+
+/* Settings Screen */
+.theme-container {
+    color: red;
+    background-color: blue;
+    margin: 1vw;
+    height: 5vw;
+}
+/* /settings screen */
+
+
 /* Game Screen */
 .game-screen {
     height: 100vh;
