@@ -132,7 +132,7 @@ function checkForMatch() {
     // If Match
     else if (cardsChosen[0] === cardsChosen[1]) {
         // Check for cards names
-        matchDisplay.textContent = 'You found a match';
+        matchDisplay.textContent = 'You Found a match';
         // If is match toggle class hidden 
         // Cards disappear from board
         cards[optionOneId].classList.toggle("hidden");
@@ -143,8 +143,8 @@ function checkForMatch() {
         cardsWon.push(cardsChosen);
         audio.matchCard();
         // If not match
-        // Flip cards back and show back card image
     } else {
+         // Flip cards back and show back card image
         cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
         cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
         matchDisplay.textContent = 'Sorry No Match!';
@@ -170,12 +170,11 @@ $('.new-game-button').click(function () {
     $(".game-screen").removeClass("hidden").addClass("visible");
 });
 
-
 $('.restart-game').click(function () {
     $("#end-screen").toggleClass("hidden");
 });
 
-
+// From game end screen to main menu and back
 $('.main-menu-in-game').click(function () {
     $(".game-screen").addClass("hidden").removeClass("visible"),
     $(".main-menu-screen").removeClass("hidden").addClass("visible"),
