@@ -20,28 +20,8 @@
 </head>
 
 <!-- Main Menu  -->
-
 <body>
-	<!-- <div class="container-fluid main-menu-screen theme-red" id="menu-container">
-		<div class="row mt-3">
-			<div class="col main-menu-logo text-center">Find-A-Match</div>
-		</div>
-		<div class="row mx-auto main-menu" id="main-menu">
-			<div class="col main-menu-items-container new-game">
-				<div class="col menu-title">Main Menu</div>
-				<div role="button" class="button-container mx-auto new-game-button" onclick="resetGame()">New Game
-				</div>
-				<div class="col main-menu-items-container records">
-					<div class="button-container mx-auto instruction-button">Instruction
-					</div>
-					<div class="col main-menu-items-containe main-menu-item-settings">
-						<div role="button" class="button-container mx-auto settings-button">Settings</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-    <div class="container-fluid main-menu-screen theme-red">
+    <div class="container-fluid main-menu-screen theme-red" id="menu-container">
         <div class="container-fluid">
             <div class="row">
                 <div class="col mb-5 text-center main-menu-logo">Find-A-Match</div>
@@ -50,17 +30,95 @@
         <div class="container text-center main-menu main-menu-container">
             <div class="row d-inline">
                 <div class="col mx-auto menu-title">Main Menu</div>
-                <div class="col-4 mx-auto main-menu-buttons">New Game</div>
-                <div class="col-4 mx-auto main-menu-buttons">Instruction</div>
-                <div class="col-4 mx-auto main-menu-buttons">Settings</div>
+                <div class="col-4 mx-auto new-game-button main-menu-buttons" 
+                    onclick="resetGame()">New Game</div>
+                <div class="col-4 mx-auto instruction-button main-menu-buttons">Instruction</div>
+                <div class="col-4 mx-auto settings-button main-menu-buttons">Settings</div>
             </div>
         </div>
     </div>
-
 	<!-- /main Menu  -->
 
 	<!-- Settings Menu -->
-	
+	<div class="container-fluid settings-menu-screen hidden theme-red" id="settings-container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="settings-heading">SETTINGS</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mx-auto" id="settings-menu-container">
+				<div class="col settings-menu">
+					<h2 class="settings-menu-options">Sound</h2>
+					<button class="m-1">On/Off</button>
+					<h2 class="settings-menu-options">Background</h2>
+					<div class="container">
+						<div class="row theme-container">
+							<div role="button" class="col theme setting-theme-red"></div>
+							<div role="button" class="col theme setting-theme-green"></div>
+							<div role="button" class="col theme setting-theme-yellow"></div>
+						</div>
+					</div>
+					<h2 class="settings-menu-options">Card Style</h2>
+					<div class="container">
+						<div class="row theme-container">
+							<div role="button" class="col theme settings-card-back-red"></div>
+							<div role="button" class="col theme settings-card-back-black"></div>
+							<div role="button" class="col theme settings-card-back-blue"></div>
+						</div>
+					</div>
+					<div class="container pt-2">
+						<div class="row">
+							<button role="button" class="col-8 mx-auto settings-main-menu-back-button">Main Menu</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /settings menu -->
+
+	<!-- Game Screen -->
+	<div class="container-fluid game-screen hidden">
+		<div class="row">
+			<div class="col-12 text-center logo">Find-a-Match</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-4 mx-auto score-counter text-center score">
+						<div class="container">
+							<span id="score"> - </span></div>
+					</div>
+					<div class="col-4 mx-auto match-indicator text-center win-lose  match-no-match">
+						<div class="container">
+							<span id="match-no-match"> - </span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 mt-3">
+				<div id="grid" class="grid mx-auto">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /game-screen -->
+
+	<!-- End Game Screen -->
+	<div id="end-screen" class="container-fluid hidden end-screen-container">
+		<div class="row end-screen text-center">
+			<div class="col">
+				<div class="win-message">CONGRATULATIONS! YOU FIND THEM ALL!</div>
+				<div class="container end-game-buttons">
+					<div class="row justify-content-center">
+						<div role="button" class="col-4 m-1 main-menu-in-game">Main Menu</div>
+						<div role="button" class="col-4 m-1 restart-game" onclick="resetGame()">Restart Game</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- /end game screen -->
 
 
