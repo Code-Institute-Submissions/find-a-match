@@ -1,19 +1,22 @@
 /* Main Menu */
 
 .menu-title {
-    font-size: 2.5vw;
-    padding-bottom: 1vw;
+    margin: 2vw;
+    font-size: 3vw;
     font-family: 'Goblin One', cursive;
+}
+
+.main-menu-buttons {
+    border: 1px solid black;
+    padding: 0.5vw;
+    margin: 1vw;
+    font-size: 1vw;
 }
 
 .main-menu-screen {
     background: url("../images/theme-red.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
-    z-index: 5;
     height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 #main-menu,
@@ -46,11 +49,11 @@
     box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
 
-.main-menu-items-container {
-    color: #ffe92d;
-    text-align: center;
-    display: inline;
-    align-self: center;
+.main-menu-container {
+    position: relative;
+    height: 30vw;
+    width: 45vw;
+    border: 2px solid black;
 }
 
 .main-menu-item-settings {
@@ -67,6 +70,29 @@
     justify-content: center;
 }
 
+
+
+.settings-menu-screen {
+    background: url(../images/theme-red.jpg) repeat center center;
+    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
+    z-index: 10;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.theme-red {
+    background: url("../images/theme-red.jpg") repeat center center;
+    box-shadow: inset 0px 0px 1vw 0.6vw #000000;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+}
+
+
+/* Game buttons */
 .new-game-button,
 .settings-button,
 .instruction-button,
@@ -90,9 +116,11 @@
     background-color: red;
     box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
 }
+/* /game-buttons */
 /* /main menu button container */
 /* /main menu */
 
+/* Game Screen */
 .game-screen {
     height: 100vh;
     background: url("../images/theme-red.jpg") repeat center center;
@@ -100,7 +128,9 @@
     top: 0px;
     left: 0px; 
 }
+/* /game Screen */
 
+/* Screens Visability */
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -112,6 +142,7 @@
   opacity: 1;
   transition: opacity 2s linear;
 }
+/* /screens Visability */
 
 /* Score-Match counters */
 .match-indicator,
@@ -125,6 +156,7 @@
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
 }
+/* /score-Match counters */
 
 /* Cards grid position */
 .grid {
@@ -150,6 +182,9 @@
     border-radius: 5px;
     box-shadow: #191919 5px 5px 5px 0px;
 }
+/* /cards style */
+/* /cards grid position */
+
 
 /* If fliped cards match */
 .match {
@@ -158,6 +193,7 @@
 }
 
 /* When player find all cards */
+/* End Screen */
 .end-screen-container {
     position: fixed;
     height: 100%;
@@ -191,6 +227,7 @@
 }
 
 .end-game-buttons {
-    position: absolute;
     top: 50%;
 }
+/* /end-screen */
+/* /when player find all cards */

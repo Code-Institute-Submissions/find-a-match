@@ -181,3 +181,7 @@ $('.main-menu-in-game').click(function () {
     $("#end-screen").removeClass("visible").addClass("hidden");
 });
 
+$('.settings-button').click(function () {
+     $(".main-menu-screen").addClass("hidden"),
+     $(".settings-menu-screen").removeClass("hidden").addClass("visible");
+});

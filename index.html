@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <!-- Style Css -->
+	<!-- Style Css -->
 	<link rel="stylesheet" href="assets/css/style.css" />
 
 	<!-- Google font -->
@@ -20,8 +20,9 @@
 </head>
 
 <!-- Main Menu  -->
+
 <body>
-	<div class="container-fluid main-menu-screen theme-red" id="menu-container">
+	<!-- <div class="container-fluid main-menu-screen theme-red" id="menu-container">
 		<div class="row mt-3">
 			<div class="col main-menu-logo text-center">Find-A-Match</div>
 		</div>
@@ -34,54 +35,33 @@
 					<div class="button-container mx-auto instruction-button">Instruction
 					</div>
 					<div class="col main-menu-items-containe main-menu-item-settings">
-						<div class="button-container mx-auto settings-button">Settings</div>
+						<div role="button" class="button-container mx-auto settings-button">Settings</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
+    <div class="container-fluid main-menu-screen theme-red">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col mb-5 text-center main-menu-logo">Find-A-Match</div>
+            </div>
+        </div>
+        <div class="container text-center main-menu main-menu-container">
+            <div class="row d-inline">
+                <div class="col mx-auto menu-title">Main Menu</div>
+                <div class="col-4 mx-auto main-menu-buttons">New Game</div>
+                <div class="col-4 mx-auto main-menu-buttons">Instruction</div>
+                <div class="col-4 mx-auto main-menu-buttons">Settings</div>
+            </div>
+        </div>
+    </div>
+
 	<!-- /main Menu  -->
 
-    <!-- Game Screen -->
-	<div class="container-fluid game-screen">
-		<div class="row">
-			<div class="col-12 text-center logo">Find-a-Match</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-4 mx-auto score-counter text-center score">
-						<div class="container">
-							<span id="score"> - </span></div>
-					</div>
-					<div class="col-4 mx-auto match-indicator text-center win-lose  match-no-match">
-						<div class="container">
-							<span id="match-no-match"> - </span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-12 mt-3">
-				<div id="grid" class="grid mx-auto">
-				</div>
-			</div>
-		</div>
-	</div>
-    <!-- /game-screen -->
-
-    <!-- End Game Screen -->
-	<div id="end-screen" class="container-fluid hidden end-screen-container">
-		<div class="row end-screen text-center">
-			<div class="col">
-				<div class="win-message">CONGRATULATIONS! YOU FIND THEM ALL!</div>
-				<div class="container end-game-buttons">
-					<div class="row justify-content-center">
-						<div role="button" class="col-4 mr-4 main-menu-in-game">Main Menu</div>
-						<div role="button" class="col-4 ml-4 restart-game" onclick="resetGame()">Restart Game</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    <!-- /end game screen -->
+	<!-- Settings Menu -->
+	
+	<!-- /end game screen -->
 
 
 	<!-- Optional JavaScript -->
@@ -95,7 +75,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
 	</script>
-    <!-- Game Script -->
+	<!-- Game Script -->
 	<script src="assets/js/game.js"></script>
 </body>
 
