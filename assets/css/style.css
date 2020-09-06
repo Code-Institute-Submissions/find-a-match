@@ -50,7 +50,7 @@
 .main-menu-container,
 .settings-menu-container {
     position: relative;
-    height: 30vw;
+    height: 45vh;
     width: 45vw;
     border: 2px solid black;
 }
@@ -71,6 +71,7 @@
 .settings-button,
 .instruction-button,
 .main-menu-in-game,
+.settings-back-button,
 .restart-game {
     background-color: #580200;
     font-family: 'Goblin One', cursive;
@@ -86,6 +87,7 @@
 .settings-button:hover,
 .instruction-button:hover,
 .main-menu-in-game:hover,
+.settings-back-button:hover,
 .restart-game:hover  {
     color: black;
     text-shadow: 0px 0px 0px #000000;
@@ -99,11 +101,14 @@
 
 /* Settings Screen */
 .theme-container {
-    color: red;
     background-color: blue;
-    margin: 1vw;
+    margin: 0.5vw;
     height: 5vw;
+    border: 2px solid grey;
+    border-radius: 1vw;
+    box-shadow: inset 0px 0px 20px 1px #000000;
 }
+
 /* /settings screen */
 
 
