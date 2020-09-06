@@ -191,8 +191,10 @@ $('.instruction-button').click( function () {
 // Instruction
 // Instruction back button
 // From Instruction to Main Menu
-
-
+$('.instruction-back-button').click( function() {
+    $(".main-menu-screen").removeClass("hidden").addClass("visible"),
+    $(".instruction-screen").removeClass("visible").addClass("hidden");
+});
 
 // Settings 
 // Settings back button to Main Menu 
