@@ -3,12 +3,16 @@ class audioControl {
     constructor() {
         this.flipSound = new Audio('assets/audio/flip-card.mp3');
         this.winSound = new Audio('assets/audio/win.mp3');
+        this.noMatchSound = new Audio('assets/audio/no-match.mp3');
     }
     flip() {
         this.flipSound.play();
     }
     matchCard() {
         this.winSound.play();
+    }
+    noMatch() {
+        this.noMatchSound.play();
     }
 }
 
@@ -144,6 +148,7 @@ function checkForMatch() {
         cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
         cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
         matchDisplay.textContent = 'Sorry No Match!';
+        audio.noMatch();
     }
     cardsChosen = [];
     cardsChosenId = [];
@@ -155,22 +160,25 @@ function checkForMatch() {
     }
 }
 
-createBoard();
-
 function resetGame() {
     createBoard();
 }
 
 // Main Menu New Game Button
 $('.new-game-button').click(function () {
-    $(".main-menu-screen").toggleClass("hidden");
+    $(".main-menu-screen").toggleClass("hidden").removeClass("visible"),
+    $(".game-screen").removeClass("hidden").addClass("visible");
 });
 
-$('.new-game-button').click(function () {
-    $(".game-screen").removeClass("hidden").addClass('visible');
-});
 
 $('.restart-game').click(function () {
     $("#end-screen").toggleClass("hidden");
+});
+
+
+$('.main-menu-in-game').click(function () {
+    $(".game-screen").addClass("hidden").removeClass("visible"),
+    $(".main-menu-screen").removeClass("hidden").addClass("visible"),
+    $("#end-screen").removeClass("visible").addClass("hidden");
 });
 
