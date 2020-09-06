@@ -166,8 +166,8 @@ function resetGame() {
 
 // Main Menu 
 // New Game Button
-// Main Menu disapear and game appear
-$('.new-game-button').click(function () {
+// Main Menu disapear and Game appear
+$('.new-game-button').click( function () {
     $(".main-menu-screen").toggleClass("hidden").removeClass("visible"),
     $(".game-screen").removeClass("hidden").addClass("visible");
 });
@@ -175,25 +175,39 @@ $('.new-game-button').click(function () {
 // Main menu
 // Settings Button
 // Main Menu disapear and settings appear
-$('.settings-button').click(function () {
+$('.settings-button').click( function () {
      $(".main-menu-screen").addClass("hidden"),
      $(".settings-menu-screen").removeClass("hidden").addClass("visible");
 });
+
+// Instruction
+// Instruction Button
+// Main Menu disapear and Instruction appear
+$('.instruction-button').click( function () {
+    $(".main-menu-screen").addClass("hidden"),
+    $(".instruction-screen").removeClass("hidden").addClass("visible");
+});
+
+// Instruction
+// Instruction back button
+// From Instruction to Main Menu
+
+
 
 // Settings 
 // Settings back button to Main Menu 
 $('.settings-back-button').click( function() {
     $(".main-menu-screen").removeClass("hidden"),
     $(".settings-menu-screen").addClass("hidden").removeClass("visible");
-})
+});
 
 // End game screen
-$('.restart-game').click(function () {
+$('.restart-game').click( function () {
     $("#end-screen").toggleClass("hidden");
 });
 
 // From Game End screen to Main Menu and back
-$('.main-menu-in-game').click(function () {
+$('.main-menu-in-game').click( function () {
     $(".game-screen").addClass("hidden").removeClass("visible"),
     $(".main-menu-screen").removeClass("hidden").addClass("visible"),
     $("#end-screen").removeClass("visible").addClass("hidden");
