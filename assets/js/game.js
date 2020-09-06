@@ -80,7 +80,6 @@
             card.setAttribute('id', `cards`)
             card.addEventListener('click', flipCard)
             grid.appendChild(card)
-            cardsWon = [];
         };
     };
 
