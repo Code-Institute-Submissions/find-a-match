@@ -1,6 +1,7 @@
 /* Main Menu */
 
 .menu-title,
+.instruction-title,
 .settings-title {
     font-size: 3vw;
     font-family: 'Goblin One', cursive;
@@ -35,26 +36,19 @@
 
 
 .main-menu,
+.instruction,
 .setings-menu {
     background-color: black;
     flex-direction: column;
     display: grid;
     margin-top: 1vw;
+    height: 45vh;
+    width: 45vw;
     position: relative;
     border: 2px solid gray;
     border-radius: 4vw;
     box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
-
-.main-menu-container,
-.settings-menu-container {
-    position: relative;
-    height: 45vh;
-    width: 45vw;
-    border: 2px solid black;
-}
-/* Main Menu Button Container */
-
 
 .theme-red {
     background: url("../images/themes/theme-red.jpg") repeat center center;
@@ -69,6 +63,7 @@
 .new-game-button,
 .settings-button,
 .instruction-button,
+.instruction-back-button,
 .main-menu-in-game,
 .settings-back-button,
 .restart-game {
@@ -86,6 +81,7 @@
 .new-game-button:hover,
 .settings-button:hover,
 .instruction-button:hover,
+.instruction-back-button:hover,
 .main-menu-in-game:hover,
 .settings-back-button:hover,
 .restart-game:hover  {
@@ -98,6 +94,19 @@
 /* /main menu button container */
 /* /main menu */
 
+/* Instruction Screen */
+.instruction-container {
+    height: 10vw;
+    width: 30vw;
+}
+
+h3 {
+    font-size: 1vw;
+    font-family: 'Goblin One', cursive;
+    color: red;
+}
+
+/* /instruction-screen */
 
 /* Settings Screen */
 .theme-container {
