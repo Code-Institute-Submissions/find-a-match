@@ -13,6 +13,7 @@
     font-size: 1vw;
 }
 
+.settings-menu-screen,
 .main-menu-screen {
     background: url("../images/theme-red.jpg") repeat center center; 
     box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
@@ -31,6 +32,7 @@
     color: black;
     text-shadow: 1px 1px 13px #ffe400, 1px 1px 13px #ffffff; 
 }
+
 
 .main-menu {
     background-color: black;
@@ -51,15 +53,6 @@
 }
 /* Main Menu Button Container */
 
-.settings-menu-screen {
-    background: url(../images/theme-red.jpg) repeat center center;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
-    z-index: 10;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 .theme-red {
     background: url("../images/theme-red.jpg") repeat center center;
