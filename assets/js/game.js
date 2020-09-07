@@ -235,3 +235,14 @@ $('.setting-theme-yellow').on('click',function() {
     }
 });
 
+// Settings Themes
+// Red Themes
+// Check if screens have any theme if so remove and add this one
+$('.setting-theme-red').on('click',function() {
+    if($(".screens").hasClass("theme-yellow") || ("theme-green")) {
+        $(".screens").removeClass("theme-yellow").removeClass("theme-green"),
+        $(".screens").addClass("theme-red");
+    }
+});
+
+
