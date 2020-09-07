@@ -73,6 +73,176 @@ const easyList = [
     },
 ];
 
+const mediumList = [
+    {
+        name: 'AH',
+        img: 'assets/images/cards/AH.png'
+    },
+    {
+        name: 'AH',
+        img: 'assets/images/cards/AH.png'
+    },
+    {
+        name: 'KH',
+        img: 'assets/images/cards/KH.png'
+    },
+    {
+        name: 'KH',
+        img: 'assets/images/cards/KH.png'
+    },
+    {
+        name: 'QH',
+        img: 'assets/images/cards/QH.png'
+    },
+    {
+        name: 'QH',
+        img: 'assets/images/cards/QH.png'
+    },
+    {
+        name: 'AS',
+        img: 'assets/images/cards/AS.png'
+    },
+    {
+        name: 'AS',
+        img: 'assets/images/cards/AS.png'
+    },
+    {
+        name: 'KS2',
+        img: 'assets/images/cards/KS.png'
+    },
+    {
+        name: 'KS2',
+        img: 'assets/images/cards/KS.png'
+    },
+    {
+        name: 'QS',
+        img: 'assets/images/cards/QS.png'
+    },
+    {
+        name: 'QS',
+        img: 'assets/images/cards/QS.png'
+    },
+    {
+        name: 'JS',
+        img: 'assets/images/cards/JS.png'
+    },
+    {
+        name: 'JS',
+        img: 'assets/images/cards/JS.png'
+    },
+    {
+        name: 'JH',
+        img: 'assets/images/cards/JH.png'
+    },
+    {
+        name: 'JH',
+        img: 'assets/images/cards/JH.png'
+    },
+    {
+        name: '10S',
+        img: 'assets/images/cards/10S.png'
+    },
+    {
+        name: '10S',
+        img: 'assets/images/cards/10S.png'
+    },
+];
+
+const hardList = [
+    {
+        name: 'AC',
+        img: 'assets/images/cards/AC.png'
+    },
+    {
+        name: 'AC',
+        img: 'assets/images/cards/AC.png'
+    },
+    {
+        name: 'AD',
+        img: 'assets/images/cards/AD.png'
+    },
+    {
+        name: 'AD',
+        img: 'assets/images/cards/AD.png'
+    },
+    {
+        name: 'AH',
+        img: 'assets/images/cards/AH.png'
+    },
+    {
+        name: 'AH',
+        img: 'assets/images/cards/AH.png'
+    },
+    {
+        name: 'AS',
+        img: 'assets/images/cards/AS.png'
+    },
+    {
+        name: 'AS',
+        img: 'assets/images/cards/AS.png'
+    },
+    {
+        name: 'KC',
+        img: 'assets/images/cards/KC.png'
+    },
+    {
+        name: 'KC',
+        img: 'assets/images/cards/KC.png'
+    },
+    {
+        name: 'KD',
+        img: 'assets/images/cards/KD.png'
+    },
+    {
+        name: 'KD',
+        img: 'assets/images/cards/KD.png'
+    },
+    {
+        name: 'KH',
+        img: 'assets/images/cards/KH.png'
+    },
+    {
+        name: 'KH',
+        img: 'assets/images/cards/KH.png'
+    },
+    {
+        name: 'KS',
+        img: 'assets/images/cards/KS.png'
+    },
+    {
+        name: 'KS',
+        img: 'assets/images/cards/KS.png'
+    },
+    {
+        name: 'QC',
+        img: 'assets/images/cards/QC.png'
+    },
+    {
+        name: 'QC',
+        img: 'assets/images/cards/QC.png'
+    },
+    {
+        name: 'QD',
+        img: 'assets/images/cards/QD.png'
+    },{
+        name: 'QD',
+        img: 'assets/images/cards/QD.png'
+    },{
+        name: 'QH',
+        img: 'assets/images/cards/QH.png'
+    },{
+        name: 'QH',
+        img: 'assets/images/cards/QH.png'
+    },{
+        name: 'QS',
+        img: 'assets/images/cards/QS.png'
+    },{
+        name: 'QS',
+        img: 'assets/images/cards/QS.png'
+    },
+];
+
+
     
 
 //  Game timer
@@ -139,7 +309,13 @@ function startGame() {
 
 
 // Grid element
-const grid = document.querySelector('.easy');
+const grid = {
+    easyGrid: easyList,
+    mediumGrid: mediumList,
+    hardGrid: hardList  
+}
+
+/* document.querySelectorAll('.card__face--back'); */
 // Score counter and match indicator
 let resultDisplay = document.querySelector('.score');
 let matchDisplay = document.querySelector('.match-no-match');
@@ -155,10 +331,10 @@ let audio = new audioControl();
 //Loop over card array for each create img element
 //Set attribute src, id and class
 //Append to grid
-function createBoard() {
+function createCard() {
     for (let i = 0; i < easyList.length; i++) {
         let card = document.getElementsByName('card__face--back');
-        card.setAttribute('src', 'assets/images/cards/back-of-card.png');
+        card.setAttribute('src', );
         card.setAttribute('data-id', i);
         card.setAttribute('class', `cards`);
         card.addEventListener('click', flipCard);
