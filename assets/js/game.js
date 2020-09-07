@@ -222,6 +222,7 @@ $('.game-screen-main-menu-button').click( function() {
     $(".main-menu-screen").addClass("visible").removeClass("hidden");
     audio.buttonClick();
     $("#grid").empty();
+    cardsWon = [];
 })
 
 // End game screen
@@ -236,6 +237,7 @@ $('.main-menu-in-game').click( function () {
     $(".main-menu-screen").removeClass("hidden").addClass("visible"),
     $("#end-screen").removeClass("visible").addClass("hidden");
     audio.buttonClick();
+    
 });
 
 // Settings Themes
