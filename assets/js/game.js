@@ -4,6 +4,7 @@ class audioControl {
         this.flipSound = new Audio('assets/audio/flip-card.mp3');
         this.winSound = new Audio('assets/audio/win.mp3');
         this.noMatchSound = new Audio('assets/audio/no-match.mp3');
+        this.click = new Audio('assets/audio/click.mp3');
     }
     flip() {
         this.flipSound.play();
@@ -13,6 +14,9 @@ class audioControl {
     }
     noMatch() {
         this.noMatchSound.play();
+    }
+    buttonClick() {
+        this.click.play();
     }
 }
 
@@ -95,7 +99,6 @@ function createBoard() {
         card.setAttribute('src', 'assets/images/cards/card-back.png');
         card.setAttribute('data-id', i);
         card.setAttribute('class', `cards`);
-        card.setAttribute('id', `cards`);
         card.addEventListener('click', flipCard);
         grid.appendChild(card);
     }
@@ -107,8 +110,12 @@ function createBoard() {
 // If player choose two cards check for match
 function flipCard() {
     let cardId = this.getAttribute('data-id');
+    console.log(cardId)
     cardsChosen.push(cardArray[cardId].name);
+    console.log(cardArray)
+    console.log(cardsChosen)
     cardsChosenId.push(cardId);
+    console.log(cardsChosenId)
     this.setAttribute('src', cardArray[cardId].img);
     audio.flip();
     if (cardsChosen.length === 2) {
@@ -170,6 +177,7 @@ function resetGame() {
 $('.new-game-button').click( function () {
     $(".main-menu-screen").toggleClass("hidden").removeClass("visible"),
     $(".game-screen").removeClass("hidden").addClass("visible");
+    audio.buttonClick();
 });
 
 // Main menu
@@ -178,6 +186,7 @@ $('.new-game-button').click( function () {
 $('.settings-button').click( function () {
      $(".main-menu-screen").addClass("hidden"),
      $(".settings-menu-screen").removeClass("hidden").addClass("visible");
+     audio.buttonClick();
 });
 
 // Instruction
@@ -186,6 +195,7 @@ $('.settings-button').click( function () {
 $('.instruction-button').click( function () {
     $(".main-menu-screen").addClass("hidden"),
     $(".instruction-screen").removeClass("hidden").addClass("visible");
+    audio.buttonClick();
 });
 
 // Instruction
@@ -194,6 +204,7 @@ $('.instruction-button').click( function () {
 $('.instruction-back-button').click( function() {
     $(".main-menu-screen").removeClass("hidden").addClass("visible"),
     $(".instruction-screen").removeClass("visible").addClass("hidden");
+    audio.buttonClick();
 });
 
 // Settings 
@@ -201,11 +212,13 @@ $('.instruction-back-button').click( function() {
 $('.settings-back-button').click( function() {
     $(".main-menu-screen").removeClass("hidden"),
     $(".settings-menu-screen").addClass("hidden").removeClass("visible");
+    audio.buttonClick();
 });
 
 // End game screen
 $('.restart-game').click( function () {
     $("#end-screen").toggleClass("hidden");
+    audio.buttonClick();
 });
 
 // From Game End screen to Main Menu and back
@@ -213,6 +226,7 @@ $('.main-menu-in-game').click( function () {
     $(".game-screen").addClass("hidden").removeClass("visible"),
     $(".main-menu-screen").removeClass("hidden").addClass("visible"),
     $("#end-screen").removeClass("visible").addClass("hidden");
+    audio.buttonClick();
 });
 
 // Settings Themes
@@ -223,6 +237,7 @@ $('.setting-theme-green').on('click',function() {
         $(".screens").removeClass("theme-red").removeClass("theme-yellow"),
         $(".screens").addClass("theme-green");
     }
+    audio.buttonClick();
 });
 
 // Settings Themes
@@ -233,6 +248,7 @@ $('.setting-theme-yellow').on('click',function() {
         $(".screens").removeClass("theme-red").removeClass("theme-green"),
         $(".screens").addClass("theme-yellow");
     }
+    audio.buttonClick();
 });
 
 // Settings Themes
@@ -243,6 +259,7 @@ $('.setting-theme-red').on('click',function() {
         $(".screens").removeClass("theme-yellow").removeClass("theme-green"),
         $(".screens").addClass("theme-red");
     }
+    audio.buttonClick();
 });
 
 
