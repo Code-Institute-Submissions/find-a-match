@@ -221,8 +221,8 @@ $('.game-screen-main-menu-button').click( function() {
     $(".game-screen").addClass("hidden").removeClass("visible"),
     $(".main-menu-screen").addClass("visible").removeClass("hidden");
     audio.buttonClick();
+    $("#grid").empty();
 })
-
 
 // End game screen
 $('.restart-game').click( function () {
