@@ -215,6 +215,15 @@ $('.settings-back-button').click( function() {
     audio.buttonClick();
 });
 
+// Game Screen
+// From Game Screen to Main Menu
+$('.game-screen-main-menu-button').click( function() {
+    $(".game-screen").addClass("hidden").removeClass("visible"),
+    $(".main-menu-screen").addClass("visible").removeClass("hidden");
+    audio.buttonClick();
+})
+
+
 // End game screen
 $('.restart-game').click( function () {
     $("#end-screen").toggleClass("hidden");
