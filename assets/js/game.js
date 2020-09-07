@@ -214,3 +214,14 @@ $('.main-menu-in-game').click( function () {
     $(".main-menu-screen").removeClass("hidden").addClass("visible"),
     $("#end-screen").removeClass("visible").addClass("hidden");
 });
+
+// Settings Themes
+// Green Themes
+// Check if screens have any theme if so remove and add this one
+$('.setting-theme-green').on('click',function() {
+    if($(".screens").hasClass("theme-red") || ("theme-yellow")) {
+        $(".screens").removeClass("theme-red").removeClass("theme-yellow"),
+        $(".screens").addClass("theme-green");
+    }
+});
+
