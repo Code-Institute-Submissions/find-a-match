@@ -78,6 +78,7 @@
 .instruction-back-button,
 .main-menu-in-game,
 .settings-back-button,
+.game-screen-main-menu-button,
 .restart-game {
     background-color: #580200;
     font-family: 'Goblin One', cursive;
@@ -96,6 +97,7 @@
 .instruction-back-button:hover,
 .main-menu-in-game:hover,
 .settings-back-button:hover,
+.game-screen-main-menu-button:hover,
 .restart-game:hover  {
     color: black;
     text-shadow: 0px 0px 0px #000000;
