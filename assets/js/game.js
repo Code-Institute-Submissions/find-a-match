@@ -22,7 +22,7 @@ class audioControl {
 
 // Cards Faces
 // Card Array
-const cardArray = [
+const easyList = [
     {
         name: 'AH',
         img: 'assets/images/cards/AH.png'
@@ -56,11 +56,11 @@ const cardArray = [
         img: 'assets/images/cards/AS.png'
     },
     {
-        name: 'KS',
+        name: 'KS2',
         img: 'assets/images/cards/KS.png'
     },
     {
-        name: 'KS',
+        name: 'KS2',
         img: 'assets/images/cards/KS.png'
     },
     {
@@ -73,8 +73,10 @@ const cardArray = [
     },
 ];
 
+
+
 // Shuffle the cards
-cardArray.sort(() => 0.5 - Math.random());
+easyList.sort(() => 0.5 - Math.random());
 
 // Grid element
 const grid = document.querySelector('.grid');
@@ -96,7 +98,7 @@ let audio = new audioControl();
 function createBoard() {
     for (let i = 0; i < cardArray.length; i++) {
         let card = document.createElement('img');
-        card.setAttribute('src', 'assets/images/cards/card-back.png');
+        card.setAttribute('src', 'assets/images/cards/back-of-card.png');
         card.setAttribute('data-id', i);
         card.setAttribute('class', `cards`);
         card.addEventListener('click', flipCard);
@@ -132,8 +134,8 @@ function checkForMatch() {
     const optionTwoId = cardsChosenId[1];
     // Check if player choose same cards
     if (optionOneId == optionTwoId) {
-        cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
-        cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
+        cards[optionOneId].setAttribute('src', 'assets/images/cards/back-of-card.png');
+        cards[optionTwoId].setAttribute('src', 'assets/images/cards/back-of-card.png');
         matchDisplay.textContent = 'Sorry that is same card';
     }
     // If Match
@@ -152,8 +154,8 @@ function checkForMatch() {
         // If not match
     } else {
          // Flip cards back and show back card image
-        cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
-        cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
+        cards[optionOneId].setAttribute('src', 'assets/images/cards/back-of-card.png');
+        cards[optionTwoId].setAttribute('src', 'assets/images/cards/back-of-card.png');
         matchDisplay.textContent = 'Sorry No Match!';
         audio.noMatch();
     }
@@ -169,6 +171,8 @@ function checkForMatch() {
 
 function resetGame() {
     createBoard();
+    cardsWon = [];
+    
 }
 
 // Main Menu 
@@ -223,7 +227,7 @@ $('.game-screen-main-menu-button').click( function() {
     audio.buttonClick();
     $("#grid").empty();
     cardsWon = [];
-})
+});
 
 // End game screen
 $('.restart-game').click( function () {
