@@ -73,13 +73,73 @@ const easyList = [
     },
 ];
 
+    
+
+//  Game timer
+function changeValue() {
+    document.getElementById("timer").innerHTML = "Your time : " + ++value;
+};
+
+let timer = null;
+
+function startTimer() {
+  stopTimer(); // stoping the previous counting (if any)
+  value = 0;
+  timer = setInterval(changeValue, 1000);
+}
+
+let stopTimer = function() {
+    // clear timer timer start from 0
+  clearInterval(timer);
+   // update visual counter to 0
+  document.getElementById("timer").innerHTML = "0";
+}
+
+/*
+    Game Levels
+    Level is determined by player input
+*/
+let easyLevel = null;
+    $('#lvlOne').click(() => {
+        easyLevel = true;
+        startGame ()
+});
+
+let mediumLevel = null;
+    $('').click(() => {
+        mediumLevel = true;
+        startGame ()     
+});
+
+let hardLevel = null;
+    $('').click(() => {
+        hardLevel = true;
+        startGame ()     
+});
 
 
-// Shuffle the cards
-easyList.sort(() => 0.5 - Math.random());
+function startGame() {
+    if (easyLevel == true) {
+        easyLevel === easyList;
+        easyList.sort(() => 0.5 - Math.random());
+        $(".easy").removeClass("hidden").addClass("visible");
+        stopTimer();
+    } else if (mediumLevel == true) {
+        mediumLevel === mediumList;
+        mediumList.sort(() => 0.5 - Math.random());
+        $(".easy, .medium").removeClass("hidden").addClass("visible");
+        stopTimer();
+    } else if (hardLevel == true) {
+        hardLevel === hardList;
+        hardList.sort(() => 0.5 - Math.random());
+        $(".easy, .medium, hard").removeClass("hidden").addClass("visible");
+        stopTimer();
+    }
+}
+
 
 // Grid element
-const grid = document.querySelector('.grid');
+const grid = document.querySelector('.easy');
 // Score counter and match indicator
 let resultDisplay = document.querySelector('.score');
 let matchDisplay = document.querySelector('.match-no-match');
@@ -96,8 +156,8 @@ let audio = new audioControl();
 //Set attribute src, id and class
 //Append to grid
 function createBoard() {
-    for (let i = 0; i < cardArray.length; i++) {
-        let card = document.createElement('img');
+    for (let i = 0; i < easyList.length; i++) {
+        let card = document.getElementsByName('card__face--back');
         card.setAttribute('src', 'assets/images/cards/back-of-card.png');
         card.setAttribute('data-id', i);
         card.setAttribute('class', `cards`);

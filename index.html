@@ -54,13 +54,21 @@
 			<div class="col-12 text-center logo">Find-a-Match</div>
 		</div>
 		<div class="row text-center justify-content-around">
-			<div class="col-3 game-display-container">Timer</div>
-			<div class="col-3 game-display-container">Sound on/off</div>
+			<div class="col-3 game-display-container" id="timer">0</div>
+			<div role="button" onclick="startTimer()" class="col-3 game-display-container">Sound on/off</div>
 			<div class="col-3 game-display-container">Reset</div>
-			<div class="col-3 game-display-container">Indicator</div>
+			<div class="col-3 game-display-container" id="lvlOne">Indicator</div>
 		</div>
 		<div class="row">
-			<div class="col lineOne">
+			<div class="col hard lineOne hidden">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div role="button" class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col medium hidden lineOne">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -68,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineOne">
+			<div class="col easy hidden lineOne">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -76,7 +84,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineOne">
+			<div class="col easy hidden lineOne">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -84,7 +92,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineOne">
+			<div class="col easy hidden lineOne">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -92,7 +100,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineOne">
+			<div class="col easy hidden lineOne">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -100,7 +108,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineOne">
+			<div class="col medium hidden lineOne">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -108,81 +116,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col lineTwo">
+			<div class="col hard hidden lineOne">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -192,7 +126,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col lineThree">
+			<div class="col hard hidden lineTwo">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -200,7 +134,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineThree">
+			<div class="col medium hidden lineTwo">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -208,7 +142,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineThree">
+			<div class="col easy hidden lineTwo">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -216,7 +150,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineThree">
+			<div class="col easy hidden lineTwo">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -224,7 +158,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineThree">
+			<div class="col easy hidden lineTwo">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -232,7 +166,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineThree">
+			<div class="col easy hidden lineTwo">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -240,7 +174,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineThree">
+			<div class="col medium hidden lineTwo">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
@@ -248,7 +182,73 @@
 					</div>
 				</div>
 			</div>
-			<div class="col lineThree">
+			<div class="col hard hidden lineTwo">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col hard hidden lineThree">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col medium hidden lineThree">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col easy hidden lineThree">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col easy hidden lineThree">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col easy hidden lineThree">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col easy hidden lineThree">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col medium hidden lineThree">
+				<div class="scene">
+					<div class="card">
+						<div class="card__face card__face--front"></div>
+						<div class="card__face card__face--back"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col hard hidden lineThree">
 				<div class="scene">
 					<div class="card">
 						<div class="card__face card__face--front"></div>
