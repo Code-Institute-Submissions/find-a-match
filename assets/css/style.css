@@ -101,7 +101,8 @@
 .settings-back-button:hover,
 .game-screen-main-menu-button:hover,
 .restart-game:hover,
-.game-screen-buttons:hover  {
+.game-screen-buttons:hover,
+.end-screen-buttons:hover  {
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
@@ -121,6 +122,17 @@
     cursor: pointer;
 }
 
+.end-screen-buttons {
+    font-size: 1.4vw;
+    background-color: #580200;
+    font-family: 'Goblin One', cursive;
+    border-radius: 1vw;
+    box-shadow: inset 0px 0px 20px 1px #000000;
+    border: 2px solid gray;
+    text-shadow: 0px 0px 20px #000000;
+    color: yellow;
+    cursor: pointer;
+}
 
 /* /game-buttons */
 /* /main menu button container */
@@ -303,20 +315,8 @@ h3 {
     box-shadow: 1px 1px 20px 1px #000000, inset 1px 1px 9px 2px white;
 }
 
-.win-message {
-    height: 3vw;
-    font-family: 'Goblin One', cursive;
-    margin: 2vw;
-    font-size: 1.5vw;
-    box-shadow: 0 0 6px 2px red;
-    color: yellow;
-    padding-top: 0.5vw;
-    border-radius: 10px;
-}
 
-.end-game-buttons {
-    top: 50%;
-}
+
 /* /end-screen */
 /* /when player find all cards */
 
@@ -327,6 +327,36 @@ h3 {
     box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
 }
 
+
+/* End Screen */
+
+/* Congratulation Message */
+.win-message {
+    font-size: 3vw;
+    align-self: center;
+    font-family: 'Goblin One', cursive;
+    
+}
+
+.motivation-message {
+    align-self: center;
+    font-family: 'Goblin One', cursive;
+    color: red;
+    font-size: 2.4vw;
+    padding: 0.5vh;
+}
+/* Align All End Screen Items To Middle */
 .end-screen-items {
     align-self: center;
+    font-family: 'Goblin One', cursive;
+    font-size: 1vw;
+    padding: 0.5vh;
 }
+
+/* Reward Image */
+
+.reward-image {
+    height: 18vh;
+
+}
+

@@ -339,7 +339,7 @@ getReward()
 console.log(rewardFour)
 function showReward() {
     if (/* value < null && */ easyLevel == true) {
-        $("#end-message").append('');
+        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-three.png"></img>');
     }
 }
 
