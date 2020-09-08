@@ -223,13 +223,7 @@ $('#easy').click(() => {
     setTimeout(startTimer, 1500);
 });
 
-$('#hard').click(() => {
-    $(".game-screen").removeClass("hidden").addClass("visible"),
-    $(".lvl-screen").addClass("hidden").removeClass("visible"),
-    easyLevel = false;
-    startGame();
-    setTimeout(startTimer, 1500);
-});
+
 
 
 /*
