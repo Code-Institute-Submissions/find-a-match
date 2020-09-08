@@ -148,13 +148,31 @@ const hardList = [
     },
 ];
 
-// Shuffle the cards
-/* cardArray.sort(() => 0.5 - Math.random()); */
+//  Game timer
+function changeValue() {
+    document.getElementById("time").innerHTML = "Your time : " + ++value;
+};
+
+let timer = null;
+
+function startTimer() {
+  stopTimer(); // stoping the previous counting (if any)
+  value = 0;
+  timer = setInterval(changeValue, 1000);
+}
+
+let stopTimer = function() {
+    // clear timer timer start from 0
+  clearInterval(timer);
+   // update visual counter to 0
+  document.getElementById("time").innerHTML = "0";
+}
+
 
 // Grid element
 const grid = document.querySelector('.grid');
 // Score counter and match indicator
-let resultDisplay = document.querySelector('.score');
+/* let resultDisplay = document.querySelector('.score'); */
 let matchDisplay = document.querySelector('.match-no-match');
 // Chosen Cards and iDs
 let cardsChosen = [];
@@ -170,6 +188,7 @@ $('#easy').click(() => {
     $(".lvl-screen").addClass("hidden").removeClass("visible");
     easyLevel = true;
     startGame();
+    startTimer();
 });
 
 $('#hard').click(() => {
@@ -177,7 +196,9 @@ $('#hard').click(() => {
     $(".lvl-screen").addClass("hidden").removeClass("visible"),
     easyLevel = false;
     startGame();
+    startTimer();
 });
+
 
 /*
 Create Board
@@ -257,10 +278,17 @@ function checkForMatch() {
     }
     cardsChosen = [];
     cardsChosenId = [];
-    resultDisplay.textContent = cardsWon.length;
+    /* resultDisplay.textContent = cardsWon.length; */
     if (cardsWon.length === cardsList.length / 2) {
         document.getElementById("end-screen").classList.remove("hidden");
         $("#grid").empty();
+        stopTimer();
+        if (value < 20) {
+            console.log("genius")
+        } if (value > 20) {
+            console.log("try harder")
+        }
+        console.log(value)
         cardsWon = [];
     }
 }
