@@ -100,12 +100,28 @@
 .main-menu-in-game:hover,
 .settings-back-button:hover,
 .game-screen-main-menu-button:hover,
-.restart-game:hover  {
+.restart-game:hover,
+.game-screen-buttons:hover  {
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
     box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
 }
+
+.game-screen-buttons {
+    font-size: 0.7vw;
+    padding: 7px;
+    background-color: #580200;
+    font-family: 'Goblin One', cursive;
+    border-radius: 1vw;
+    box-shadow: inset 0px 0px 20px 1px #000000;
+    border: 2px solid gray;
+    text-shadow: 0px 0px 20px #000000;
+    color: yellow;
+    cursor: pointer;
+}
+
+
 /* /game-buttons */
 /* /main menu button container */
 /* /main menu */
@@ -225,6 +241,7 @@ h3 {
     font-family: 'Goblin One', cursive;
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
+    padding: 11px;
 }
 /* /score-Match counters */
 
@@ -302,3 +319,10 @@ h3 {
 }
 /* /end-screen */
 /* /when player find all cards */
+
+.soundOn {
+    color: black;
+    text-shadow: 0px 0px 0px #000000;
+    background-color: red;
+    box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
+}

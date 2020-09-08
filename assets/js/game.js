@@ -5,6 +5,7 @@ class audioControl {
         this.winSound = new Audio('assets/audio/win.mp3');
         this.noMatchSound = new Audio('assets/audio/no-match.mp3');
         this.click = new Audio('assets/audio/click.mp3');
+        this.bgMusic = new Audio('assets/audio/bg-music.mp3')
     }
     flip() {
         this.flipSound.play();
@@ -17,6 +18,13 @@ class audioControl {
     }
     buttonClick() {
         this.click.play();
+    }
+    startMusic() {
+        this.bgMusic.currentTime = 0;
+        this.bgMusic.play();
+    }
+    stopMusic() {
+        this.bgMusic.pause();
     }
 }
 
@@ -153,7 +161,30 @@ function changeValue() {
     document.getElementById("time").innerHTML = "Your time : " + ++value;
 };
 
+//background music toggler
+$('#soundBtn').click(() => {
+    let soundOn = sound;
+    soundOn ? stopBgSound() : startBgSound();
+});
+
+function stopBgSound() {
+    sound = false;
+    $('#soundBtn').addClass('soundOff');
+    $('#soundBtn').removeClass('soundOn');
+    $('#soundBtn').text("SOUND OFF");
+    audio.stopMusic();
+}
+
+function startBgSound() {
+    sound = true;
+    $('#soundBtn').addClass('soundOn');
+    $('#soundBtn').removeClass('soundOff');
+    $('#soundBtn').text("SOUND ON");
+    audio.startMusic();
+}
+
 let timer = null;
+let sound = true;
 
 function startTimer() {
   stopTimer(); // stoping the previous counting (if any)
@@ -187,8 +218,9 @@ $('#easy').click(() => {
     $(".game-screen").removeClass("hidden").addClass("visible"),
     $(".lvl-screen").addClass("hidden").removeClass("visible");
     easyLevel = true;
+    audio.startMusic();
     startGame();
-    startTimer();
+    setTimeout(startTimer, 1500);
 });
 
 $('#hard').click(() => {
@@ -196,7 +228,7 @@ $('#hard').click(() => {
     $(".lvl-screen").addClass("hidden").removeClass("visible"),
     easyLevel = false;
     startGame();
-    startTimer();
+    setTimeout(startTimer, 1500);
 });
 
 
@@ -284,7 +316,7 @@ function checkForMatch() {
         $("#grid").empty();
         stopTimer();
         if (value < 20) {
-            console.log("genius")
+            alert("genius")
         } if (value > 20) {
             console.log("try harder")
         }
@@ -293,10 +325,19 @@ function checkForMatch() {
     }
 }
 
-function startGame() {
-    createBoard();
+function resetGame() {
+    stopTimer();
+    $("#grid").empty();
+    startGame();
+    matchDisplay.textContent = '-';
+    setTimeout(startTimer, 1500);
+    cardsWon = [];
 }
 
+function startGame() {
+    createBoard();
+    cardsWon = [];
+}
 
 // Main Menu 
 // New Game Button
