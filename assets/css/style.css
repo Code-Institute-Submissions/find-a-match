@@ -292,15 +292,15 @@ h3 {
 .end-screen {
     margin-top: auto;
     position: fixed;
-    top: 17vw;
+    top: 23vh;
     left: 19vw;
-    height: 20vw;
+    height: 53vh;
     background-color: black;
     border: 2px solid gray;
     width: 64vw;
     border-radius: 10px;
     color: yellow;
-    box-shadow: 1px 1px 20px 1px #ffca00;
+    box-shadow: 1px 1px 20px 1px #000000, inset 1px 1px 9px 2px white;
 }
 
 .win-message {

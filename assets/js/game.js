@@ -232,8 +232,6 @@ $('#hard').click(() => {
 });
 
 
-this is new line;
-
 /*
 Create Board
 Loop over card array for each create img element
