@@ -213,7 +213,7 @@ let cardsWon = [];
 // Sound from constructor
 let audio = new audioControl();
 
-let easyLevel = null;
+let easyLevel = true; //TRUE FOR TESTING REMOVE AND CHANGE TO --> null
 $('#easy').click(() => {
     $(".game-screen").removeClass("hidden").addClass("visible"),
     $(".lvl-screen").addClass("hidden").removeClass("visible");
@@ -325,6 +325,27 @@ function checkForMatch() {
     }
 }
 
+
+function getReward(rewardOne, rewardTwo, rewardThree, rewardFour) {
+    this.rewardOne = 'YOUR SCORE IS GREAT!';
+    this.rewardTwo = 'Ahhhh SO CLOSE!!!';
+    this.rewardThree = 'Common YOU can do IT!!';
+    this.rewardFour = 'YOU just didn,t give your best this time\n\nTry again you can do it!,'
+};
+
+
+
+getReward()
+console.log(rewardFour)
+function showReward() {
+    if (/* value < null && */ easyLevel == true) {
+        $("#end-message").append('');
+    }
+}
+
+showReward()
+
+
 function resetGame() {
     stopTimer();
     $("#grid").empty();
@@ -338,6 +359,8 @@ function startGame() {
     createBoard();
     cardsWon = [];
 }
+
+
 
 // Main Menu 
 // New Game Button
