@@ -20,7 +20,7 @@ class audioControl {
         this.click.play();
     }
     startMusic() {
-        this.bgMusic.currentTime = 0;
+        this.bgMusic.currentTime = 2;
         this.bgMusic.play();
     }
     stopMusic() {
