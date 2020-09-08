@@ -2,7 +2,8 @@
 
 .menu-title,
 .instruction-title,
-.settings-title {
+.settings-title,
+.lvl-title {
     font-size: 3vw;
     font-family: 'Goblin One', cursive;
     color: #bda70b;
@@ -30,7 +31,8 @@
 
 .main-menu,
 .instruction,
-.setings-menu {
+.setings-menu,
+.lvl-menu {
     background-color: black;
     flex-direction: column;
     display: grid;
@@ -107,6 +109,33 @@
 /* /game-buttons */
 /* /main menu button container */
 /* /main menu */
+
+/* Choose Difficulty */
+.lvl-container {
+    background-color: black;
+    font-family: 'Goblin One', cursive;
+    color: yellow;
+    font-size: 3vw;
+    margin: 0.5vw;
+    height: 5vw;
+    border: 2px solid grey;
+    border-radius: 1vw;
+    box-shadow: inset 0px 0px 20px 1px #000000;
+    cursor: pointer;
+}
+
+#easy:hover {
+    color: black;
+    background-color:green;
+    box-shadow: 0px 0px 20px 2px green;
+}
+
+#hard:hover {
+    color: black;
+    background-color: red;
+    box-shadow: 0px 0px 20px 2px #ff0000;
+}
+
 
 /* Instruction Screen */
 .instruction-container {
@@ -201,20 +230,20 @@ h3 {
 
 /* Cards grid position */
 .grid {
-    display: grid;
+    display: flex;
     height: 100%;
-    width: 69vw;
+    width: 57vw;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 0.5em;
     flex-wrap: wrap;
+    text-align: -webkit-auto;
 }
 
 /* Cards style */
 .cards {
     height: 10vw;
-    width: 15vw;
+    width: 8vw;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -222,6 +251,7 @@ h3 {
     align-items: center;
     border-radius: 5px;
     box-shadow: #191919 5px 5px 5px 0px;
+    margin: 0.5vw;
 }
 /* /cards style */
 /* /cards grid position */

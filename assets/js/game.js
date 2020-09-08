@@ -22,7 +22,7 @@ class audioControl {
 
 // Cards Faces
 // Card Array
-const cardArray = [
+const easyList = [
     {
         name: 'AH',
         img: 'assets/images/cards/AH.png'
@@ -73,8 +73,84 @@ const cardArray = [
     },
 ];
 
+const mediumList = [
+    {
+        name: 'AH',
+        img: 'assets/images/cards/AH.png'
+    },
+    {
+        name: 'AH',
+        img: 'assets/images/cards/AH.png'
+    },
+    {
+        name: 'KH',
+        img: 'assets/images/cards/KH.png'
+    },
+    {
+        name: 'KH',
+        img: 'assets/images/cards/KH.png'
+    },
+    {
+        name: 'QH',
+        img: 'assets/images/cards/QH.png'
+    },
+    {
+        name: 'QH',
+        img: 'assets/images/cards/QH.png'
+    },
+    {
+        name: 'AS',
+        img: 'assets/images/cards/AS.png'
+    },
+    {
+        name: 'AS',
+        img: 'assets/images/cards/AS.png'
+    },
+    {
+        name: 'KS2',
+        img: 'assets/images/cards/KS.png'
+    },
+    {
+        name: 'KS2',
+        img: 'assets/images/cards/KS.png'
+    },
+    {
+        name: 'QS',
+        img: 'assets/images/cards/QS.png'
+    },
+    {
+        name: 'QS',
+        img: 'assets/images/cards/QS.png'
+    },
+    {
+        name: 'JS',
+        img: 'assets/images/cards/JS.png'
+    },
+    {
+        name: 'JS',
+        img: 'assets/images/cards/JS.png'
+    },
+    {
+        name: 'JH',
+        img: 'assets/images/cards/JH.png'
+    },
+    {
+        name: 'JH',
+        img: 'assets/images/cards/JH.png'
+    },
+    {
+        name: '10S',
+        img: 'assets/images/cards/10S.png'
+    },
+    {
+        name: '10S',
+        img: 'assets/images/cards/10S.png'
+    },
+];
+
+
 // Shuffle the cards
-cardArray.sort(() => 0.5 - Math.random());
+/* cardArray.sort(() => 0.5 - Math.random()); */
 
 // Grid element
 const grid = document.querySelector('.grid');
@@ -89,12 +165,30 @@ let cardsWon = [];
 // Sound from constructor
 let audio = new audioControl();
 
+let easyLevel = null;
+    $('#easyLvl').click(() => {
+        easyLevel = true;
+
+    });
+
+    $('#hardLvl').click(() => {
+        easyLevel = false;
+
+});
+
 //Create Board
 //Loop over card array for each create img element
 //Set attribute src, id and class
 //Append to grid
+
 function createBoard() {
-    for (let i = 0; i < cardArray.length; i++) {
+    if (easyLevel = true) {
+            cardsList = easyList;
+        } else {
+            cardsList = mediumList;
+        }
+        cardsList.sort(() => 0.5 - Math.random());
+    for (let i = 0; i < cardsList.length; i++) {
         let card = document.createElement('img');
         card.setAttribute('src', 'assets/images/cards/card-back.png');
         card.setAttribute('data-id', i);
@@ -110,13 +204,9 @@ function createBoard() {
 // If player choose two cards check for match
 function flipCard() {
     let cardId = this.getAttribute('data-id');
-    console.log(cardId)
-    cardsChosen.push(cardArray[cardId].name);
-    console.log(cardArray)
-    console.log(cardsChosen)
+    cardsChosen.push(cardsList[cardId].name);
     cardsChosenId.push(cardId);
-    console.log(cardsChosenId)
-    this.setAttribute('src', cardArray[cardId].img);
+    this.setAttribute('src', cardsList[cardId].img);
     audio.flip();
     if (cardsChosen.length === 2) {
         setTimeout(checkForMatch, 500);
@@ -160,7 +250,7 @@ function checkForMatch() {
     cardsChosen = [];
     cardsChosenId = [];
     resultDisplay.textContent = cardsWon.length;
-    if (cardsWon.length === cardArray.length / 2) {
+    if (cardsWon.length === cardsList.length / 2) {
         document.getElementById("end-screen").classList.remove("hidden");
         $("#grid").empty();
         cardsWon = [];
