@@ -73,7 +73,7 @@ const easyList = [
     },
 ];
 
-const mediumList = [
+const hardList = [
     {
         name: 'AH',
         img: 'assets/images/cards/AH.png'
@@ -148,7 +148,6 @@ const mediumList = [
     },
 ];
 
-
 // Shuffle the cards
 /* cardArray.sort(() => 0.5 - Math.random()); */
 
@@ -166,35 +165,44 @@ let cardsWon = [];
 let audio = new audioControl();
 
 let easyLevel = null;
-    $('#easyLvl').click(() => {
-        easyLevel = true;
-
-    });
-
-    $('#hardLvl').click(() => {
-        easyLevel = false;
-
+$('#easy').click(() => {
+    $(".game-screen").removeClass("hidden").addClass("visible"),
+    $(".lvl-screen").addClass("hidden").removeClass("visible");
+    easyLevel = true;
+    startGame();
 });
 
-//Create Board
-//Loop over card array for each create img element
-//Set attribute src, id and class
-//Append to grid
+$('#hard').click(() => {
+    $(".game-screen").removeClass("hidden").addClass("visible"),
+    $(".lvl-screen").addClass("hidden").removeClass("visible"),
+    easyLevel = false;
+    startGame();
+});
+
+/*
+Create Board
+Loop over card array for each create img element
+Set attribute src, id and class
+Append to grid
+ */
 
 function createBoard() {
-    if (easyLevel = true) {
-            cardsList = easyList;
-        } else {
-            cardsList = mediumList;
-        }
-        cardsList.sort(() => 0.5 - Math.random());
+
+    if (easyLevel) {
+        cardsList = easyList 
+    } else {
+        cardsList = hardList
+    }
+        console.log(cardsList)
     for (let i = 0; i < cardsList.length; i++) {
+        cardsList.sort(() => 0.5 - Math.random());
         let card = document.createElement('img');
         card.setAttribute('src', 'assets/images/cards/card-back.png');
         card.setAttribute('data-id', i);
         card.setAttribute('class', `cards`);
         card.addEventListener('click', flipCard);
         grid.appendChild(card);
+    
     }
 }
 
@@ -257,16 +265,17 @@ function checkForMatch() {
     }
 }
 
-function resetGame() {
+function startGame() {
     createBoard();
 }
+
 
 // Main Menu 
 // New Game Button
 // Main Menu disapear and Game appear
 $('.new-game-button').click( function () {
     $(".main-menu-screen").toggleClass("hidden").removeClass("visible"),
-    $(".game-screen").removeClass("hidden").addClass("visible");
+    $(".lvl-screen").removeClass("hidden").addClass("visible");
     audio.buttonClick();
 });
 
