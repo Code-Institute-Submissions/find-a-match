@@ -22,7 +22,7 @@ class audioControl {
 
 // Cards Faces
 // Card Array
-const easyList = [
+const cardArray = [
     {
         name: 'AH',
         img: 'assets/images/cards/AH.png'
@@ -54,156 +54,6 @@ const easyList = [
     {
         name: 'AS',
         img: 'assets/images/cards/AS.png'
-    },
-    {
-        name: 'KS2',
-        img: 'assets/images/cards/KS.png'
-    },
-    {
-        name: 'KS2',
-        img: 'assets/images/cards/KS.png'
-    },
-    {
-        name: 'QS',
-        img: 'assets/images/cards/QS.png'
-    },
-    {
-        name: 'QS',
-        img: 'assets/images/cards/QS.png'
-    },
-];
-
-const mediumList = [
-    {
-        name: 'AH',
-        img: 'assets/images/cards/AH.png'
-    },
-    {
-        name: 'AH',
-        img: 'assets/images/cards/AH.png'
-    },
-    {
-        name: 'KH',
-        img: 'assets/images/cards/KH.png'
-    },
-    {
-        name: 'KH',
-        img: 'assets/images/cards/KH.png'
-    },
-    {
-        name: 'QH',
-        img: 'assets/images/cards/QH.png'
-    },
-    {
-        name: 'QH',
-        img: 'assets/images/cards/QH.png'
-    },
-    {
-        name: 'AS',
-        img: 'assets/images/cards/AS.png'
-    },
-    {
-        name: 'AS',
-        img: 'assets/images/cards/AS.png'
-    },
-    {
-        name: 'KS2',
-        img: 'assets/images/cards/KS.png'
-    },
-    {
-        name: 'KS2',
-        img: 'assets/images/cards/KS.png'
-    },
-    {
-        name: 'QS',
-        img: 'assets/images/cards/QS.png'
-    },
-    {
-        name: 'QS',
-        img: 'assets/images/cards/QS.png'
-    },
-    {
-        name: 'JS',
-        img: 'assets/images/cards/JS.png'
-    },
-    {
-        name: 'JS',
-        img: 'assets/images/cards/JS.png'
-    },
-    {
-        name: 'JH',
-        img: 'assets/images/cards/JH.png'
-    },
-    {
-        name: 'JH',
-        img: 'assets/images/cards/JH.png'
-    },
-    {
-        name: '10S',
-        img: 'assets/images/cards/10S.png'
-    },
-    {
-        name: '10S',
-        img: 'assets/images/cards/10S.png'
-    },
-];
-
-const hardList = [
-    {
-        name: 'AC',
-        img: 'assets/images/cards/AC.png'
-    },
-    {
-        name: 'AC',
-        img: 'assets/images/cards/AC.png'
-    },
-    {
-        name: 'AD',
-        img: 'assets/images/cards/AD.png'
-    },
-    {
-        name: 'AD',
-        img: 'assets/images/cards/AD.png'
-    },
-    {
-        name: 'AH',
-        img: 'assets/images/cards/AH.png'
-    },
-    {
-        name: 'AH',
-        img: 'assets/images/cards/AH.png'
-    },
-    {
-        name: 'AS',
-        img: 'assets/images/cards/AS.png'
-    },
-    {
-        name: 'AS',
-        img: 'assets/images/cards/AS.png'
-    },
-    {
-        name: 'KC',
-        img: 'assets/images/cards/KC.png'
-    },
-    {
-        name: 'KC',
-        img: 'assets/images/cards/KC.png'
-    },
-    {
-        name: 'KD',
-        img: 'assets/images/cards/KD.png'
-    },
-    {
-        name: 'KD',
-        img: 'assets/images/cards/KD.png'
-    },
-    {
-        name: 'KH',
-        img: 'assets/images/cards/KH.png'
-    },
-    {
-        name: 'KH',
-        img: 'assets/images/cards/KH.png'
     },
     {
         name: 'KS',
@@ -214,108 +64,20 @@ const hardList = [
         img: 'assets/images/cards/KS.png'
     },
     {
-        name: 'QC',
-        img: 'assets/images/cards/QC.png'
-    },
-    {
-        name: 'QC',
-        img: 'assets/images/cards/QC.png'
-    },
-    {
-        name: 'QD',
-        img: 'assets/images/cards/QD.png'
-    },{
-        name: 'QD',
-        img: 'assets/images/cards/QD.png'
-    },{
-        name: 'QH',
-        img: 'assets/images/cards/QH.png'
-    },{
-        name: 'QH',
-        img: 'assets/images/cards/QH.png'
-    },{
         name: 'QS',
         img: 'assets/images/cards/QS.png'
-    },{
+    },
+    {
         name: 'QS',
         img: 'assets/images/cards/QS.png'
     },
 ];
 
-
-    
-
-//  Game timer
-function changeValue() {
-    document.getElementById("timer").innerHTML = "Your time : " + ++value;
-};
-
-let timer = null;
-
-function startTimer() {
-  stopTimer(); // stoping the previous counting (if any)
-  value = 0;
-  timer = setInterval(changeValue, 1000);
-}
-
-let stopTimer = function() {
-    // clear timer timer start from 0
-  clearInterval(timer);
-   // update visual counter to 0
-  document.getElementById("timer").innerHTML = "0";
-}
-
-/*
-    Game Levels
-    Level is determined by player input
-*/
-let easyLevel = null;
-    $('#lvlOne').click(() => {
-        easyLevel = true;
-        startGame ()
-});
-
-let mediumLevel = null;
-    $('').click(() => {
-        mediumLevel = true;
-        startGame ()     
-});
-
-let hardLevel = null;
-    $('').click(() => {
-        hardLevel = true;
-        startGame ()     
-});
-
-
-function startGame() {
-    if (easyLevel == true) {
-        easyLevel === easyList;
-        easyList.sort(() => 0.5 - Math.random());
-        $(".easy").removeClass("hidden").addClass("visible");
-        stopTimer();
-    } else if (mediumLevel == true) {
-        mediumLevel === mediumList;
-        mediumList.sort(() => 0.5 - Math.random());
-        $(".easy, .medium").removeClass("hidden").addClass("visible");
-        stopTimer();
-    } else if (hardLevel == true) {
-        hardLevel === hardList;
-        hardList.sort(() => 0.5 - Math.random());
-        $(".easy, .medium, hard").removeClass("hidden").addClass("visible");
-        stopTimer();
-    }
-}
-
+// Shuffle the cards
+cardArray.sort(() => 0.5 - Math.random());
 
 // Grid element
-const grid = {
-    easyGrid: easyList,
-    mediumGrid: mediumList,
-    hardGrid: hardList  
-}
-
-/* document.querySelectorAll('.card__face--back'); */
+const grid = document.querySelector('.grid');
 // Score counter and match indicator
 let resultDisplay = document.querySelector('.score');
 let matchDisplay = document.querySelector('.match-no-match');
@@ -331,10 +93,10 @@ let audio = new audioControl();
 //Loop over card array for each create img element
 //Set attribute src, id and class
 //Append to grid
-function createCard() {
-    for (let i = 0; i < easyList.length; i++) {
-        let card = document.getElementsByName('card__face--back');
-        card.setAttribute('src', );
+function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+        let card = document.createElement('img');
+        card.setAttribute('src', 'assets/images/cards/card-back.png');
         card.setAttribute('data-id', i);
         card.setAttribute('class', `cards`);
         card.addEventListener('click', flipCard);
@@ -370,8 +132,8 @@ function checkForMatch() {
     const optionTwoId = cardsChosenId[1];
     // Check if player choose same cards
     if (optionOneId == optionTwoId) {
-        cards[optionOneId].setAttribute('src', 'assets/images/cards/back-of-card.png');
-        cards[optionTwoId].setAttribute('src', 'assets/images/cards/back-of-card.png');
+        cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
+        cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
         matchDisplay.textContent = 'Sorry that is same card';
     }
     // If Match
@@ -390,8 +152,8 @@ function checkForMatch() {
         // If not match
     } else {
          // Flip cards back and show back card image
-        cards[optionOneId].setAttribute('src', 'assets/images/cards/back-of-card.png');
-        cards[optionTwoId].setAttribute('src', 'assets/images/cards/back-of-card.png');
+        cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
+        cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
         matchDisplay.textContent = 'Sorry No Match!';
         audio.noMatch();
     }
@@ -407,8 +169,6 @@ function checkForMatch() {
 
 function resetGame() {
     createBoard();
-    cardsWon = [];
-    
 }
 
 // Main Menu 
@@ -463,7 +223,7 @@ $('.game-screen-main-menu-button').click( function() {
     audio.buttonClick();
     $("#grid").empty();
     cardsWon = [];
-});
+})
 
 // End game screen
 $('.restart-game').click( function () {

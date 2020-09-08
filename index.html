@@ -20,12 +20,70 @@
 </head>
 
 <!-- Main Menu  -->
-
 <body>
+    <div class="container-fluid main-menu-screen screens theme-red">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col mb-5 text-center main-menu-logo">Find-A-Match</div>
+            </div>
+        </div>
+        <div class="container text-center main-menu">
+            <div class="row d-inline align-self-center">
+                <div class="col mx-auto menu-title">Main Menu</div>
+                <div role="button" class="col-4 mx-auto new-game-button main-menu-buttons" onclick="resetGame()">New Game</div>
+                <div class="col-4 mx-auto instruction-button main-menu-buttons">Instruction</div>
+                <div class="col-4 mx-auto settings-button main-menu-buttons">Settings</div>
+            </div>
+        </div>
+    </div>
+	<!-- /main Menu  -->
 
+    <!-- Instruction Screen -->
+    <div class="container-fluid instruction-screen screens hidden theme-red" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col mb-5 text-center main-menu-logo">Find-A-Match</div>
+            </div>
+        </div>
+        <div class="container text-center instruction">
+            <div class="row d-inline p-1 align-self-center">
+                <div class="col mx-auto p-1 instruction-title">Instruction</div>
+                <div class="col mx-auto m-1 p-1 instruction-container">
+                    <h3>Find-A-Match Game Main Goal</h3>
+                    <h3>Is To Find All Matching Cards!</h3>
+                    <h3>Have Fun!</h3>
+                    <h3>And Good Luck!</h3>
+                </div>
+                <div role="button" class="col-4 p-2 mx-auto text-center instruction-back-button">Main Menu</div>
+            </div>
+        </div>
+    </div>
+    <!-- /instruction screen -->
+
+	<!-- Settings Menu -->
+	<div class="container-fluid settings-menu-screen screens hidden theme-red">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col mb-5 text-center main-menu-logo">Find-A-Match</div>
+            </div>
+        </div>
+        <div class="container text-center p-1 setings-menu">
+            <div class="row no-gutters d-inline p-2 align-self-center">
+                <div class="col mx-auto p-1 settings-title">Settings</div>
+                <div class="col theme-title">Choose you theme</div>
+                      <div class="row no-gutters p-2 justify-content-center">
+                        <div class="col theme-container setting-theme-green"></div>
+                        <div class="col theme-container setting-theme-red"></div>
+                        <div class="col theme-container setting-theme-yellow"></div>                      
+                     </div>
+                <div role="button" class="col-4 p-2 mx-auto text-center settings-back-button">Main Menu</div>
+            </div>
+        </div>
+    </div>
+	<!-- /settings menu -->
 
 	<!-- Game Screen -->
-	<!-- <div class="container-fluid game-screen  theme-red screens hidden">
+	<div class="container-fluid game-screen  theme-red screens hidden">
 		<div class="row">
 			<div class="col-12 text-center logo">Find-a-Match</div>
 			<div class="container">
@@ -46,221 +104,24 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<!-- /game-screen -->
 
-	<div class="container-fluid game-screen  theme-red screens">
-		<div class="row">
-			<div class="col-12 text-center logo">Find-a-Match</div>
-		</div>
-		<div class="row text-center justify-content-around">
-			<div class="col-3 game-display-container" id="timer">0</div>
-			<div role="button" onclick="startTimer()" class="col-3 game-display-container">Sound on/off</div>
-			<div class="col-3 game-display-container">Reset</div>
-			<div class="col-3 game-display-container" id="lvlOne">Indicator</div>
-		</div>
-		<div class="row">
-			<div class="col hard lineOne hidden">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div role="button" class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col medium hidden lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col medium hidden lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col hard hidden lineOne">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
+	<!-- End Game Screen -->
+	<div id="end-screen" class="container-fluid hidden screens end-screen-container">
+		<div class="row end-screen text-center">
+			<div class="col">
+				<div class="win-message">CONGRATULATIONS! YOU FIND THEM ALL!</div>
+				<div class="container end-game-buttons">
+					<div class="row justify-content-center">
+						<div role="button" class="col-4 m-1 main-menu-in-game">Main Menu</div>
+						<div role="button" class="col-4 m-1 restart-game" onclick="resetGame()">Restart Game</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col hard hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col medium hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col medium hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col hard hidden lineTwo">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col hard hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col medium hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col easy hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col medium hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col hard hidden lineThree">
-				<div class="scene">
-					<div class="card">
-						<div class="card__face card__face--front"></div>
-						<div class="card__face card__face--back"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row text-center">FOOTER</div>
 	</div>
-
-
+	<!-- /end game screen -->
 
 
 	<!-- Optional JavaScript -->

@@ -186,10 +186,7 @@ h3 {
 /* /screens Visability */
 
 /* Score-Match counters */
-.game-display-container {
-    background-color: black;
-}
-/* .match-indicator,
+.match-indicator,
 .score-counter {
     background-color: #000000;
     color: yellow;
@@ -199,7 +196,7 @@ h3 {
     font-family: 'Goblin One', cursive;
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
-} */
+}
 /* /score-Match counters */
 
 /* Cards grid position */
@@ -217,16 +214,14 @@ h3 {
 /* Cards style */
 .cards {
     height: 10vw;
-    width: 7vw;
-    position: sticky;
+    width: 15vw;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     align-items: center;
     border-radius: 5px;
     box-shadow: #191919 5px 5px 5px 0px;
-    object-fit: contain;
-    justify-self: center;
 }
 /* /cards style */
 /* /cards grid position */
@@ -277,51 +272,3 @@ h3 {
 }
 /* /end-screen */
 /* /when player find all cards */
-
-
-/* Cards 3d flip effect */
-.lineOne,
-.lineTwo,
-.lineThree {
-  height: 10vw;
-  perspective: 600px;
-  padding: 0.5vw;
-  margin: 1vw;
-  
-}
-
-.scene {
-  height: 10vw;
-  perspective: 600px;
-  padding: 0.5vw;
-  margin: 1vw;
-}
-
-.card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.card__face {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-
-.card__face--front {
-  background: red;
-  background: url("/assets/images/cards/card-back2.png") repeat center center;
-}
-
-.card__face--back {
-  background: blue;
-  transform: rotateY( 180deg );
-}
-
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
