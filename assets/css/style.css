@@ -1,5 +1,4 @@
-/* Main Menu */
-
+/* Headers names */
 .menu-title,
 .instruction-title,
 .settings-title,
@@ -9,13 +8,15 @@
     color: #bda70b;
 }
 
+/* Main menu buttons */
 .main-menu-buttons {
     border: 1px solid black;
     padding: 0.5vw;
     margin: 1vw;
 }
 
-.logo,
+/* Game logo */
+.game-screen-logo,
 .main-menu-logo {
     margin-top: 1.5vw;
     -webkit-background-size: cover;
@@ -24,13 +25,14 @@
     background-size: contain;
     font-family: 'Goblin One', cursive;
     font-size: 5vw;
-    color: #af9100;
+    color: #d6b100;
     text-shadow: 0px 5px 4px #a70000, 1px 1px 7px #000000;
     box-shadow: -1px 1px 17px 2px black;
     border-radius: 10px;
     background: #000000c2;
 }
 
+/* Game menus */
 .main-menu,
 .instruction,
 .setings-menu,
@@ -47,6 +49,7 @@
     box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
 
+/* Game themes */
 .theme-red {
     background: url("../images/themes/theme-red.jpg") repeat center center;
     box-shadow: inset 0px 0px 1vw 0.6vw #000000;
@@ -73,7 +76,6 @@
     top: 0px;
     left: 0px; 
 }
-
 
 /* Game buttons */
 .new-game-button,
@@ -113,8 +115,9 @@
 
 .game-screen-buttons {
     font-size: 0.7vw;
-    padding: 7px;
+    padding: 4px;
     background-color: #580200;
+    padding-top: 15px;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
     box-shadow: inset 0px 0px 20px 1px #000000;
@@ -136,12 +139,8 @@
     cursor: pointer;
 }
 
-/* /game-buttons */
-/* /main menu button container */
-/* /main menu */
-
-/* Choose Difficulty */
-.lvl-container {
+/* Choose difficulty */
+.lvl-button {
     background-color: black;
     font-family: 'Goblin One', cursive;
     color: yellow;
@@ -167,7 +166,7 @@
 }
 
 
-/* Instruction Screen */
+/* Instruction screen */
 .instruction-container {
     height: 10vw;
     width: 30vw;
@@ -179,9 +178,7 @@ h3 {
     color: red;
 }
 
-/* /instruction-screen */
-
-/* Settings Screen */
+/* Settings screen */
 .theme-container {
     background-color: blue;
     margin: 0.5vw;
@@ -218,16 +215,13 @@ h3 {
 .setting-theme-green:hover {
     box-shadow: 0px 0px 9px 4px yellow, inset 0px 0px 3px 3px black;;
 } 
-/* /settings screen */
 
-
-/* Game Screen */
+/* Game screen */
 .game-screen {
     height: 100vh;
     box-shadow: 0px 0px 7px 4px black, inset 0px 0px 13px 3px #000000;
     left: 0px; 
 }
-/* /game Screen */
 
 /* Screens Visability */
 .hidden {
@@ -241,9 +235,8 @@ h3 {
   opacity: 1;
   transition: opacity 2s linear;
 }
-/* /screens Visability */
 
-/* Score-Match counters */
+/* Score Match counters */
 .match-indicator,
 .score-counter {
     background-color: #000000;
@@ -253,16 +246,38 @@ h3 {
     font-family: 'Goblin One', cursive;
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
-    padding: 11px;
-
+    padding: 13px;
 }
-/* /score-Match counters */
+
+/* Check cards */
+
+.same-card {
+    background-color: yellow;
+    color: black;
+    font-family: 'Goblin One', cursive;
+    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+}
+
+.no-match {
+    background-color: red;
+    color: black;
+    font-family: 'Goblin One', cursive;
+    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+}
+
+.match-cards{
+    background-color: green;
+    color: black;
+    font-family: 'Goblin One', cursive;
+    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+}
 
 /* Cards grid position */
-.grid {
-    display: flex;
+.grid-easy {
+    display: grid;
     height: 100%;
-    width: 54vw;
+    position: relative;
+    justify-content: center;
     top: 3vh;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
@@ -270,6 +285,20 @@ h3 {
     flex-wrap: wrap;
     text-align: -webkit-auto;
 }
+
+.grid-hard {
+    display: flex;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    top: 3vh;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
+    grid-template-columns: auto auto auto auto;
+    flex-wrap: wrap;
+    text-align: -webkit-auto;
+}
+
 
 /* Cards style */
 .cards {
@@ -285,18 +314,13 @@ h3 {
     margin: 0.5vw;
 }
 
-/* /cards style */
-/* /cards grid position */
-
-
 /* If fliped cards match */
 .match {
     box-shadow: none;
     visibility: hidden;
 }
 
-/* When player find all cards */
-/* End Screen */
+/* End screen */
 .end-screen-container {
     position: fixed;
     height: 100%;
@@ -318,22 +342,15 @@ h3 {
     box-shadow: 1px 1px 20px 1px #000000, inset 1px 1px 9px 2px white;
 }
 
-
-
-/* /end-screen */
-/* /when player find all cards */
-
+/* Sound on button */
 .soundOn {
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
-    box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
+    box-shadow: 0px 0px 9px 1px #ffe600, inset 0px 0px 6px 3px #000000;
 }
 
-
-/* End Screen */
-
-/* Congratulation Message */
+/* Rewards Messages */
 .win-message {
     font-size: 3vw;
     align-self: center;
@@ -348,17 +365,31 @@ h3 {
     font-size: 2.3vw;
     padding: 0.5vh;
 }
-/* Align All End Screen Items To Middle */
+
+/* Align all end screen items to middle */
 .end-screen-items {
     font-family: 'Goblin One', cursive;
     font-size: 1vw;
     padding: 0.5vh;
 }
 
-/* Reward Image */
-
+/* Reward image */
 .reward-image {
     height: 18vh;
-
 }
 
+/* Footer */
+
+.footer {
+    height: 4vw;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: black;
+    color: red;
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+    padding-top: 0.5vw;
+    font-size: 1.5vw;
+    box-shadow: 0px 0px 10px 2px black;
+}
