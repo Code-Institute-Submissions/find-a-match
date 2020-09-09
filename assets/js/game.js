@@ -539,7 +539,7 @@ Settings
 Settings back button to Main Menu
  */
 $('.settings-back-button').click( function() {
-    $(".main-menu-screen").removeClass("hidden"),
+    $("#main-menu-screen").removeClass("hidden"),
     $(".settings-menu-screen").addClass("hidden").removeClass("visible");
     audio.buttonClick();
 });
