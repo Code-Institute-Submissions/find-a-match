@@ -168,7 +168,7 @@ const hardList = [
     },
 ];
 
-
+// Initial timer and sound states
 let timer = null;
 let sound = true;
 
