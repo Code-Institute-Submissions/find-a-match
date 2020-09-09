@@ -261,7 +261,7 @@ h3 {
 .grid {
     display: flex;
     height: 100%;
-    width: 57vw;
+    width: 54vw;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
     grid-template-columns: auto auto auto auto;

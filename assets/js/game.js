@@ -373,9 +373,9 @@ function clearRewards() {
     let rewards = document.getElementsByClassName('reward'),
     element;
         while (element = rewards[0]) {
-            element.parentNode.removeChild(element);
-    };
-};
+            element.parentNode.removeChild(element)
+    }
+}
 
 
 function resetGame() {
@@ -385,7 +385,7 @@ function resetGame() {
     matchDisplay.textContent = '-';
     setTimeout(startTimer, 1500);
     cardsWon = [];
-    clearRewards()
+    clearRewards();
 }
 
 function startGame() {
@@ -394,11 +394,12 @@ function startGame() {
 }
 
 
+
 // Main Menu 
 // New Game Button
 // Main Menu disapear and Game appear
 $('.new-game-button').click( function () {
-    $(".main-menu-screen").toggleClass("hidden").removeClass("visible"),
+    $("#main-menu-screen").toggleClass("hidden").removeClass("visible"),
     $(".lvl-screen").removeClass("hidden").addClass("visible");
     audio.buttonClick();
 });
@@ -447,7 +448,6 @@ $('.game-screen-main-menu-button').click( function() {
     $("#grid").empty();
     cardsWon = [];
 })
-
 /* 
     End game screen
     Restart button
@@ -455,17 +455,23 @@ $('.game-screen-main-menu-button').click( function() {
     Game screen visible
  */
 $("#end-restart-btn").click( function () {
-    $('#end-screen').toggleClass('hidden'),
+    $('#end-screen').addClass('hidden').removeClass('visible'),
     $('#game-screen').removeClass('hidden').addClass('visible');
+    clearRewards()
+    resetGame();
 });
 
-
-// From Game End screen to Main Menu and back
-$("#end-main-menu-btn").click( function () {
-    $('#game-screen').addClass('hidden').removeClass('visible'),
+/* 
+    Eng game screen
+    Main menu button
+    To Main Menu Screen
+ */
+$('#end-main-menu-btn').click( function () {
+    $('#end-screen').addClass('hidden').removeClass('visible'),
     $('#main-menu-screen').removeClass('hidden').addClass('visible'),
-    $('#end-screen').removeClass('visible').addClass('hidden');
-    audio.butto'Click()'
+    $('#game-screen').removeClass('visible').addClass('hidden');
+    clearRewards();
+    audio.buttonClick();
     
 });
 

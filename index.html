@@ -21,8 +21,8 @@
 
 <!-- Main Menu  -->
 <body>
-   <div id="main-menu-screen" class="container-fluid main-menu-screen visible screens theme-red">
-   <div id="" class="container-fluid main-menu-screen visible screens theme-red">
+   <div class="container-fluid main-menu-screen visible screens theme-red">
+   <div id="main-menu-screen" class="container-fluid screens theme-red">
         <div class="container-fluid">
             <div class="row">
                 <div class="col mb-5 text-center main-menu-logo">Find-A-Match</div>
@@ -31,7 +31,7 @@
         <div class="container text-center main-menu">
             <div class="row d-inline align-self-center">
                 <div class="col mx-auto menu-title">Main Menu</div>
-                <div role="button" class="col-4 mx-auto new-game-button main-menu-buttons" >New Game</div>
+                <div role="button" class="col-4 mx-auto new-game-button main-menu-buttons">New Game</div>
                 <div class="col-4 mx-auto instruction-button main-menu-buttons">Instruction</div>
                 <div class="col-4 mx-auto settings-button main-menu-buttons">Settings</div>
             </div>
@@ -132,21 +132,6 @@
 	</div>
 	<!-- /game-screen -->
 
-	<!-- End Game Screen -->
-	<!-- <div id="end-screen" class="container-fluid  screens end-screen-container"> 
-		<div class="row end-screen text-center">
-			<div class="col">
-				<div class="win-message">CONGRATULATIONS! YOU FIND THEM ALL!</div>
-				<div class="container end-game-buttons">
-					<div class="row justify-content-center">
-						<div role="button" class="col-4 m-1 main-menu-in-game">Main Menu</div>
-						<div role="button" class="col-4 m-1 restart-game" onclick="resetGame()">Restart Game</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
     <div id="end-screen" class="container-fluid hidden theme-red screens end-screen-container"> 
 		<div class="row end-screen text-center" id="end-message">
             <div class="col-12 pt-2 win-message" >CONGRATULATION!</div>
@@ -157,7 +142,7 @@
             <div class="col-12 end-screen-items end-buttons">
                 <div class="row no-gutters pb-2 justify-content-around">
                     <div id="end-main-menu-btn" class="col-4 end-screen-buttons">MAIN MENU</div>
-                    <div id="end-restart-btn" class="col-4 end-screen-buttons" onclick="resetGame();">RESTART</div>
+                    <div id="end-restart-btn" class="col-4 end-screen-buttons">RESTART</div>
                 </div>
             </div>
 		</div>
