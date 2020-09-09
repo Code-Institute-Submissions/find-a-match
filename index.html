@@ -5,24 +5,40 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- /required meta tags -->
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- /bootstrap css -->
 
 	<!-- Style Css -->
-	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/style.css"/>
+    <!-- /style css -->
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+    <!-- /google font -->
 
 	<title>Find-a-Match</title>
 </head>
 
-<!-- Main Menu  -->
+
 <body>
-   <div class="container-fluid main-menu-screen visible screens theme-red">
-   <div id="main-menu-screen" class="container-fluid screens theme-red">
+    <!-- Loading Screen // for xs-md screens -->
+   <!--  <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mx-auto text-center"></div>
+            <div class="col-12 mx-auto text-center"></div>
+            <div class="col-12 mx-auto text-center"></div>
+        </div>
+    </div> -->
+    <!-- /loading screen // for xs-md screens -->
+
+    <!-- Main Menu  -->
+   <div class="container-fluid main-menu-screen screens theme-red">
+   <div id="main-menu-screen" class="container-fluid  
+   screens theme-red">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-10 mb-5 mx-auto text-center main-menu-logo">Find-A-Match</div>
@@ -83,6 +99,7 @@
     </div>
 	<!-- /settings menu -->
 
+    <!-- Difficulty Screen -->
 	<div class="container-fluid lvl-screen screens hidden theme-red">
 		<div class="container-fluid">
 			<div class="row">
@@ -103,7 +120,7 @@
 			</div>
 		</div>
 	</div>
-
+    <!-- /difficulty screen -->
 
 	<!-- Game Screen -->
 	<div id="game-screen" class="container-fluid game-screen  theme-red screens hidden">
@@ -117,8 +134,8 @@
                     <div class="col-1 mx-auto text-center game-screen-buttons" onclick="resetGame()">RESET GAME</div>
                     <div class="col-1 mx-auto text-center game-screen-buttons">MAIN MENU</div>
                     <div class="col-1 mx-auto text-center game-screen-buttons soundOn" id="soundBtn">SOUND ON</div>
-					<div class="col-3 mx-auto match-indicator text-center win-lose  match-no-match">
-						<div class="container">
+					<div class="col-3 mx-auto match-indicator text-center">
+						<div class="container p-0">
 							<span id="match-no-match"> - </span>
 						</div>
 					</div>
@@ -132,6 +149,7 @@
 	</div>
 	<!-- /game-screen -->
 
+    <!-- End Game Screen -->
     <div id="end-screen" class="container-fluid hidden theme-red screens end-screen-container"> 
 		<div class="row end-screen text-center" id="end-message">
             <div class="col-12 pt-2 win-message" >CONGRATULATION!</div>
@@ -147,9 +165,7 @@
             </div>
 		</div>
 	</div>
-
 	<!-- /end game screen -->
-
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

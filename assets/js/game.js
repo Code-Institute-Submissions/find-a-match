@@ -1,3 +1,5 @@
+
+
 //Game sounds
 class audioControl {
     constructor() {
@@ -28,8 +30,12 @@ class audioControl {
     }
 }
 
-// Cards Faces
-// Card Array
+
+/* 
+    Easy lvl list cards
+    List contain 6 pairs / 12 cards
+    Length of list 12
+*/
 const easyList = [
     {
         name: 'AH',
@@ -81,6 +87,12 @@ const easyList = [
     },
 ];
 
+
+/* 
+    Hard lvl list cards
+    List contain 9 pairs / 18 cards
+    Length of list 18
+*/
 const hardList = [
     {
         name: 'AH',
@@ -115,11 +127,11 @@ const hardList = [
         img: 'assets/images/cards/AS.png'
     },
     {
-        name: 'KS2',
+        name: 'KS',
         img: 'assets/images/cards/KS.png'
     },
     {
-        name: 'KS2',
+        name: 'KS',
         img: 'assets/images/cards/KS.png'
     },
     {
@@ -156,12 +168,77 @@ const hardList = [
     },
 ];
 
-//  Game timer
+
+let timer = null;
+let sound = true;
+
+
+/* 
+    Grid selecting div and create grid inside
+    Grid size determinated by player input
+    Easy 12 titles - Hard 18 titles
+*/
+const grid = document.querySelector('#grid');
+
+
+//  Match indicator match / no match
+let matchDisplay = document.querySelector('#match-no-match');
+
+
+/* 
+    Cards Choosen and Cards Id
+    Determinated by player input
+    Used for check for match
+    Empyt after Use
+*/
+let cardsChosen = [];
+let cardsChosenId = [];
+
+
+/* 
+    Cards won store matched pair cards
+    For each pair matched length +1
+    When cards won length reach 6 or 9 game ends
+*/
+let cardsWon = [];
+
+// Game sounds
+let audio = new audioControl();
+
+
+/* Easy level initial state
+   Game level determinated by player choise 
+*/
+let easyLevel = null; //TRUE FOR TESTING R --> null
+
+
+/* 
+    Game timer functions
+    Value is seconds needed for find all matching cards 
+*/
+// Show time in time element
 function changeValue() {
-    document.getElementById("time").innerHTML = "Your time : " + ++value;
+    document.getElementById("time").innerHTML = 
+        "Your time : " + ++  value;
 };
 
-//background music toggler
+function startTimer() {
+  stopTimer(); // stoping the previous counting (if any)
+  value = 0; // start value
+  timer = setInterval(changeValue, 1000);
+}
+
+let stopTimer = function() {
+  clearInterval(timer); // clear timer timer start from 0
+   // update visual counter to 0
+  document.getElementById("time").innerHTML = " 0 ";
+}
+
+/*   
+    Game sound 
+    Sound can be controlled only from main menu
+*/
+// Main Menu button
 $('#soundBtn').click(() => {
     let soundOn = sound;
     soundOn ? stopBgSound() : startBgSound();
@@ -183,37 +260,11 @@ function startBgSound() {
     audio.startMusic();
 }
 
-let timer = null;
-let sound = true;
 
-function startTimer() {
-  stopTimer(); // stoping the previous counting (if any)
-  value = 0;
-  timer = setInterval(changeValue, 1000);
-}
+/* 
+    Game Levels Easy and Hard
 
-let stopTimer = function() {
-    // clear timer timer start from 0
-  clearInterval(timer);
-   // update visual counter to 0
-  document.getElementById("time").innerHTML = "0";
-}
-
-
-// Grid element
-const grid = document.querySelector('.grid');
-// Score counter and match indicator
-/* let resultDisplay = document.querySelector('.score'); */
-let matchDisplay = document.querySelector('.match-no-match');
-// Chosen Cards and iDs
-let cardsChosen = [];
-let cardsChosenId = [];
-// Array for save match cards
-let cardsWon = [];
-// Sound from constructor
-let audio = new audioControl();
-
-let easyLevel = false; //TRUE FOR TESTING REMOVE AND CHANGE TO --> null
+*/
 $('#easy').click(() => {
     $(".game-screen").removeClass("hidden").addClass("visible");
     $(".lvl-screen").addClass("hidden").removeClass("visible");
@@ -235,20 +286,19 @@ $('#hard').click(() => {
 
 
 /*
-Create Board
-Loop over card array for each create img element
-Set attribute src, id and class
-Append to grid
+    Create Board
+    Loop over card array for each create img element
+    Shuffle cards when player choose level
+    Set attribute src, id and class
+    Click on card to flip card
+    Append to grid
  */
-
 function createBoard() {
-
-    if (easyLevel) {
+    if (easyLevel) {    
         cardsList = easyList 
     } else {
         cardsList = hardList
     }
-        console.log(cardsList)
     for (let i = 0; i < cardsList.length; i++) {
         cardsList.sort(() => 0.5 - Math.random());
         let card = document.createElement('img');
@@ -261,59 +311,67 @@ function createBoard() {
     }
 }
 
-// Flip Card
-// Set cards Id
-// Add card images
-// If player choose two cards check for match
+
+/*
+    Flip Card
+    Set cards Id
+    Set card images
+    
+*/
 function flipCard() {
     let cardId = this.getAttribute('data-id');
     cardsChosen.push(cardsList[cardId].name);
     cardsChosenId.push(cardId);
     this.setAttribute('src', cardsList[cardId].img);
     audio.flip();
-    if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 500);
+    if (cardsChosen.length === 2) { // check if player choose 2 cards
+        setTimeout(checkForMatch, 500); // if check for match 500 ms half second
     }
 }
 
+
 // Check for Match Cards
 function checkForMatch() {
-    // Select all cards
+    // select all cards
     let cards = document.querySelectorAll('img');
-    //Cards Value
+    // cards id
     const optionOneId = cardsChosenId[0];
     const optionTwoId = cardsChosenId[1];
-    // Check if player choose same cards
+    // same cards
     if (optionOneId == optionTwoId) {
         cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
         cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
+        // if cards are same show this message
         matchDisplay.textContent = 'Sorry that is same card';
     }
     // If Match
     else if (cardsChosen[0] === cardsChosen[1]) {
-        // Check for cards names
+        // check for cards names
+        // if shot this message
         matchDisplay.textContent = 'You Found a match';
-        // If is match toggle class hidden 
-        // Cards disappear from board
+        // if is match toggle class hidden 
+        // cards disappear from board
         cards[optionOneId].classList.toggle("hidden");
         cards[optionTwoId].classList.toggle("hidden");
         cards[optionOneId].removeEventListener('click', flipCard);
         cards[optionTwoId].removeEventListener('click', flipCard);
-        // Push choosen cards
+        // push choosen cards to cards won
         cardsWon.push(cardsChosen);
         audio.matchCard();
         // If not match
     } else {
-         // Flip cards back and show back card image
+         // flip cards back and show back card image
         cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
         cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
         matchDisplay.textContent = 'Sorry No Match!';
         audio.noMatch();
     }
+    // clean arrays for next check
     cardsChosen = [];
     cardsChosenId = [];
-    /* resultDisplay.textContent = cardsWon.length; */
+    // when player finds all cards cards length 6 / 9 game ends
     if (cardsWon.length === cardsList.length / 2) {
+        console.log(cardsWon.length)
         document.getElementById("end-screen").classList.remove("hidden");
         document.getElementById("game-screen").classList.add("hidden");
         $("#grid").empty();
@@ -325,11 +383,7 @@ function checkForMatch() {
 }
 
 
-//for testing messages REMOVE LATER
-/* value = 30;
-Rewards();
-showReward(); */
-
+//Rewards Messages
 function Rewards(rewardOne, rewardTwo, rewardThree, rewardFour) {
     this.rewardOne = 'YOUR ARE GENIUS!';
     this.rewardTwo = 'Ahhhh SO CLOSE!!!';
@@ -338,39 +392,52 @@ function Rewards(rewardOne, rewardTwo, rewardThree, rewardFour) {
     this.rewardFifth = 'WHY YOU NOT PLAYING?';
 };
 
+
+/* 
+    Show rewards
+    Determinate which level is chosen and time
+    Then show messages
+*/
 function showReward() {
+    // Under 20 easy 30 hard
     if (( value <= 30 && easyLevel == true) ||
         ( value <= 20 && easyLevel == false)) {
         $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-one.png"></img>');
         $("#motivation-message").append('<div class="reward">' + rewardOne + '</div>');
         $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value +'</div>');
+
+    // Under 45 easy 30 hard
     } else if (( value <= 45  && easyLevel == true) || 
        ( value <= 30 && easyLevel == false)) {
         $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-two.png"></img>');
         $('#motivation-message').append('<div class="reward">' + rewardTwo + '</div>');
-        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value +       '</div>')
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
+
+    // Under 50 easy 35 hard
     } else if ((value <= 50  && easyLevel == true) || 
        ( value <= 35 && easyLevel == false)) {
         $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-three.png"></img>');
         $('#motivation-message').append('<div class="reward">' + rewardThree + '</div>');
-        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + 57 +       '</div>')
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
+
+    // Under 60 easy 40 hard
     } else if ((value <= 60  && easyLevel == true) || 
        ( value <= 40 && easyLevel == false)) {
         $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-four.png"></img>');
         $('#motivation-message').append('<div class="reward">' + rewardFour + '</div>');
-        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + 57 +       '</div>')
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
+
+    // Over 60 easy 50 hard    
     } else if ((value > 60  && easyLevel == true) || 
        ( value > 50 && easyLevel == false)) {
         $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-fifth.png"></img>');
         $('#motivation-message').append('<div class="reward">' + rewardFifth + '</div>');
-        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + 57 + '</div>')
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
     }     
 }  
 
-/* 
-    Remove reward messages from DOM
-    Targeted by class = reward    
-*/
+
+// For clear rewards messages 
 function clearRewards() {
     let rewards = document.getElementsByClassName('reward'),
     element;
@@ -380,6 +447,7 @@ function clearRewards() {
 }
 
 
+// Reset Game 
 function resetGame() {
     stopTimer();
     $("#grid").empty();
@@ -390,6 +458,7 @@ function resetGame() {
     clearRewards();
 }
 
+
 function startGame() {
     createBoard();
     cardsWon = [];
@@ -397,52 +466,69 @@ function startGame() {
 
 
 
-// Main Menu 
-// New Game Button
-// Main Menu disapear and Game appear
+/* 
+    Main Menu 
+    New Game Button
+    Main Menu disapear and Game appear
+ */
 $('.new-game-button').click( function () {
     $("#main-menu-screen").toggleClass("hidden").removeClass("visible"),
     $(".lvl-screen").removeClass("hidden").addClass("visible");
     audio.buttonClick();
 });
 
-// Main menu
-// Settings Button
-// Main Menu disapear and settings appear
+
+/*
+    Main menu
+    Settings Button
+    Main Menu disapear and settings appear
+*/
 $('.settings-button').click( function () {
      $(".main-menu-screen").addClass("hidden"),
      $(".settings-menu-screen").removeClass("hidden").addClass("visible");
      audio.buttonClick();
 });
 
-// Instruction
-// Instruction Button
-// Main Menu disapear and Instruction appear
+
+/*
+    Instruction
+    Instruction Button
+    Main Menu disapear and Instruction appear
+*/
 $('.instruction-button').click( function () {
     $(".main-menu-screen").addClass("hidden"),
     $(".instruction-screen").removeClass("hidden").addClass("visible");
     audio.buttonClick();
 });
 
-// Instruction
-// Instruction back button
-// From Instruction to Main Menu
+
+/*
+    Instruction
+    Instruction back button
+    From Instruction to Main Menu
+ */
 $('.instruction-back-button').click( function() {
     $(".main-menu-screen").removeClass("hidden").addClass("visible"),
     $(".instruction-screen").removeClass("visible").addClass("hidden");
     audio.buttonClick();
 });
 
-// Settings 
-// Settings back button to Main Menu 
+
+/*
+Settings 
+Settings back button to Main Menu
+ */
 $('.settings-back-button').click( function() {
     $(".main-menu-screen").removeClass("hidden"),
     $(".settings-menu-screen").addClass("hidden").removeClass("visible");
     audio.buttonClick();
 });
 
-// Game Screen
-// From Game Screen to Main Menu
+
+/*
+    Game Screen
+    From Game Screen to Main Menu
+ */
 $('.game-screen-main-menu-button').click( function() {
     $(".game-screen").addClass("hidden").removeClass("visible"),
     $(".main-menu-screen").addClass("visible").removeClass("hidden");
@@ -450,6 +536,8 @@ $('.game-screen-main-menu-button').click( function() {
     $("#grid").empty();
     cardsWon = [];
 })
+
+
 /* 
     End game screen
     Restart button
@@ -462,6 +550,7 @@ $("#end-restart-btn").click( function () {
     clearRewards()
     resetGame();
 });
+
 
 /* 
     Eng game screen
@@ -477,9 +566,12 @@ $('#end-main-menu-btn').click( function () {
     
 });
 
-// Settings Themes
-// Green Themes
-// Check if screens have any theme if so remove and add this one
+
+/*
+    Settings Themes
+    Green Themes
+    Check if screens have any theme if so remove and add this one
+ */
 $('.setting-theme-green').on('click',function() {
     if($(".screens").hasClass("theme-red") || ("theme-yellow")) {
         $(".screens").removeClass("theme-red").removeClass("theme-yellow"),
@@ -488,9 +580,12 @@ $('.setting-theme-green').on('click',function() {
     audio.buttonClick();
 });
 
-// Settings Themes
-// Yellow Themes
-// Check if screens have any theme if so remove and add this one
+
+/*
+    Settings Themes
+    Yellow Themes
+    Check if screens have any theme if so remove and add this one
+*/
 $('.setting-theme-yellow').on('click',function() {
     if($(".screens").hasClass("theme-red") || ("theme-green")) {
         $(".screens").removeClass("theme-red").removeClass("theme-green"),
@@ -499,9 +594,12 @@ $('.setting-theme-yellow').on('click',function() {
     audio.buttonClick();
 });
 
-// Settings Themes
-// Red Themes
-// Check if screens have any theme if so remove and add this one
+
+/*
+    Settings Themes
+    Red Themes
+    Check if screens have any theme if so remove and add this one
+ */
 $('.setting-theme-red').on('click',function() {
     if($(".screens").hasClass("theme-yellow") || ("theme-green")) {
         $(".screens").removeClass("theme-yellow").removeClass("theme-green"),

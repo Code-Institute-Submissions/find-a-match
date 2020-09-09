@@ -24,7 +24,7 @@
     background-size: contain;
     font-family: 'Goblin One', cursive;
     font-size: 5vw;
-    color: #af9100;
+    color: #d6b100;
     text-shadow: 0px 5px 4px #a70000, 1px 1px 7px #000000;
     box-shadow: -1px 1px 17px 2px black;
     border-radius: 10px;
@@ -113,7 +113,7 @@
 
 .game-screen-buttons {
     font-size: 0.7vw;
-    padding: 7px;
+    padding: 9px;
     background-color: #580200;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
@@ -253,7 +253,7 @@ h3 {
     font-family: 'Goblin One', cursive;
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
-    padding: 11px;
+    padding: 8px;
 
 }
 /* /score-Match counters */
