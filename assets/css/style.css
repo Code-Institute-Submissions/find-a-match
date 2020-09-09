@@ -115,8 +115,9 @@
 
 .game-screen-buttons {
     font-size: 0.7vw;
-    padding: 9px;
+    padding: 4px;
     background-color: #580200;
+    padding-top: 15px;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
     box-shadow: inset 0px 0px 20px 1px #000000;
@@ -272,10 +273,11 @@ h3 {
 }
 
 /* Cards grid position */
-.grid {
-    display: flex;
+.grid-easy {
+    display: grid;
     height: 100%;
-    width: 54vw;
+    position: relative;
+    justify-content: center;
     top: 3vh;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
@@ -283,6 +285,20 @@ h3 {
     flex-wrap: wrap;
     text-align: -webkit-auto;
 }
+
+.grid-hard {
+    display: flex;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    top: 3vh;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
+    grid-template-columns: auto auto auto auto;
+    flex-wrap: wrap;
+    text-align: -webkit-auto;
+}
+
 
 /* Cards style */
 .cards {
@@ -362,3 +378,18 @@ h3 {
     height: 18vh;
 }
 
+/* Footer */
+
+.footer {
+    height: 4vw;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: black;
+    color: red;
+    position: absolute;
+    bottom: 10px;
+    width: 50%;
+    padding-top: 0.5vw;
+    font-size: 1.5vw;
+    box-shadow: 0px 0px 10px 2px black;
+}

@@ -126,26 +126,29 @@
 	<div id="game-screen" class="container-fluid game-screen  theme-red screens hidden">
 		<div class="row">
 			<div class="col-10 m-3 mx-auto text-center game-screen-logo">Find-a-Match</div>
-			<div class="container mb-3">
-				<div class="row">
-					<div class="col-3 mx-auto score-counter text-center score">
-						<div class="container"><span id="time"> - </span></div>
-					</div>
-                    <div class="col-1 mx-auto text-center game-screen-buttons" onclick="resetGame()">RESET GAME</div>
-                    <div class="col-1 mx-auto text-center game-screen-buttons">MAIN MENU</div>
-                    <div class="col-1 mx-auto text-center game-screen-buttons soundOn" id="soundBtn">SOUND ON</div>
-					<div id="card-check" class="col-3 mx-auto match-indicator text-center">
-						<div class="container p-0">
-							<span id="match-no-match"> - </span>
-						</div>
-					</div>
-				</div>
+		</div>
+		<div class="row" style="justify-content: space-evenly">
+			<div class="col-3 score-counter text-center score">
+				<div class="container"><span id="time"> - </span></div>
 			</div>
-			<div class="col-12">
-				<div id="grid" class="grid mx-auto">
+			<div class="col-1 text-center game-screen-buttons" onclick="resetGame()">RESET GAME</div>
+			<div id="game-screen-main-menu-button" class="col-1 text-center game-screen-buttons" onclick="stopGame()">MAIN
+				MENU</div>
+			<div class="col-1 text-center game-screen-buttons soundOn" id="soundBtn">SOUND ON</div>
+			<div id="card-check" class="col-3 match-indicator text-center">
+				<div class="container p-0">
+					<span id="match-no-match"> - </span>
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div id="grid" class="mx-auto col">
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col footer text-center">For educational purposes @ 2020 by Ivan Tepes<div>
+		</div>
+	</div>
 	</div>
 	<!-- /game-screen -->
 

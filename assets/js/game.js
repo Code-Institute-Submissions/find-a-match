@@ -247,7 +247,7 @@ function stopBgSound() {
     sound = false;
     $('#soundBtn').addClass('soundOff');
     $('#soundBtn').removeClass('soundOn');
-    $('#soundBtn').text("SOUND OFF");
+    $('#soundBtn').text('SOUND OFF');
     audio.stopMusic();
 }
 
@@ -255,7 +255,7 @@ function startBgSound() {
     sound = true;
     $('#soundBtn').addClass('soundOn');
     $('#soundBtn').removeClass('soundOff');
-    $('#soundBtn').text("SOUND ON");
+    $('#soundBtn').text('SOUND ON');
     audio.startMusic();
 }
 
@@ -267,6 +267,7 @@ function startBgSound() {
 $('#easy').click(() => {
     $(".game-screen").removeClass("hidden").addClass("visible");
     $(".lvl-screen").addClass("hidden").removeClass("visible");
+    $("#grid").addClass('grid-easy').removeClass('grid-hard');
     audio.buttonClick();
     easyLevel = true;
     audio.startMusic();
@@ -277,6 +278,7 @@ $('#easy').click(() => {
 $('#hard').click(() => {
     $(".game-screen").removeClass("hidden").addClass("visible");
     $(".lvl-screen").addClass("hidden").removeClass("visible");
+    $("#grid").addClass('grid-hard').addClass('col-7').removeClass('grid-easy');
     audio.buttonClick();
     easyLevel = false;
     startGame();
@@ -474,6 +476,15 @@ function startGame() {
     document.getElementById("card-check").classList.remove('match-cards','no-match', 'same-card' );
 }
 
+function stopGame() {
+    stopTimer();
+    $("#grid").empty();
+    document.getElementById("card-check").classList.remove('match-cards','no-match', 'same-card' );
+    matchDisplay.textContent = '-';
+    audio.stopMusic();
+    cardsWon = [];
+    clearRewards();
+}
 
 /* 
     Main Menu 
@@ -493,7 +504,7 @@ $('.new-game-button').click( function () {
     Main Menu disapear and settings appear
 */
 $('.settings-button').click( function () {
-     $(".main-menu-screen").addClass("hidden"),
+     $("#main-menu-screen").addClass("hidden"),
      $(".settings-menu-screen").removeClass("hidden").addClass("visible");
      audio.buttonClick();
 });
@@ -505,7 +516,7 @@ $('.settings-button').click( function () {
     Main Menu disapear and Instruction appear
 */
 $('.instruction-button').click( function () {
-    $(".main-menu-screen").addClass("hidden"),
+    $("#main-menu-screen").addClass("hidden"),
     $(".instruction-screen").removeClass("hidden").addClass("visible");
     audio.buttonClick();
 });
@@ -517,7 +528,7 @@ $('.instruction-button').click( function () {
     From Instruction to Main Menu
  */
 $('.instruction-back-button').click( function() {
-    $(".main-menu-screen").removeClass("hidden").addClass("visible"),
+    $("#main-menu-screen").removeClass("hidden").addClass("visible"),
     $(".instruction-screen").removeClass("visible").addClass("hidden");
     audio.buttonClick();
 });
@@ -538,14 +549,15 @@ $('.settings-back-button').click( function() {
     Game Screen
     From Game Screen to Main Menu
  */
-$('.game-screen-main-menu-button').click( function() {
-    $(".game-screen").addClass("hidden").removeClass("visible"),
-    $(".main-menu-screen").addClass("visible").removeClass("hidden");
+$('#game-screen-main-menu-button').click( function() {
+    $("#game-screen").addClass("hidden").removeClass("visible"),
+    $("#main-menu-screen").addClass("visible").removeClass("hidden");
     audio.buttonClick();
-    $("#grid").empty();
-    cardsWon = [];
 })
 
+$('.game-screen-buttons').click( function() {
+    audio.buttonClick();
+})
 
 /* 
     End game screen
@@ -556,7 +568,7 @@ $('.game-screen-main-menu-button').click( function() {
 $("#end-restart-btn").click( function () {
     $('#end-screen').addClass('hidden').removeClass('visible'),
     $('#game-screen').removeClass('hidden').addClass('visible');
-    clearRewards()
+    audio.buttonClick();
     resetGame();
 });
 
@@ -570,8 +582,8 @@ $('#end-main-menu-btn').click( function () {
     $('#end-screen').addClass('hidden').removeClass('visible'),
     $('#main-menu-screen').removeClass('hidden').addClass('visible'),
     $('#game-screen').removeClass('visible').addClass('hidden');
-    clearRewards();
     audio.buttonClick();
+    stopGame();
     
 });
 
