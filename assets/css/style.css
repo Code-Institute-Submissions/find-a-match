@@ -24,10 +24,12 @@
     background-size: contain;
     font-family: 'Goblin One', cursive;
     font-size: 5vw;
-    color: black;
-    text-shadow: 1px 1px 13px #ffe400, 1px 1px 13px #ffffff; 
+    color: #af9100;
+    text-shadow: 0px 5px 4px #a70000, 1px 1px 7px #000000;
+    box-shadow: -1px 1px 17px 2px black;
+    border-radius: 10px;
+    background: #000000c2;
 }
-
 
 .main-menu,
 .instruction,
@@ -222,8 +224,7 @@ h3 {
 /* Game Screen */
 .game-screen {
     height: 100vh;
-    box-shadow: 0px 0px 7px 5px black, inset 0px 0px 20px 20px #000000;
-    top: 0px;
+    box-shadow: 0px 0px 7px 4px black, inset 0px 0px 13px 3px #000000;
     left: 0px; 
 }
 /* /game Screen */
@@ -232,7 +233,7 @@ h3 {
 .hidden {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s 5s, opacity 2s linear;
+  transition: visibility 0s 3s, opacity 2s linear;
 }
 
 .visible {
@@ -247,13 +248,13 @@ h3 {
 .score-counter {
     background-color: #000000;
     color: yellow;
-    width: 15vw;
     border: #adadad solid 2px;
     border-radius: 5px;
     font-family: 'Goblin One', cursive;
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
     padding: 11px;
+
 }
 /* /score-Match counters */
 
@@ -262,6 +263,7 @@ h3 {
     display: flex;
     height: 100%;
     width: 54vw;
+    top: 3vh;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
     grid-template-columns: auto auto auto auto;
@@ -279,9 +281,10 @@ h3 {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    box-shadow: #191919 5px 5px 5px 0px;
+    box-shadow: #191919 0px 0px 5px 0px;
     margin: 0.5vw;
 }
+
 /* /cards style */
 /* /cards grid position */
 
