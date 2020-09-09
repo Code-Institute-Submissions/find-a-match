@@ -321,29 +321,46 @@ function checkForMatch() {
             console.log("try harder")
         }
         console.log(value)
+        let value = 10;
         cardsWon = [];
     }
 }
+Rewards();
+value = 60;
 
-
-function getReward(rewardOne, rewardTwo, rewardThree, rewardFour) {
-    this.rewardOne = 'YOUR SCORE IS GREAT!';
+function Rewards(rewardOne, rewardTwo, rewardThree, rewardFour) {
+    this.rewardOne = 'YOUR ARE GENIUS!';
     this.rewardTwo = 'Ahhhh SO CLOSE!!!';
     this.rewardThree = 'Common YOU can do IT!!';
-    this.rewardFour = 'YOU just didn,t give your best this time\n\nTry again you can do it!,'
+    this.rewardFour = 'YOU CAN DO IT!';
+    this.rewardFifth = 'WHY YOU NOT PLAYING?'
 };
 
-
-
-getReward()
-console.log(rewardFour)
 function showReward() {
-    if (/* value < null && */ easyLevel == true) {
+    if ( value <= 30 && easyLevel == true) {
+        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-one.png"></img>');
+        $("#motivation-message").append('<h1>' + rewardOne + '</h1>');
+        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57);
+    } else if ( value <= 45  && easyLevel == true) {
+        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-two.png"></img>');
+        $('#motivation-message').append('<h1>' + rewardTwo + '</h1>');
+        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
+    } else if (value <= 50  && easyLevel == true) {
         $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-three.png"></img>');
+        $('#motivation-message').append('<h1>' + rewardThree + '</h1>');
+        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
+    } else if (value <= 60  && easyLevel == true) {
+        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-four.png"></img>');
+        $('#motivation-message').append('<h1>' + rewardFour + '</h1>');
+        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
+    } else {
+        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-fifth.png"></img>');
+        $('#motivation-message').append('<h1>' + rewardFifth + '</h1>');
+        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
     }
 }
 
-showReward()
+showReward(Rewards)
 
 
 function resetGame() {
