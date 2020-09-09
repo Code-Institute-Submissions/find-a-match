@@ -246,7 +246,29 @@ h3 {
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
     padding: 13px;
+}
 
+/* Check cards */
+
+.same-card {
+    background-color: yellow;
+    color: black;
+    font-family: 'Goblin One', cursive;
+    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+}
+
+.no-match {
+    background-color: red;
+    color: black;
+    font-family: 'Goblin One', cursive;
+    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+}
+
+.match-cards{
+    background-color: green;
+    color: black;
+    font-family: 'Goblin One', cursive;
+    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
 }
 
 /* Cards grid position */
@@ -309,7 +331,7 @@ h3 {
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
-    box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
+    box-shadow: 0px 0px 9px 1px #ffe600, inset 0px 0px 6px 3px #000000;
 }
 
 /* Rewards Messages */

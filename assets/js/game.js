@@ -22,7 +22,7 @@ class audioControl {
         this.click.play();
     }
     startMusic() {
-        this.bgMusic.currentTime = 2;
+        this.bgMusic.currentTime = 0;
         this.bgMusic.play();
     }
     stopMusic() {
@@ -218,20 +218,19 @@ let easyLevel = null; //TRUE FOR TESTING R --> null
 */
 // Show time in time element
 function changeValue() {
-    document.getElementById("time").innerHTML = 
-        "Your time : " + ++  value;
+    document.getElementById("time").innerHTML = 'SCORE : ' + ++  value;
 };
 
 function startTimer() {
   stopTimer(); // stoping the previous counting (if any)
-  value = 0; // start value
+  value = -2; // start value
   timer = setInterval(changeValue, 1000);
 }
 
 let stopTimer = function() {
   clearInterval(timer); // clear timer timer start from 0
    // update visual counter to 0
-  document.getElementById("time").innerHTML = " 0 ";
+  document.getElementById("time").innerHTML = " - ";
 }
 
 /*   
@@ -272,7 +271,7 @@ $('#easy').click(() => {
     easyLevel = true;
     audio.startMusic();
     startGame();
-    setTimeout(startTimer, 1500);
+    setTimeout(startTimer, 1000);
 });
 
 $('#hard').click(() => {
@@ -281,7 +280,7 @@ $('#hard').click(() => {
     audio.buttonClick();
     easyLevel = false;
     startGame();
-    setTimeout(startTimer, 1500);
+    setTimeout(startTimer, 1000);
 });
 
 
@@ -307,7 +306,6 @@ function createBoard() {
         card.setAttribute('class', `cards`);
         card.addEventListener('click', flipCard);
         grid.appendChild(card);
-    
     }
 }
 
@@ -342,19 +340,24 @@ function checkForMatch() {
         cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
         cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
         // if cards are same show this message
-        matchDisplay.textContent = 'Sorry that is same card';
+        matchDisplay.textContent = 'SAME CARD!';
+        document.getElementById("card-check").classList.add('same-card');
+        document.getElementById("card-check").classList.remove('match-cards','no-match' );
+
     }
     // If Match
     else if (cardsChosen[0] === cardsChosen[1]) {
         // check for cards names
         // if shot this message
-        matchDisplay.textContent = 'You Found a match';
+        matchDisplay.textContent = 'MATCH!';
         // if is match toggle class hidden 
         // cards disappear from board
         cards[optionOneId].classList.toggle("hidden");
         cards[optionTwoId].classList.toggle("hidden");
         cards[optionOneId].removeEventListener('click', flipCard);
         cards[optionTwoId].removeEventListener('click', flipCard);
+        document.getElementById("card-check").classList.add('match-cards');
+        document.getElementById("card-check").classList.remove('same-card','no-match' );
         // push choosen cards to cards won
         cardsWon.push(cardsChosen);
         audio.matchCard();
@@ -363,7 +366,9 @@ function checkForMatch() {
          // flip cards back and show back card image
         cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
         cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
-        matchDisplay.textContent = 'Sorry No Match!';
+        document.getElementById("card-check").classList.add('no-match');
+        document.getElementById("card-check").classList.remove('same-card','match-cards' );
+        matchDisplay.textContent = 'NOPE!';
         audio.noMatch();
     }
     // clean arrays for next check
@@ -373,7 +378,7 @@ function checkForMatch() {
     if (cardsWon.length === cardsList.length / 2) {
         console.log(cardsWon.length)
         document.getElementById("end-screen").classList.remove("hidden");
-        document.getElementById("game-screen").classList.add("hidden");
+        /* document.getElementById("card-check").classList.add("hidden"); */
         $("#grid").empty();
         stopTimer();
         Rewards();
@@ -451,19 +456,23 @@ function clearRewards() {
 function resetGame() {
     stopTimer();
     $("#grid").empty();
-    startGame();
+    createBoard();
+    document.getElementById("card-check").classList.remove('match-cards','no-match', 'same-card' );
     matchDisplay.textContent = '-';
-    setTimeout(startTimer, 1500);
+    setTimeout(startTimer, 1000);
     cardsWon = [];
     clearRewards();
+    audio.startMusic();
 }
 
 
 function startGame() {
     createBoard();
-    cardsWon = [];
+    startTimer();
+    matchDisplay.textContent = '-';
+    setTimeout(startTimer, 1000);
+    document.getElementById("card-check").classList.remove('match-cards','no-match', 'same-card' );
 }
-
 
 
 /* 
