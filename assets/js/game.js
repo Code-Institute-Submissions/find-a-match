@@ -313,20 +313,20 @@ function checkForMatch() {
     /* resultDisplay.textContent = cardsWon.length; */
     if (cardsWon.length === cardsList.length / 2) {
         document.getElementById("end-screen").classList.remove("hidden");
+        document.getElementById("game-screen").classList.add("hidden");
         $("#grid").empty();
         stopTimer();
-        if (value < 20) {
-            alert("genius")
-        } if (value > 20) {
-            console.log("try harder")
-        }
-        console.log(value)
-        let value = 10;
+        Rewards();
+        showReward();
         cardsWon = [];
     }
 }
+
+
+//for testing messages REMOVE LATER
+/* value = 30;
 Rewards();
-value = 51;
+showReward(); */
 
 function Rewards(rewardOne, rewardTwo, rewardThree, rewardFour) {
     this.rewardOne = 'YOUR ARE GENIUS!';
@@ -339,33 +339,44 @@ function Rewards(rewardOne, rewardTwo, rewardThree, rewardFour) {
 function showReward() {
     if (( value <= 30 && easyLevel == true) ||
         ( value <= 20 && easyLevel == false)) {
-        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-one.png"></img>');
-        $("#motivation-message").append('<h1>' + rewardOne + '</h1>');
-        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57);
+        $("#reward-image").append('<img class="reward" src="assets/images/rewards/reward-one.png"></img>');
+        $("#motivation-message").append('<div class="reward">' + rewardOne + '</div>');
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value +'</div>');
     } else if (( value <= 45  && easyLevel == true) || 
        ( value <= 30 && easyLevel == false)) {
-        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-two.png"></img>');
-        $('#motivation-message').append('<h1>' + rewardTwo + '</h1>');
-        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
+        $("#reward-image").append('<img class="reward" src="assets/images/rewards/reward-two.png"></img>');
+        $('#motivation-message').append('<div class="reward">' + rewardTwo + '</div>');
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value +       '</div>')
     } else if ((value <= 50  && easyLevel == true) || 
        ( value <= 35 && easyLevel == false)) {
-        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-three.png"></img>');
-        $('#motivation-message').append('<h1>' + rewardThree + '</h1>');
-        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
+        $("#reward-image").append('<img class="reward" src="assets/images/rewards/reward-three.png"></img>');
+        $('#motivation-message').append('<div class="reward">' + rewardThree + '</div>');
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + 57 +       '</div>')
     } else if ((value <= 60  && easyLevel == true) || 
        ( value <= 40 && easyLevel == false)) {
-        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-four.png"></img>');
-        $('#motivation-message').append('<h1>' + rewardFour + '</h1>');
-        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
+        $("#reward-image").append('<img class="reward" src="assets/images/rewards/reward-four.png"></img>');
+        $('#motivation-message').append('<div class="reward">' + rewardFour + '</div>');
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + 57 +       '</div>')
     } else if ((value > 60  && easyLevel == true) || 
        ( value > 50 && easyLevel == false)) {
-        $("#reward-image").append('<img class="reward-image" src="assets/images/rewards/reward-fifth.png"></img>');
-        $('#motivation-message').append('<h1>' + rewardFifth + '</h1>');
-        $("#score").append('YOUR TIME' + "   " + ':' + "   " + 57)
+        $("#reward-image").append('<img class="reward" src="assets/images/rewards/reward-fifth.png"></img>');
+        $('#motivation-message').append('<div class="reward">' + rewardFifth + '</div>');
+        $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + 57 + '</div>')
     }     
 }  
 
-showReward()
+/* 
+    Remove reward messages from DOM
+    Targeted by class = reward    
+*/
+function clearRewards() {
+    let rewards = document.getElementsByClassName('reward'),
+    element;
+        while (element = rewards[0]) {
+            element.parentNode.removeChild(element);
+    };
+};
+
 
 function resetGame() {
     stopTimer();
@@ -374,13 +385,13 @@ function resetGame() {
     matchDisplay.textContent = '-';
     setTimeout(startTimer, 1500);
     cardsWon = [];
+    clearRewards()
 }
 
 function startGame() {
     createBoard();
     cardsWon = [];
 }
-
 
 
 // Main Menu 
@@ -437,18 +448,24 @@ $('.game-screen-main-menu-button').click( function() {
     cardsWon = [];
 })
 
-// End game screen
-$('.restart-game').click( function () {
-    $("#end-screen").toggleClass("hidden");
-    audio.buttonClick();
+/* 
+    End game screen
+    Restart button
+    End game screen hidden 
+    Game screen visible
+ */
+$("#end-restart-btn").click( function () {
+    $('#end-screen').toggleClass('hidden'),
+    $('#game-screen').removeClass('hidden').addClass('visible');
 });
 
+
 // From Game End screen to Main Menu and back
-$('.main-menu-in-game').click( function () {
-    $(".game-screen").addClass("hidden").removeClass("visible"),
-    $(".main-menu-screen").removeClass("hidden").addClass("visible"),
-    $("#end-screen").removeClass("visible").addClass("hidden");
-    audio.buttonClick();
+$("#end-main-menu-btn").click( function () {
+    $('#game-screen').addClass('hidden').removeClass('visible'),
+    $('#main-menu-screen').removeClass('hidden').addClass('visible'),
+    $('#end-screen').removeClass('visible').addClass('hidden');
+    audio.butto'Click()'
     
 });
 

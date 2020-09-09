@@ -21,7 +21,8 @@
 
 <!-- Main Menu  -->
 <body>
-   <div class="container-fluid main-menu-screen hidden screens theme-red">
+   <div id="main-menu-screen" class="container-fluid main-menu-screen visible screens theme-red">
+   <div id="" class="container-fluid main-menu-screen visible screens theme-red">
         <div class="container-fluid">
             <div class="row">
                 <div class="col mb-5 text-center main-menu-logo">Find-A-Match</div>
@@ -105,7 +106,7 @@
 
 
 	<!-- Game Screen -->
-	<div class="container-fluid game-screen  theme-red screens hidden">
+	<div id="game-screen" class="container-fluid game-screen  theme-red screens hidden">
 		<div class="row">
 			<div class="col-12 text-center logo">Find-a-Match</div>
 			<div class="container">
@@ -146,17 +147,17 @@
 		</div>
 	</div> -->
 
-    <div id="end-screen" class="container-fluid theme-red screens end-screen-container"> 
+    <div id="end-screen" class="container-fluid hidden theme-red screens end-screen-container"> 
 		<div class="row end-screen text-center" id="end-message">
             <div class="col-12 pt-2 win-message" >CONGRATULATION!</div>
+            <div class="col-12 end-screen-items" style="color: #2cdc00;" >YOU FIND THEM ALL!</div>
             <div class="col-12 end-screen-items" id="reward-image"></div>
-            <div class="col-12 end-screen-items" >YOU FIND THEM ALL!</div>
             <div class="col-12 motivation-message" id="motivation-message"></div>
             <div class="col-12 end-screen-items" id="score"></div>
             <div class="col-12 end-screen-items end-buttons">
                 <div class="row no-gutters pb-2 justify-content-around">
-                    <div role="button" class="col-3 end-screen-buttons">MAIN-MENU</div>
-                    <div class="col-3 end-screen-buttons">RESTART</div>
+                    <div id="end-main-menu-btn" class="col-4 end-screen-buttons">MAIN MENU</div>
+                    <div id="end-restart-btn" class="col-4 end-screen-buttons" onclick="resetGame();">RESTART</div>
                 </div>
             </div>
 		</div>

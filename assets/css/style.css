@@ -78,7 +78,7 @@
 .settings-button,
 .instruction-button,
 .instruction-back-button,
-.main-menu-in-game,
+.end-main-menu-btn,
 .settings-back-button,
 .game-screen-main-menu-button,
 .restart-game {
@@ -97,7 +97,7 @@
 .settings-button:hover,
 .instruction-button:hover,
 .instruction-back-button:hover,
-.main-menu-in-game:hover,
+.end-main-menu-btn:hover,
 .settings-back-button:hover,
 .game-screen-main-menu-button:hover,
 .restart-game:hover,
@@ -123,7 +123,7 @@
 }
 
 .end-screen-buttons {
-    font-size: 1.4vw;
+    font-size: 1.8vw;
     background-color: #580200;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
@@ -304,9 +304,9 @@ h3 {
 .end-screen {
     margin-top: auto;
     position: fixed;
-    top: 23vh;
+    top: 17vh;
     left: 19vw;
-    height: 53vh;
+    height: 64vh;
     background-color: black;
     border: 2px solid gray;
     width: 64vw;
@@ -342,12 +342,11 @@ h3 {
     align-self: center;
     font-family: 'Goblin One', cursive;
     color: red;
-    font-size: 2.4vw;
+    font-size: 2.3vw;
     padding: 0.5vh;
 }
 /* Align All End Screen Items To Middle */
 .end-screen-items {
-    align-self: center;
     font-family: 'Goblin One', cursive;
     font-size: 1vw;
     padding: 0.5vh;
