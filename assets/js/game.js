@@ -434,9 +434,9 @@ $(document).ready(function () {
             $('#motivation-message').append('<div class="reward">' + rewardFour + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
 
-            // Over 35 easy 45 hard    
-        } else if ((value > 35 && easyLevel == true) ||
-            (value > 45 && easyLevel == false)) {
+            // Over 30 easy 40 hard    
+        } else if ((value > 30 && easyLevel == true) ||
+            (value > 40 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-fifth.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardFifth + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
