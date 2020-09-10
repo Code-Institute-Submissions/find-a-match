@@ -406,9 +406,9 @@ $(document).ready(function () {
         Then show messages
     */
     function showReward() {
-        // Under 15 easy 20 hard
-        if ((value <= 15 && easyLevel == true) ||
-            (value <= 20 && easyLevel == false)) {
+        // Under 6 easy 9 hard
+        if ((value <= 6 && easyLevel == true) ||
+            (value <= 9 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-one.png"></img>');
             $("#motivation-message").append('<div class="reward">' + rewardOne + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>');
@@ -427,15 +427,15 @@ $(document).ready(function () {
             $('#motivation-message').append('<div class="reward">' + rewardThree + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
 
-            // Under 30 easy 40 hard
-        } else if ((value <= 30 && easyLevel == true) ||
+            // Under 35 easy 40 hard
+        } else if ((value <= 35 && easyLevel == true) ||
             (value <= 40 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-four.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardFour + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
 
-            // Over 30 easy 40 hard    
-        } else if ((value > 30 && easyLevel == true) ||
+            // Over 35 easy 40 hard    git 
+        } else if ((value > 35 && easyLevel == true) ||
             (value > 40 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-fifth.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardFifth + '</div>');
@@ -467,7 +467,7 @@ $(document).ready(function () {
         audio.startMusic();
     }
 
-
+    
     function startGame() {
         createBoard();
         startTimer();
@@ -486,7 +486,6 @@ $(document).ready(function () {
         cardsWon = [];
         clearRewards();
     }
-
 
     function screenPortrait() {
         $("#mobile").append('<div class="col-10 mx-auto text-center mobile-message">THIS GAME PLAYS IN LANDSCAPE MODE</div>');
