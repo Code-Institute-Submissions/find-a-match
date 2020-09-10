@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
-    //Game sounds
+
+    //Game Sound Constructor
     class audioControl {
         constructor() {
             this.flipSound = new Audio('assets/audio/flip-card.mp3');
@@ -209,14 +210,14 @@ $(document).ready(function () {
     /* Easy level initial state
        Game level determinated by player choise 
     */
-    let easyLevel = null; //TRUE FOR TESTING R --> null
+    let easyLevel = null;
 
 
     /* 
         Game timer functions
         Value is seconds needed for find all matching cards 
+        Show time in time element
     */
-    // Show time in time element
     function changeValue() {
         document.getElementById("time").innerHTML = 'SCORE : ' + ++value;
     };
@@ -233,16 +234,18 @@ $(document).ready(function () {
         document.getElementById("time").innerHTML = " - ";
     }
 
+
     /*   
         Game sound 
         Sound can be controlled only from main menu
+        Main Menu Sound Button
     */
-    // Main Menu button
     $('#soundBtn').click(() => {
         let soundOn = sound;
         soundOn ? stopBgSound() : startBgSound();
     });
 
+    // Stop Background Music
     function stopBgSound() {
         sound = false;
         $('#soundBtn').addClass('soundOff');
@@ -251,6 +254,7 @@ $(document).ready(function () {
         audio.stopMusic();
     }
 
+    // Start Background Music
     function startBgSound() {
         sound = true;
         $('#soundBtn').addClass('soundOn');
@@ -260,10 +264,7 @@ $(document).ready(function () {
     }
 
 
-    /* 
-        Game Levels Easy and Hard
-     
-    */
+    // Easy Level
     $('#easy').click(() => {
         $(".game-screen").removeClass("hidden").addClass("visible");
         $(".lvl-screen").addClass("hidden").removeClass("visible");
@@ -275,6 +276,7 @@ $(document).ready(function () {
         setTimeout(startTimer, 1000);
     });
 
+    // Hard Level
     $('#hard').click(() => {
         $(".game-screen").removeClass("hidden").addClass("visible");
         $(".lvl-screen").addClass("hidden").removeClass("visible");
@@ -325,7 +327,7 @@ $(document).ready(function () {
         this.setAttribute('src', cardsList[cardId].img);
         audio.flip();
         if (cardsChosen.length === 2) { // check if player choose 2 cards
-            setTimeout(checkForMatch, 300); // if check for match 500 ms half second
+            setTimeout(checkForMatch, 300); // if check for match 300 ms
         }
     }
 
@@ -380,7 +382,6 @@ $(document).ready(function () {
         if (cardsWon.length === cardsList.length / 2) {
             console.log(cardsWon.length)
             document.getElementById("end-screen").classList.remove("hidden");
-            /* document.getElementById("card-check").classList.add("hidden"); */
             $("#grid").empty();
             stopTimer();
             Rewards();
@@ -402,8 +403,8 @@ $(document).ready(function () {
 
     /* 
         Show rewards
-        Determinate which level is chosen and time
-        Then show messages
+        Determinate which level is chosen and player score
+        Then show rewards.
     */
     function showReward() {
         // Under 6 easy 9 hard
@@ -444,7 +445,12 @@ $(document).ready(function () {
     }
 
 
-    // For clear rewards messages 
+    /* 
+        Clear Reward Messages
+        Clear feedback message and set up for new one.
+        After each game player get new message(reward)
+        based on time (score) needed for complete level. 
+    */
     function clearRewards() {
         let rewards = document.getElementsByClassName('reward'),
             element;
@@ -467,7 +473,7 @@ $(document).ready(function () {
         audio.startMusic();
     }
 
-    
+    // Start Game
     function startGame() {
         createBoard();
         startTimer();
@@ -476,7 +482,7 @@ $(document).ready(function () {
         document.getElementById("card-check").classList.remove('match-cards', 'no-match', 'same-card');
     }
 
-
+    // Stop Game
     function stopGame() {
         stopTimer();
         $("#grid").empty();
@@ -487,13 +493,25 @@ $(document).ready(function () {
         clearRewards();
     }
 
+
+    /* 
+        Small screen message.
+        When screen is in portrait orijentation ask
+        player to rotate phone.
+    */
     function screenPortrait() {
         $("#mobile").append('<div class="col-10 mx-auto text-center mobile-message">THIS GAME PLAYS IN LANDSCAPE MODE</div>');
         $("#mobile").append('<div class="col-12 mx-auto text-center mobile-message"><img class="mx-auto mobile-image" src="assets/images/rotate-device.png" alt="rotate-device-img"></div>');
         $("#mobile").append('<div class="col-10 mx-auto text-center mobile-message">PLEASE ROTATE YOUR DEVICE</div>');
     }
     
-    //Clear mobile screen orijentation messages
+    /*
+        Clear mobile screen orijentation messages
+        when player rotate screen old message is deleted
+        coded this way because orijentation is detected
+        ON rotate.
+        Code copyed from https://stackoverflow.com/
+    */
     function clearMobileMessage() {
         let message = document.getElementsByClassName('mobile-message'),
             element;
@@ -508,6 +526,7 @@ $(document).ready(function () {
         if (getOrientation() !== 'landscape') {
             // you're in PORTRAIT mode
             screenPortrait();
+            audio.stopMusic();
             $(".main-menu-screen").removeClass("visible").addClass("hidden"),
             $("#main-menu-screen").removeClass("visible").addClass("hidden"),
             $(".mobile-container").removeClass("hidden").addClass("visible");
@@ -524,7 +543,7 @@ $(document).ready(function () {
 
     }, false);
     
-
+    // Get Orijentation
     function getOrientation() {
         // if window.orientation is available...
         if (window.orientation && typeof window.orientation === 'number') {
@@ -555,7 +574,7 @@ $(document).ready(function () {
 
 
     /*
-        Main menu
+        Main Menu
         Settings Button
         Main Menu disapear and settings appear
     */
@@ -567,7 +586,7 @@ $(document).ready(function () {
 
 
     /*
-        Instruction
+        Instruction Screen
         Instruction Button
         Main Menu disapear and Instruction appear
     */
@@ -579,8 +598,8 @@ $(document).ready(function () {
 
 
     /*
-        Instruction
-        Instruction back button
+        Instruction Screen
+        Instruction Button
         From Instruction to Main Menu
      */
     $('.instruction-back-button').click(function () {
@@ -591,8 +610,8 @@ $(document).ready(function () {
 
 
     /*
-    Settings 
-    Settings back button to Main Menu
+        Settings Menu
+        Settings back button to Main Menu
      */
     $('.settings-back-button').click(function () {
         $("#main-menu-screen").removeClass("hidden"),
@@ -613,12 +632,12 @@ $(document).ready(function () {
     })
 
 
-    //Game screen reset game button
+    // Game screen reset game button
     $('#reset-btn').click(function () {
        resetGame();
     });
 
-
+    // Sound for Game Screen Buttons
     $('.game-screen-buttons').click(function () {
         audio.buttonClick();
     })
