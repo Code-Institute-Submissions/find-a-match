@@ -268,7 +268,7 @@ $(document).ready(function () {
     $('#easy').click(() => {
         $(".game-screen").removeClass("hidden").addClass("visible");
         $(".lvl-screen").addClass("hidden").removeClass("visible");
-        $("#grid").addClass('grid-easy').removeClass('grid-hard');
+        $("#grid").addClass('grid-easy col-7 mt-3').removeClass('grid-hard col-11');
         audio.buttonClick();
         easyLevel = true;
         audio.startMusic();
@@ -280,7 +280,7 @@ $(document).ready(function () {
     $('#hard').click(() => {
         $(".game-screen").removeClass("hidden").addClass("visible");
         $(".lvl-screen").addClass("hidden").removeClass("visible");
-        $("#grid").addClass('grid-hard').addClass('col-7').removeClass('grid-easy');
+        $("#grid").addClass('grid-hard').addClass('col-11 mt-3').removeClass('grid-easy col-7');
         audio.buttonClick();
         easyLevel = false;
         startGame();

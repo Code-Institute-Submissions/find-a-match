@@ -116,7 +116,7 @@
     font-size: 0.7vw;
     padding: 4px;
     background-color: #580200;
-    padding-top: 15px;
+    padding-top: 1vw;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
     box-shadow: inset 0px 0px 20px 1px #000000;
@@ -246,7 +246,7 @@ h3 {
     font-family: 'Goblin One', cursive;
     box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
-    padding: 13px;
+    padding: 1vw;
 }
 
 /* Check cards */
@@ -274,7 +274,7 @@ h3 {
 
 /* Cards grid position */
 .grid-easy {
-    display: grid;
+    display: flex;
     height: 100%;
     position: relative;
     justify-content: center;
