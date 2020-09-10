@@ -604,7 +604,7 @@ $(document).ready(function () {
 
     /*
         Game screen
-        From game screen to main menu
+        From game screen to main enu
      */
     $('#game-screen-main-menu-button').click(function () {
         $("#game-screen").addClass("hidden").removeClass("visible"),

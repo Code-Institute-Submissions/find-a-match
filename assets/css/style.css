@@ -399,6 +399,7 @@ h3 {
     box-shadow: 0px 0px 10px 2px black;
 }
 
+<<<<<<< HEAD
 .mobile-container {
     height: 100vh;
     background-color: black;
@@ -430,3 +431,8 @@ h3 {
     background: url(../images/instruction.png) no-repeat center center;
     background-size: contain;
 }
+=======
+.instruction-image {
+    height: 14vh;
+}
+>>>>>>> 82b6e68d3c283840042d3073dcaacc47d777abae
