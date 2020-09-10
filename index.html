@@ -5,167 +5,187 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- /required meta tags -->
+	<!-- /required meta tags -->
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- /bootstrap css -->
+	<!-- /bootstrap css -->
 
 	<!-- Style Css -->
-	<link rel="stylesheet" href="assets/css/style.css"/>
-    <!-- /style css -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<!-- /style css -->
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
-    <!-- /google font -->
+	<!-- /google font -->
 
 	<title>Find-a-Match</title>
 </head>
 
 
 <body>
+	<!-- //LOADING AND INSTRUCTION MAKE PROBLEMS -->
+    <!-- // When image src is set up in img tag script is not worning -->
     <!-- Loading Screen // for xs-md screens -->
-   <!--  <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 mx-auto text-center"></div>
-            <div class="col-12 mx-auto text-center"></div>
-            <div class="col-12 mx-auto text-center"></div>
-        </div>
+		<!--  <div class="container-fluid d-block d-md-block d-lg-none p-0 mobile-container">     	
+        <div class="row no-gutters" id="mobile">	
+            <div class="col-10 mx-auto text-center mobile-message">THIS GAME PLAYS IN LANDSCAPE MODE</div>	
+            <div class="col-10 text-center mobile-message">	
+                <img class="mx-auto mobile-message mobile-image" src="assets/images/rotate.png"      alt="rotate-device-img">	
+            </div>	
+            <div class="col-10 mx-auto text-center mobile-message">PLEASE ROTATE YOUR DEVICE</div>	
+        </div>	
     </div> -->
-    <!-- /loading screen // for xs-md screens -->
+		<!-- /loading screen // for xs-md screens -->
 
-    <!-- Main Menu  -->
-   <div class="container-fluid main-menu-screen screens theme-red">
-   <div id="main-menu-screen" class="container-fluid  
-   screens theme-red">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 mb-5 mx-auto text-center main-menu-logo">Find-A-Match</div>
+    <!-- Loading Screen // for xs-md screens -->
+    <div class="container-fluid d-block d-md-block d-lg-none p-0 mobile-container">
+        <div class="row no-gutters" id="mobile">
+            <div class="col-10 mx-auto text-center              mobile-message">THIS GAME PLAYS IN LANDSCAPE MODE
             </div>
-        </div>
-        <div class="container text-center main-menu">
-            <div class="row d-inline align-self-center">
-                <div class="col mx-auto menu-title">Main Menu</div>
-                <div role="button" class="col-4 mx-auto new-game-button main-menu-buttons">New Game</div>
-                <div class="col-4 mx-auto instruction-button main-menu-buttons">Instruction</div>
-                <div class="col-4 mx-auto settings-button main-menu-buttons">Settings</div>
+            <div class="col-10 mx-auto text-center mobile-message mobile-image">		
             </div>
-        </div>
-    </div> 
-	<!-- /main Menu  -->
-
-    <!-- Instruction Screen -->
-    <div class="container-fluid instruction-screen screens hidden theme-red" >
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 mb-5 mx-auto text-center main-menu-logo">Find-A-Match</div>
-            </div>
-        </div>
-        <div class="container text-center instruction">
-            <div class="row d-inline p-1 align-self-center">
-                <div class="col mx-auto p-1 instruction-title">Instruction</div>
-                <div class="col mx-auto m-1 p-1 instruction-container">
-                    <h3>Find-A-Match Game Main Goal</h3>
-                    <h3>Is To Find All Matching Cards!</h3>
-                    <h3>Have Fun!</h3>
-                    <h3>And Good Luck!</h3>
-                </div>
-                <div role="button" class="col-4 p-2 mx-auto text-center instruction-back-button">Main Menu</div>
-            </div>
-        </div>
+            <div class="col-10 mx-auto text-center mobile-message">PLEASE ROTATE YOUR DEVICE
+            </div>	
+        </div>	
     </div>
-    <!-- /instruction screen -->
+		<!-- /loading screen // for xs-md screens -->
 
-	<!-- Settings Menu -->
-	<div class="container-fluid settings-menu-screen screens hidden theme-red">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-10 mb-5 mx-auto text-center main-menu-logo">Find-A-Match</div>
-            </div>
-        </div>
-        <div class="container text-center p-1 setings-menu">
-            <div class="row no-gutters d-inline p-2 align-self-center">
-                <div class="col mx-auto p-1 settings-title">Settings</div>
-                <div class="col theme-title">Choose you theme</div>
-                      <div class="row no-gutters p-2 justify-content-center">
-                        <div class="col theme-container setting-theme-green"></div>
-                        <div class="col theme-container setting-theme-red"></div>
-                        <div class="col theme-container setting-theme-yellow"></div>                      
-                     </div>
-                <div role="button" class="col-4 p-2 mx-auto text-center settings-back-button">Main Menu</div>
-            </div>
-        </div>
-    </div>
-	<!-- /settings menu -->
+	<!-- Main Menu  -->
+	<div class="container-fluid main-menu-screen screens theme-red">
+		<div id="main-menu-screen" class="container-fluid  	
+            screens theme-red ">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-10 mb-5 mx-auto text-center main-menu-logo">Find-A-Match</div>
+				</div>
+			</div>
+			<div class="container text-center main-menu">
+				<div class="row d-inline align-self-center">
+					<div class="col m-3 mx-auto menu-title">Main Menu</div>
+					<div role="button" class="col-5 m-3  mx-auto new-game-button main-menu-buttons">New Game</div>
+					<div class="col-5 m-3 mx-auto instruction-button main-menu-buttons">Instruction</div>
+					<div class="col-5 m-3 mx-auto settings-button main-menu-buttons">Settings</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col footer text-center">For educational purposes @ 2020 by Ivan Tepes
+				</div>
+			</div>
+		</div>
+		<!-- /main Menu  -->
 
-    <!-- Difficulty Screen -->
-	<div class="container-fluid lvl-screen screens hidden theme-red">
-		<div class="container-fluid">
+        <!-- Instruction Screen -->	
+		<div class="container-fluid instruction-screen screens hidden theme-red">	
+			<div class="container-fluid">	
+				<div class="row">	
+					<div class="col-10 mb-5 mx-auto text-center main-menu-logo">Find-A-Match</div>	
+				</div>	
+			</div>	
+			<div class="container text-center instruction">	
+				<div class="row d-inline p-1">	
+					<div class="col mx-auto p-1 instruction-title">Instruction</div>	
+					<div class="col mx-auto m-1 p-1 instruction-container">	
+                    <div class="col-10 mx-auto text-center mobile-message instruction-image">		
+                    </div>	
+						<h3>Rules are simple! Find two same cards.</h3>	
+						<h3>Find them all and game ends!</h3>	
+						<h3>Watch on time!</h3>	
+						<h3>Have Fun And Good Luck!</h3>	
+                        <div role="button" class="col-8 mt-4 p-2 mx-auto text-center instruction-back-button">Main Menu</div>	
+					</div>	
+				</div>	
+			</div>	
+		</div>
+
+		<!-- Settings Menu -->
+		<div class="container-fluid settings-menu-screen screens hidden theme-red">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-10 mb-5 mx-auto text-center main-menu-logo">Find-A-Match</div>
+				</div>
+			</div>
+			<div class="container text-center p-1 setings-menu">
+				<div class="row no-gutters d-inline p-2 align-self-center">
+					<div class="col mx-auto p-1 settings-title">Settings</div>
+					<div class="col theme-title">Choose you theme</div>
+					<div class="row no-gutters p-2 justify-content-center">
+						<div class="col theme-container setting-theme-green"></div>
+						<div class="col theme-container setting-theme-red"></div>
+						<div class="col theme-container setting-theme-yellow"></div>
+					</div>
+					<div role="button" class="col-4 p-2 mx-auto text-center settings-back-button">Main Menu</div>
+				</div>
+			</div>
+		</div>
+		<!-- /settings menu -->
+
+		<!-- Difficulty Screen -->
+		<div class="container-fluid lvl-screen screens hidden theme-red">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-10 mx-auto mb-5 text-center main-menu-logo">Find-A-Match</div>
+				</div>
+			</div>
+			<div class="container text-center p-1 lvl-menu">
+				<div class="row no-gutters d-inline p-2 align-self-center">
+					<div class="col mx-auto p-1 lvl-title">Choose Difficulty</div>
+					<div class="row no-gutters p-2 justify-content-center">
+						<div class="col lvl-button" onclick="" id="easy">Easy</div>
+						<div class="col lvl-button" onclick="" id="hard">Hard</div>
+					</div>
+					<div class="row theme-title no-gutters">
+						<div class="col">Contain 12 game titles</div>
+						<div class="col">Contain 18 game titles</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /difficulty screen -->
+
+		<!-- Game Screen -->
+		<div id="game-screen" class="container-fluid game-screen  theme-red screens hidden">
 			<div class="row">
-				<div class="col-10 mx-auto mb-5 text-center main-menu-logo">Find-A-Match</div>
+				<div class="col-10 m-3 mx-auto text-center game-screen-logo">Find-a-Match</div>
 			</div>
-		</div>
-		<div class="container text-center p-1 lvl-menu">
-			<div class="row no-gutters d-inline p-2 align-self-center">
-				<div class="col mx-auto p-1 lvl-title">Choose Difficulty</div>
-				<div class="row no-gutters p-2 justify-content-center">
-					<div class="col lvl-button" onclick="" id="easy">Easy</div>
-					<div class="col lvl-button" onclick="" id="hard">Hard</div>
+			<div class="row" style="justify-content: space-evenly">
+				<div class="col-3 score-counter text-center score">
+					<div class="container"><span id="time"> - </span></div>
 				</div>
-                <div class="row theme-title no-gutters">
-					<div class="col">Contain 12 game titles</div>
-					<div class="col">Contain 18 game titles</div>
+				<div id="reset-btn" class="col-1 text-center game-screen-buttons"      >RESET GAME</div>
+				<div id="game-screen-main-menu-button" class="col-1 text-center game-screen-buttons"
+					>MAIN MENU</div>
+				<div class="col-1 text-center game-screen-buttons soundOn" id="soundBtn">SOUND ON</div>
+				<div id="card-check" class="col-3 match-indicator text-center">
+					<div class="container p-0">
+						<span id="match-no-match"> - </span>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-    <!-- /difficulty screen -->
+			<div class="row">
+				<div id="grid" class="mx-auto col">
+				</div>
+			</div>
 
-	<!-- Game Screen -->
-	<div id="game-screen" class="container-fluid game-screen  theme-red screens hidden">
-		<div class="row">
-			<div class="col-10 m-3 mx-auto text-center game-screen-logo">Find-a-Match</div>
 		</div>
-		<div class="row" style="justify-content: space-evenly">
-			<div class="col-3 score-counter text-center score">
-				<div class="container"><span id="time"> - </span></div>
-			</div>
-			<div class="col-1 text-center game-screen-buttons" onclick="resetGame()">RESET GAME</div>
-			<div id="game-screen-main-menu-button" class="col-1 text-center game-screen-buttons" onclick="stopGame()">MAIN
-				MENU</div>
-			<div class="col-1 text-center game-screen-buttons soundOn" id="soundBtn">SOUND ON</div>
-			<div id="card-check" class="col-3 match-indicator text-center">
-				<div class="container p-0">
-					<span id="match-no-match"> - </span>
+		<!-- /game-screen -->
+
+		<!-- End Game Screen -->
+		<div id="end-screen" class="container-fluid hidden theme-red screens end-screen-container">
+			<div class="row end-screen text-center" id="end-message">
+				<div class="col-12 pt-2 win-message">CONGRATULATION!</div>
+				<div class="col-12 end-screen-items" style="color: #2cdc00;">YOU FIND THEM ALL!</div>
+				<div class="col-12 end-screen-items" id="reward-image"></div>
+				<div class="col-12 motivation-message" id="motivation-message"></div>
+				<div class="col-12 end-screen-items" id="score"></div>
+				<div class="col-12 end-screen-items end-buttons">
+					<div class="row no-gutters pb-2 justify-content-around">
+						<div id="end-main-menu-btn" class="col-4 end-screen-buttons">MAIN MENU</div>
+						<div id="end-restart-btn" class="col-4 end-screen-buttons">RESTART</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div id="grid" class="mx-auto col">
-			</div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col footer text-center">For educational purposes @ 2020 by Ivan Tepes<div>
-		</div>
-	</div>
-	</div>
-	<!-- /game-screen -->
-
-    <!-- End Game Screen -->
-    <div id="end-screen" class="container-fluid hidden theme-red screens end-screen-container"> 
-		<div class="row end-screen text-center" id="end-message">
-            <div class="col-12 pt-2 win-message" >CONGRATULATION!</div>
-            <div class="col-12 end-screen-items" style="color: #2cdc00;" >YOU FIND THEM ALL!</div>
-            <div class="col-12 end-screen-items" id="reward-image"></div>
-            <div class="col-12 motivation-message" id="motivation-message"></div>
-            <div class="col-12 end-screen-items" id="score"></div>
-            <div class="col-12 end-screen-items end-buttons">
-                <div class="row no-gutters pb-2 justify-content-around">
-                    <div id="end-main-menu-btn" class="col-4 end-screen-buttons">MAIN MENU</div>
-                    <div id="end-restart-btn" class="col-4 end-screen-buttons">RESTART</div>
-                </div>
-            </div>
 		</div>
 	</div>
 	<!-- /end game screen -->
