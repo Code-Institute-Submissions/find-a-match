@@ -327,7 +327,7 @@ $(document).ready(function () {
         this.setAttribute('src', cardsList[cardId].img);
         audio.flip();
         if (cardsChosen.length === 2) { // check if player choose 2 cards
-            setTimeout(checkForMatch, 300); // if check for match 300 ms
+            setTimeout(checkForMatch, 500); // if check for match 500 ms
         }
     }
 
