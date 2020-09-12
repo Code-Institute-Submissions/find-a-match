@@ -150,8 +150,27 @@ Wireframes can find here.
 </div>
 
 <div align="center">
-<img src="/readme_files/samecard.png" width="500" target="_blank" rel="noopener" alt="levels">
+<img src="/readme_files/same-card.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
+
+- Game buttons offer player three options:
+    - Reset Game - offer player options to restart game
+    - Main Menu - offer player options to go back to main menu 
+    - Sound On - sound is on by default and start when player choose level
+
+<div align="center">
+<img src="/readme_files/game-buttons.png" width="500" target="_blank" rel="noopener" alt="levels">
+</div>
+
+- Score counter
+    - Counter start when player choose his level of play it start from -2         giving player enough time to start his play.
+    - After player found all cards score is to validate his progress in game      and show player his reward.
+<div align="center">
+<img src="/readme_files/score.png" width="500" target="_blank" rel="noopener" alt="levels">
+</div>
+
+- 
+
 
 
 
