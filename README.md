@@ -10,6 +10,8 @@ Features of game are easy to operate and navigate buttons, 2 level of difficulty
 Game rules are simple find two matching cards, find them all and game ends. 
 <br>
 
-[Find-A-Match page](https://ivantepes.github.io/find-a-match/)
+[Find-A-Match game page](https://ivantepes.github.io/find-a-match/)
 
 </div>
+
+
