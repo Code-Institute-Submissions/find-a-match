@@ -108,7 +108,7 @@ Wireframes can find here.
 - If player rotate screen in middle of play music of game stops and player is asked to rotate screen back in landscape mode.
 
 <div align="center">
-<img src="/readme_files/rotate-device.png" height="300" width="500" target="_blank" rel="noopener" alt="main-menu">
+<img src="/readme_files/rotate-device.png" height="300" width="300" target="_blank" rel="noopener" alt="main-menu">
 </div>
 
 #### Main menu
