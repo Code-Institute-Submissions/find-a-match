@@ -408,7 +408,7 @@ $(document).ready(function () {
     */
     function showReward() {
         // Under 6 easy 9 hard
-        if ((value <= 10 && easyLevel == true) ||
+        if ((value <= 15 && easyLevel == true) ||
             (value <= 10 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-one.png"></img>');
             $("#motivation-message").append('<div class="reward">' + rewardOne + '</div>');
