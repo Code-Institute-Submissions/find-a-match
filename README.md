@@ -212,9 +212,10 @@ Wireframes can find here.
 
 #### Features Left to Implement
 
-- Improvements on game play
-- Additional difficulty level
-- Different themes for kids
+- Improvements on game play.
+- Additional difficulty level.
+- Different themes for kids.
+- Change level button on end game screen.
 
 
 
