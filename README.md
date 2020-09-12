@@ -106,11 +106,10 @@ Wireframes can find here.
 #### Smaller devices
 - This game is playing in landscape mode and require from player to rotate screen in landscape mode so that game can start.
 - If player rotate screen in middle of play music of game stops and player is asked to rotate screen back in landscape mode.
+
 <div align="center">
-<img src="/readme_files/rotate-device.png" width="500" target="_blank" rel="noopener" alt="main-menu">
+<img src="/readme_files/rotate-device.png" height="300" width="500" target="_blank" rel="noopener" alt="main-menu">
 </div>
-
-
 
 #### Main menu
 
