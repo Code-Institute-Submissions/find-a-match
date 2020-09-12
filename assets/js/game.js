@@ -407,23 +407,23 @@ $(document).ready(function () {
         Then show rewards.
     */
     function showReward() {
-        // Under 6 easy 9 hard
+        // Under 15 easy 10 hard
         if ((value <= 15 && easyLevel == true) ||
             (value <= 10 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-one.png"></img>');
             $("#motivation-message").append('<div class="reward">' + rewardOne + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>');
 
-            // Under 30 easy 30 hard
+            // Under 30 easy 20 hard
         } else if ((value <= 30 && easyLevel == true) ||
-            (value <= 30 && easyLevel == false)) {
+            (value <= 20 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-two.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardTwo + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
 
-            // Under 35 easy 35 hard
+            // Under 35 easy 30 hard
         } else if ((value <= 35 && easyLevel == true) ||
-            (value <= 35 && easyLevel == false)) {
+            (value <= 30 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-three.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardThree + '</div>');
             $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')

@@ -178,6 +178,26 @@ Wireframes can find here.
 - There are 5 levels of rewards for player time of play.
 - Each reward give player corresponding message here is where humor part come     in.
 
+<div align="center">
+<img src="/readme_files/reward-1.png" width="500" target="_blank" rel="noopener" alt="reward">
+</div>
+
+<div align="center">
+<img src="/readme_files/reward-2.png" width="500" target="_blank" rel="noopener" alt="reward">
+</div>
+
+<div align="center">
+<img src="/readme_files/reward-3.png" width="500" target="_blank" rel="noopener" alt="reward">
+</div>
+
+<div align="center">
+<img src="/readme_files/reward-4.png" width="500" target="_blank" rel="noopener" alt="reward">
+</div>
+
+<div align="center">
+<img src="/readme_files/reward-5.png" width="500" target="_blank" rel="noopener" alt="reward">
+</div>
+
 
 
 
