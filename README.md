@@ -103,6 +103,15 @@ Wireframes can find here.
 
 ### Existing Features
 
+#### Smaller devices
+- This game is playing in landscape mode and require from player to rotate screen in landscape mode so that game can start.
+- If player rotate screen in middle of play music of game stops and player is asked to rotate screen back in landscape mode.
+<div align="center">
+<img src="/readme_files/rotate-device.png" width="500" target="_blank" rel="noopener" alt="main-menu">
+</div>
+
+
+
 #### Main menu
 
 - On arriving at the page for the first time player land on Main menu and have    chooice for futher actions what he want to make.
@@ -172,7 +181,11 @@ Wireframes can find here.
 <img src="/readme_files/score.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
 
-#### Rewards 
+#### End game screen
+
+- End game screen provide player his reward and give him option to go back in     main menu or to restart game.
+
+##### Rewards 
 
 - When player find all matching cards time spend on finding them is taken to      validate and show player feedback about his play.
 - There are 5 levels of rewards for player time of play.
@@ -198,8 +211,11 @@ Wireframes can find here.
 <img src="/readme_files/reward-5.png" width="500" target="_blank" rel="noopener" alt="reward">
 </div>
 
+#### Features Left to Implement
 
-
+- Improvements on game play
+- Additional difficulty level
+- Different themes for kids
 
 
 
