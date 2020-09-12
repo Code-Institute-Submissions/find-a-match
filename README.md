@@ -106,7 +106,7 @@ Wireframes can find here.
 #### Main menu
 - On arriving at the page for the first time player land on Main menu and have    chooice for futher actions what he want to make.
 <div align="center">
-<img src="/readme_files/main-menu.jpg" target="_blank" rel="noopener" width="800" height="500" alt="main-menu">
+<img src="/readme_files/main-menu.png" target="_blank" rel="noopener" alt="main-menu">
 </div>
 
 
