@@ -167,6 +167,7 @@ Wireframes can find here.
 ##### Score counter
 - Counter start when player choose his level of play it start from -2         giving player enough time to start his play.
 - After player found all cards score is to validate his progress in game      and show player his reward.
+
 <div align="center">
 <img src="/readme_files/score.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
