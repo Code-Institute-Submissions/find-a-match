@@ -138,10 +138,12 @@ Wireframes can find here.
     - There are three indicator with corresponding colors.
 <div align="center">
 <img src="/readme_files/match.png" width="500" target="_blank" rel="noopener" alt="levels">
+
 </div>
 <div align="center">
 <img src="/readme_files/nope.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
+
 <div align="center">
 <img src="/readme_files/samecard.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
