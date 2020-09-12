@@ -37,6 +37,7 @@ The game has been designed to be as intutive and user friendly as possible. It a
 - As a user i expect to have options to change my settings.
 - As a user i expect to get any feedback of my play.
 - As a user i expect that game challange me.
+- As a user i expect to be able to play this game on my favorite device.
 
 #### Developer Goals
 
@@ -47,6 +48,80 @@ The game has been designed to be as intutive and user friendly as possible. It a
 - Offer clear information to player about their play.
 - Offer player to choose their theme to play on.
 
-### Design Choices
+### Design 
+
+This project was developed with a focus on a mobile approach first. However, with full responsiveness on other screen sizes.
+Game is developed with focus on mobile device and play in landscape mode.
+When the player tries to enter the game and the screen is in a portrait position, the player receives a message to rotate his device.
+Theme choose for this memory game are playing poker cards and emoji for rewards and instructions.
+
+#### Fonts
+
+- The primary font used in this game is [Goblin One](https://fonts.google.com/specimen/Goblin+One?query=Goblin+One+) 
+
+- I choose this font for game because fits in well with style of game.
+
+#### Colours
+
+- In the colour scheme, i used black, red and yellow which combined together      gave me favoured the easy visualization of the information.
+
+- Game uses three background themes red, green and yellow.
+
+- Color sheme and background themes can find [here.](/readme_files/readme/colors.png)
+
+### Buttons
+
+- Buttons on this application are made with **Bootstrap**. Big and easy to use.
+
+### Shadows
+
+- Shadows are used on whole page for better appealing and visualization.
+
+#### Card images
+
+- Cards used for this project is poker playing cards however not a full deck      because game not use that much cards.
+
+#### Audio files
+
+- Audio files is matched with cards and use poker audio themes for click          buttons, match cards and miss cards.
+- Background music for game is taken from [Soundimage.org](https://soundimage.org/puzzle-music/).
+
+#### Layout
+
+This is a multi-page layout, but designed with simplicity in mind. The home page displays the menu with three options.
+    - New game - which on press transfer user to difficulty menu.
+    - Instructions - which on press show player game rules and instruction of game.
+    - Settings - which transfer player to settings menu where he can choose from three background option.
+
+#### Wireframes 
+
+Is designed with [Balsamiq Wireframes](https://balsamiq.com/wireframes/). These were the first version of scope and some things have changed, removed or left for later development.
+
+Wireframes can find here.
+
+## Features
+
+### Existing Features
+
+#### Main menu
+- On arriving at the page for the first time player land on Main menu and have    chooice for futher actions what he want to make.
+<div align="center">
+<img src="/readme_files/main-menu.jpg" target="_blank" rel="noopener" width="800" heigth="500" alt="main-menu">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
