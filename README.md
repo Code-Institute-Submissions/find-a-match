@@ -69,11 +69,11 @@ Theme choose for this memory game are playing poker cards and emoji for rewards 
 
 - Color sheme and background themes can find [here.](/readme_files/readme/colors.png)
 
-### Buttons
+#### Buttons
 
 - Buttons on this application are made with **Bootstrap**. Big and easy to use.
 
-### Shadows
+#### Shadows
 
 - Shadows are used on whole page for better appealing and visualization.
 
@@ -121,7 +121,7 @@ Wireframes can find here.
 
 #### Settings
 
-- Offer player three background theme.
+- Offer player three background theme to choose from.
 
 <div align="center">
 <img src="/readme_files/settings.png" width="500" target="_blank" rel="noopener" alt="settings">
@@ -138,8 +138,10 @@ Wireframes can find here.
 </div>
 
 #### Game screen
-- Match indicator inform player about card match.
-- There are three indicator with corresponding colors.
+- Game screen contain game feedback indicators and buttons.
+
+##### Match indicator inform player about card match.
+- There are three indicator with corresponding colors and message.
 
 <div align="center">
 <img src="/readme_files/match.png" width="500" target="_blank" rel="noopener" alt="levels">
@@ -153,23 +155,30 @@ Wireframes can find here.
 <img src="/readme_files/same-card.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
 
-- Game buttons offer player three options:
-    - Reset Game - offer player options to restart game
-    - Main Menu - offer player options to go back to main menu 
-    - Sound On - sound is on by default and start when player choose level
+##### Game buttons offer player three options:
+    - Reset Game - offer player options to restart game.
+    - Main Menu - offer player options to go back to main menu.
+    - Sound On - sound is on by default and start when player choose level.
 
 <div align="center">
 <img src="/readme_files/game-buttons.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
 
-- Score counter
+##### Score counter
     - Counter start when player choose his level of play it start from -2         giving player enough time to start his play.
     - After player found all cards score is to validate his progress in game      and show player his reward.
 <div align="center">
 <img src="/readme_files/score.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
 
-- 
+#### Rewards 
+
+- When player find all matching cards time spend on finding them is taken to      validate and show player feedback about his play.
+- There are 5 levels of rewards for player time of play.
+- Each reward give player corresponding message here is where humor part come     in.
+ 
+
+
 
 
 
