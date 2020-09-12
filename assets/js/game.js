@@ -224,7 +224,7 @@ $(document).ready(function () {
 
     function startTimer() {
         stopTimer(); // stoping the previous counting (if any)
-        value = -1; // start value
+        value = -2; // start value
         timer = setInterval(changeValue, 1000);
     }
 
