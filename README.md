@@ -104,10 +104,38 @@ Wireframes can find here.
 ### Existing Features
 
 #### Main menu
+
 - On arriving at the page for the first time player land on Main menu and have    chooice for futher actions what he want to make.
 <div align="center">
 <img src="/readme_files/main-menu.png" width="500" target="_blank" rel="noopener" alt="main-menu">
 </div>
+
+#### Instructions
+
+- Provide user with clear instruction what is expected from player and how to play a game.
+<div align="center">
+<img src="/readme_files/instructions.png" width="500" target="_blank" rel="noopener" alt="instructions">
+</div>
+
+#### Settings
+
+- Offer player three background theme.
+<div align="center">
+<img src="/readme_files/settings.png" width="500" target="_blank" rel="noopener" alt="settings">
+</div>
+
+#### Game difficulty
+
+- Offer player 2 level of difficulty easy and hard.
+- Easy level contain 12 cards.
+- Hard level contain 18 cards.
+<div align="center">
+<img src="/readme_files/levels.png" width="500" target="_blank" rel="noopener" alt="levels">
+</div>
+
+
+
+
 
 
 
