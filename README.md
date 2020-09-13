@@ -97,7 +97,7 @@ This is a multi-page layout, but designed with simplicity in mind. The home page
 
 Is designed with [Balsamiq Wireframes](https://balsamiq.com/wireframes/). These were the first version of scope and some things have changed, removed or left for later development.
 
-Wireframes can find here.
+Wireframes [here.](/readme_files/find-a-match wireframes.pdf)
 
 ## Features
 
@@ -216,6 +216,7 @@ Wireframes can find here.
 - Additional difficulty level.
 - Different themes for kids.
 - Change level button on end game screen.
+- Record Screen for store best records of game.
 
 
 ## Tehnologies used
@@ -235,13 +236,15 @@ Wireframes can find here.
 - [HTML Formatter](https://www.freeformatter.com/html-formatter.html)
     - Used to formating code.
 - [Photoshop](https://www.adobe.com/ie/products/photoshop.html)
-    - Used to edit all pictures on the site and creating some presentation images for this README.
+    - Used to edit all pictures on the site and creating some presentation        images for this README.
 - [Lucidchart](https://app.lucidchart.com/)
     - Used to make flowchart
 - [Pattern Cooler](https://www.patterncooler.com/)
     - Used to make pattern images for background themes
 - [Troy](http://troy.labs.daum.net/)
     - Used for testing game on mobile devices.
+- [Balsamiq Wireframes](https://balsamiq.com/wireframes/)
+    - Used to create the wireframes and planning this project.
 
 ## Testing
 
