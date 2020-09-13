@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* Headers names */
 .menu-title,
 .instruction-title,
@@ -19,15 +26,13 @@
 .game-screen-logo,
 .main-menu-logo {
     margin-top: 1.5vw;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: contain;
     font-family: 'Goblin One', cursive;
     font-size: 5vw;
     color: #d6b100;
     text-shadow: 0px 5px 4px #a70000, 1px 1px 7px #000000;
-    box-shadow: -1px 1px 17px 2px black;
+    -webkit-box-shadow: -1px 1px 17px 2px black;
+            box-shadow: -1px 1px 17px 2px black;
     border-radius: 10px;
     background: #000000c2;
 }
@@ -38,20 +43,26 @@
 .setings-menu,
 .lvl-menu {
     background-color: black;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -ms-grid;
     display: grid;
     height: 58vh;
     width: 45vw;
     position: relative;
     border: 2px solid gray;
     border-radius: 4vw;
-    box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
+    -webkit-box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
+            box-shadow: 0px 0px 5vh 2vh black, inset 0px 0px 1vh 0.2vh #ffffff;
 }
 
 /* Game themes */
 .theme-red {
     background: url("../images/themes/theme-red.jpg") repeat center center;
-    box-shadow: inset 0px 0px 1vw 0.6vw #000000;
+    -webkit-box-shadow: inset 0px 0px 1vw 0.6vw #000000;
+            box-shadow: inset 0px 0px 1vw 0.6vw #000000;
     height: 100vh;
     position: absolute;
     top: 0px;
@@ -60,7 +71,8 @@
 
 .theme-yellow {
     background: url("../images/themes/theme-yellow.jpg") repeat center center;
-    box-shadow: inset 0px 0px 1vw 0.6vw #000000;
+    -webkit-box-shadow: inset 0px 0px 1vw 0.6vw #000000;
+            box-shadow: inset 0px 0px 1vw 0.6vw #000000;
     height: 100vh;
     position: absolute;
     top: 0px;
@@ -70,7 +82,8 @@
 .theme-green {
     height: 100vh;
     background: url("../images/themes/theme-green.jpg") repeat center center;
-    box-shadow: inset 0px 0px 1vw 0.6vw #000000;
+    -webkit-box-shadow: inset 0px 0px 1vw 0.6vw #000000;
+            box-shadow: inset 0px 0px 1vw 0.6vw #000000;
     position: absolute;
     top: 0px;
     left: 0px; 
@@ -88,7 +101,8 @@
     background-color: #580200;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
-    box-shadow: inset 0px 0px 20px 1px #000000;
+    -webkit-box-shadow: inset 0px 0px 20px 1px #000000;
+            box-shadow: inset 0px 0px 20px 1px #000000;
     border: 2px solid gray;
     text-shadow: 0px 0px 20px #000000;
     color: yellow;
@@ -109,7 +123,8 @@
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
-    box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
+    -webkit-box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
+            box-shadow: 0px 0px 9px 1px #ff0909, inset 0px 0px 6px 3px #000000;
 }
 
 .game-screen-buttons {
@@ -119,7 +134,8 @@
     padding-top: 1.2vw;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
-    box-shadow: inset 0px 0px 20px 1px #000000;
+    -webkit-box-shadow: inset 0px 0px 20px 1px #000000;
+            box-shadow: inset 0px 0px 20px 1px #000000;
     border: 2px solid gray;
     text-shadow: 0px 0px 20px #000000;
     color: yellow;
@@ -131,7 +147,8 @@
     background-color: #580200;
     font-family: 'Goblin One', cursive;
     border-radius: 1vw;
-    box-shadow: inset 0px 0px 20px 1px #000000;
+    -webkit-box-shadow: inset 0px 0px 20px 1px #000000;
+            box-shadow: inset 0px 0px 20px 1px #000000;
     border: 2px solid gray;
     text-shadow: 0px 0px 20px #000000;
     color: yellow;
@@ -148,20 +165,23 @@
     height: 5vw;
     border: 2px solid grey;
     border-radius: 1vw;
-    box-shadow: inset 0px 0px 20px 1px #000000;
+    -webkit-box-shadow: inset 0px 0px 20px 1px #000000;
+            box-shadow: inset 0px 0px 20px 1px #000000;
     cursor: pointer;
 }
 
 #easy:hover {
     color: black;
     background-color:green;
-    box-shadow: 0px 0px 20px 2px green;
+    -webkit-box-shadow: 0px 0px 20px 2px green;
+            box-shadow: 0px 0px 20px 2px green;
 }
 
 #hard:hover {
     color: black;
     background-color: red;
-    box-shadow: 0px 0px 20px 2px #ff0000;
+    -webkit-box-shadow: 0px 0px 20px 2px #ff0000;
+            box-shadow: 0px 0px 20px 2px #ff0000;
 }
 
 
@@ -185,7 +205,8 @@ h3 {
     height: 11vw;
     border: 2px solid grey;
     border-radius: 1vw;
-    box-shadow: inset 0px 0px 20px 1px #000000;
+    -webkit-box-shadow: inset 0px 0px 20px 1px #000000;
+            box-shadow: inset 0px 0px 20px 1px #000000;
     cursor: pointer;
 }
 
@@ -197,29 +218,34 @@ h3 {
 
 .setting-theme-red {
     background: url("../images/themes/theme-red.jpg") repeat center center;
-    box-shadow: inset 0px 0px 3px 3px black;
+    -webkit-box-shadow: inset 0px 0px 3px 3px black;
+            box-shadow: inset 0px 0px 3px 3px black;
 }
 
 .setting-theme-green {
     background: url("../images/themes/theme-green.jpg") repeat center center;
-    box-shadow: inset 0px 0px 3px 3px black;
+    -webkit-box-shadow: inset 0px 0px 3px 3px black;
+            box-shadow: inset 0px 0px 3px 3px black;
 }
 
 .setting-theme-yellow {
     background: url("../images/themes/theme-yellow.jpg") repeat center center;
-    box-shadow: inset 0px 0px 3px 3px black;
+    -webkit-box-shadow: inset 0px 0px 3px 3px black;
+            box-shadow: inset 0px 0px 3px 3px black;
 }
 
 .setting-theme-red:hover,
 .setting-theme-yellow:hover,
 .setting-theme-green:hover {
-    box-shadow: 0px 0px 9px 4px yellow, inset 0px 0px 3px 3px black;;
+    -webkit-box-shadow: 0px 0px 9px 4px yellow, inset 0px 0px 3px 3px black;
+            box-shadow: 0px 0px 9px 4px yellow, inset 0px 0px 3px 3px black;;
 } 
 
 /* Game screen */
 .game-screen {
     height: 100vh;
-    box-shadow: 0px 0px 7px 4px black, inset 0px 0px 13px 3px #000000;
+    -webkit-box-shadow: 0px 0px 7px 4px black, inset 0px 0px 13px 3px #000000;
+            box-shadow: 0px 0px 7px 4px black, inset 0px 0px 13px 3px #000000;
     left: 0px; 
 }
 
@@ -227,12 +253,16 @@ h3 {
 .hidden {
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: visibility 0s 1s, opacity 1s linear;
+  -o-transition: visibility 0s 1s, opacity 1s linear;
   transition: visibility 0s 1s, opacity 1s linear;
 }
 
 .visible {
   visibility: visible;
   opacity: 1;
+  -webkit-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
   transition: opacity 1s linear;
 }
 
@@ -244,7 +274,8 @@ h3 {
     border: #adadad solid 2px;
     border-radius: 5px;
     font-family: 'Goblin One', cursive;
-    box-shadow: 1px 1px 20px 2px black;
+    -webkit-box-shadow: 1px 1px 20px 2px black;
+            box-shadow: 1px 1px 20px 2px black;
     font-size: 1vw;
     padding: 1vw;
 }
@@ -255,47 +286,60 @@ h3 {
     background-color: yellow;
     color: black;
     font-family: 'Goblin One', cursive;
-    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+    -webkit-box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+            box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
 }
 
 .no-match {
     background-color: red;
     color: black;
     font-family: 'Goblin One', cursive;
-    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+    -webkit-box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+            box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
 }
 
 .match-cards{
     background-color: green;
     color: black;
     font-family: 'Goblin One', cursive;
-    box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+    -webkit-box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
+            box-shadow: inset 1px 1px 20px 4px black, 0px 0px 8px 4px black;
 }
 
 /* Cards grid position */
 .grid-easy {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
     position: relative;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     top: 3vh;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
     grid-template-columns: auto auto auto auto;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: -webkit-auto;
 }
 
 .grid-hard {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
     position: relative;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     top: 3vh;
     display: -ms-grid;
     -ms-grid-columns: 1fr 1em 1fr 1em 1fr 1em 1fr;
     grid-template-columns: auto auto auto auto;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: -webkit-auto;
 }
 
@@ -308,15 +352,19 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 5px;
-    box-shadow: #191919 0px 0px 5px 0px;
+    -webkit-box-shadow: #191919 0px 0px 5px 0px;
+            box-shadow: #191919 0px 0px 5px 0px;
     margin: 0.5vw;
 }
 
 /* If fliped cards match */
 .match {
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     visibility: hidden;
 }
 
@@ -339,7 +387,8 @@ h3 {
     width: 64vw;
     border-radius: 10px;
     color: yellow;
-    box-shadow: 1px 1px 20px 1px #000000, inset 1px 1px 9px 2px white;
+    -webkit-box-shadow: 1px 1px 20px 1px #000000, inset 1px 1px 9px 2px white;
+            box-shadow: 1px 1px 20px 1px #000000, inset 1px 1px 9px 2px white;
 }
 
 /* Sound on button */
@@ -347,19 +396,24 @@ h3 {
     color: black;
     text-shadow: 0px 0px 0px #000000;
     background-color: red;
-    box-shadow: 0px 0px 9px 1px #ffe600, inset 0px 0px 6px 3px #000000;
+    -webkit-box-shadow: 0px 0px 9px 1px #ffe600, inset 0px 0px 6px 3px #000000;
+            box-shadow: 0px 0px 9px 1px #ffe600, inset 0px 0px 6px 3px #000000;
 }
 
 /* Rewards Messages */
 .win-message {
     font-size: 3vw;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     font-family: 'Goblin One', cursive;
     
 }
 
 .motivation-message {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     font-family: 'Goblin One', cursive;
     color: red;
     font-size: 2.3vw;
@@ -391,7 +445,8 @@ h3 {
     width: 50%;
     padding-top: 0.5vw;
     font-size: 1.5vw;
-    box-shadow: 0px 0px 10px 2px black;
+    -webkit-box-shadow: 0px 0px 10px 2px black;
+            box-shadow: 0px 0px 10px 2px black;
 }
 
 /* For mobile screens */
