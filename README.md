@@ -218,7 +218,108 @@ Wireframes can find here.
 - Change level button on end game screen.
 
 
+## Tehnologies used
 
+- This project uses HTML, CSS, and JavaScript programming languages.
+
+- [JQuery](https://jquery.com)
+    - The project uses JQuery to simplify DOM manipulation.
+- [Bootstrap](https://www.bootstrapcdn.com/)
+    - Used for better responsiveness and organization.
+- [Google Fonts](https://fonts.google.com/)
+    - Used to provide font.
+- [Autoprefixer](https://autoprefixer.github.io/)
+    - Used to valid code for all browsers.
+- [Favicon & App Icon Generator](https://www.favicon-generator.org/)
+    - Used for creating favicon for site.
+- [HTML Formatter](https://www.freeformatter.com/html-formatter.html)
+    - Used to formating code.
+- [Photoshop](https://www.adobe.com/ie/products/photoshop.html)
+    - Used to edit all pictures on the site and creating some presentation images for this README.
+- [Lucidchart](https://app.lucidchart.com/)
+    - Used to make flowchart
+- [Pattern Cooler](https://www.patterncooler.com/)
+    - Used to make pattern images for background themes
+- [Troy](http://troy.labs.daum.net/)
+    - Used for testing game on mobile devices.
+
+## Testing
+
+Testing information can be found in separate [testing.md](testing.md) file.
+
+## Deployment
+
+This project was developed using the [Gitpod](https://www.gitpod.io/) Integrated development environment, version controlled by committing to git and pushing to[GitHub](https://github.com/) via the GitPod IDE.
+
+- To deploy this page to **GitHub** pages from its specific **GitHub** repository the steps followed were;**
+
+- Scroll to the top of this **GitHub** page or press **[here](https://ivantepes.github.io/find-a-match/)**.
+
+- From the horizontal menu select **Settings**
+    
+- The page should be open on **Options** if is not select **Options** from left menu.
+    
+- Scroll down to the **GitHub Pages section**
+    
+- Under **Source** select **Master branch**
+    
+- On selecting **Master branch** the page is automatically refreshed, the website is now delployed.
+
+- The link to the webpage can be found at the top of the **GitHub Pages section**
+
+**How to run this project locally?**
+
+- To clone this project from GitHub:
+
+- Follow this link to the Project GitHub repository.
+
+- Under the repository name, click **Clone or download**
+
+- In the Clone with HTTPs section, copy the clone URL for the repository
+
+- In your local IDE open the terminal
+
+- Change the current working directory to the location where you want the cloned directory to be made.
+
+- Type **git clone**, and then paste the URL you copied from repository.
+
+- Press Enter. Your local clone will be created
+
+## Credits
+
+### Media
+
+- Card images and emoji images are downloaded from **[Google](https://www.google.com/)**
+
+- Sounds for game are download from [Soundimage.org](https://soundimage.org/puzzle-music/).
+
+### Inspiration 
+
+- Color Patterns from **[Adobe Color](https://color.adobe.com)**.
+
+- Font Inspiration from **[Reliable](https://www.reliablepsd.com/)**.
+
+- Inspiration, ideas, problems solutions from:
+    * **[Free Front End](https://freefrontend.com/)**
+    * **[Codepen](https://codepen.io/)**
+    * **[w3schools.com](https://www.w3schools.com/)**
+    * **[Stack Overflow](https://stackoverflow.com/)**
+    * **[Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)**
+    * **[Behance](https://www.behance.net/onboarding/adobe)**
+
+
+## Acknowledgements
+
+- I'd like to thank my mentor in Code Institute **[Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/)** who had all the patience to explain and make me understand certain concepts and peculiarities of the project. And also for useful and constructive feedback through this project.
+
+- To my girlfriend who was my biggest helper, the biggest critic, the voice of common sense in some difficult moments during the making of this project.
+
+- All people, including family, friends, and colleagues who have tested the application on their real devices, reporting to me about any usability issues and giving improvement tips to improve the usability.
+
+- To all of the **[Code Institute Slack](https://codeinstitute.net/)** community for the help in my issues and review to my project.
+
+### The content of this website is for educational purposes only. 
+### Thank you.
 
 
 
