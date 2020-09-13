@@ -97,7 +97,9 @@ This is a multi-page layout, but designed with simplicity in mind. The home page
 
 Is designed with [Balsamiq Wireframes](https://balsamiq.com/wireframes/). These were the first version of scope and some things have changed, removed or left for later development.
 
-Wireframes [here.](/readme_files/find-a-match wireframes.pdf)
+Wireframes can be find  [here.](/readme_files/find-a-match-wireframes.pdf)
+
+Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 ## Features
 
