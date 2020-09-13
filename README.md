@@ -88,17 +88,19 @@ Theme choose for this memory game are playing poker cards and emoji for rewards 
 
 #### Layout
 
-This is a multi-page layout, but designed with simplicity in mind. The home page displays the menu with three options.
+This is a multi-page layout, but designed with simplicity in mind.
+- The home page displays the menu with three options.
     - New game - which on press transfer user to difficulty menu.
     - Instructions - which on press show player game rules and instruction of game.
     - Settings - which transfer player to settings menu where he can choose from three background option.
 
 #### Wireframes 
 
-Is designed with [Balsamiq Wireframes](https://balsamiq.com/wireframes/). These were the first version of scope and some things have changed, removed or left for later development.
+- Is designed with [Balsamiq Wireframes](https://balsamiq.com/wireframes/). These were the first version of scope and some things have changed, removed or left for later development.
 
 Wireframes can be find  [here.](/readme_files/find-a-match-wireframes.pdf)
 
+- Flow Chart is designed with [Lucidchart](https://app.lucidchart.com/).
 Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 ## Features
