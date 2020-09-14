@@ -69,11 +69,31 @@ The following validation services and used to check the validity of the website 
 
 ## Testing functionality of the site on varied mobile devices.
 
+### Landscape game mode
+- Game required from user for start a game to rotate scren in landscape mode.
+- This mode create some unexpected behavior when is tested even feature working perfectly on real devices.
+
+
+
+#### **NOTE FOR CODE INSTITUTE ASSESSMENT TEAM**
+- Site require to be refresh before is tested for mobile screens,
+- Assumption is that when is switched to device view dev tool reproduce screen   from detsktop mode on device mode without load a mobile mode so site require    to be refresh on device mode so mobile mode can be loaded.(istruction below)
+
+- <div align="center">
+
+![Mobile Testing](/readme_files/mobile-testing-instruction.gif)
+</div>
+
+
+
 - For this testing i choose [Troy](http://troy.labs.daum.net/) web page that has different devices in its database as well as different screen sizes.
 
 - Result from this testing shows that game working propery on mobile devices and tablets but have problem on very small devices screens like 
     - Samsung Galaxy S3, Note2, Note1, Galaxy S2, S1
     - Apple iPhone 4, 5, 5SE etc.
+
+
+
 
 ## Known Bugs
 
