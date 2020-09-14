@@ -8,7 +8,7 @@ $(document).ready(function () {
             this.winSound = new Audio('assets/audio/win.mp3');
             this.noMatchSound = new Audio('assets/audio/no-match.mp3');
             this.click = new Audio('assets/audio/click.mp3');
-            this.bgMusic = new Audio('assets/audio/bg-music.mp3')
+            this.bgMusic = new Audio('assets/audio/bg-music.mp3');
         }
         flip() {
             this.flipSound.play();
@@ -219,8 +219,8 @@ $(document).ready(function () {
         Show time in time element
     */
     function changeValue() {
-        document.getElementById("time").innerHTML = 'SCORE : ' + ++value;
-    };
+        document.getElementById("time").innerHTML = 'SCORE : ' + (++value);
+    }
 
     function startTimer() {
         stopTimer(); // stoping the previous counting (if any)
@@ -232,7 +232,7 @@ $(document).ready(function () {
         clearInterval(timer); // clear timer timer start from 0
         // update visual counter to 0
         document.getElementById("time").innerHTML = " - ";
-    }
+    };
 
 
     /*   
@@ -298,9 +298,9 @@ $(document).ready(function () {
      */
     function createBoard() {
         if (easyLevel) {
-            cardsList = easyList
+            cardsList = easyList;
         } else {
-            cardsList = hardList
+            cardsList = hardList;
         }
         for (let i = 0; i < cardsList.length; i++) {
             cardsList.sort(() => 0.5 - Math.random());
@@ -380,7 +380,6 @@ $(document).ready(function () {
         cardsChosenId = [];
         // when player finds all cards cards length 6 / 9 game ends
         if (cardsWon.length === cardsList.length / 2) {
-            console.log(cardsWon.length)
             document.getElementById("end-screen").classList.remove("hidden");
             $("#grid").empty();
             stopTimer();
@@ -398,7 +397,7 @@ $(document).ready(function () {
         this.rewardThree = 'Common YOU can do IT!!';
         this.rewardFour = 'YOU CAN DO IT!';
         this.rewardFifth = 'WHY YOU NOT PLAYING?';
-    };
+    }
 
 
     /* 
@@ -419,28 +418,28 @@ $(document).ready(function () {
             (value <= 20 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-two.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardTwo + '</div>');
-            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
+            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>');
 
             // Under 35 easy 30 hard
         } else if ((value <= 35 && easyLevel == true) ||
             (value <= 30 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-three.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardThree + '</div>');
-            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
+            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>');
 
             // Under 40 easy 40 hard
         } else if ((value <= 40 && easyLevel == true) ||
             (value <= 40 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-four.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardFour + '</div>');
-            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
+            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>');
 
             // Over 40 easy 40 hard
         } else if ((value > 40 && easyLevel == true) ||
             (value > 40 && easyLevel == false)) {
             $("#reward-image").append('<img class="reward reward-image" src="assets/images/rewards/reward-fifth.png"></img>');
             $('#motivation-message').append('<div class="reward">' + rewardFifth + '</div>');
-            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>')
+            $("#score").append('<div class="reward">' + 'YOUR TIME' + "   " + ':' + "   " + value + '</div>');
         }
     }
 
@@ -455,7 +454,7 @@ $(document).ready(function () {
         let rewards = document.getElementsByClassName('reward'),
             element;
         while (element = rewards[0]) {
-            element.parentNode.removeChild(element)
+            element.parentNode.removeChild(element);
         }
     }
 
@@ -516,7 +515,7 @@ $(document).ready(function () {
         let message = document.getElementsByClassName('mobile-message'),
             element;
         while (element = message[0]) {
-            element.parentNode.removeChild(element)
+            element.parentNode.removeChild(element);
         }
     }
     
@@ -629,7 +628,7 @@ $(document).ready(function () {
             $("#main-menu-screen").addClass("visible").removeClass("hidden");
         audio.buttonClick();
         stopGame();
-    })
+    });
 
 
     // Game screen reset game button
@@ -640,7 +639,7 @@ $(document).ready(function () {
     // Sound for Game Screen Buttons
     $('.game-screen-buttons').click(function () {
         audio.buttonClick();
-    })
+    });
 
 
     /* 

@@ -83,7 +83,7 @@ Theme choose for this memory game are playing poker cards and emoji for rewards 
 
 #### Audio files
 
-- Audio files is matched with cards and use poker audio themes for click          buttons, match cards and miss cards.
+- Audio files is matched with cards and use poker audio themes for      click buttons, match cards and miss cards.
 - Background music for game is taken from [Soundimage.org](https://soundimage.org/puzzle-music/).
 
 #### Layout
@@ -327,26 +327,3 @@ This project was developed using the [Gitpod](https://www.gitpod.io/) Integrated
 
 ### The content of this website is for educational purposes only. 
 ### Thank you.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
