@@ -14,6 +14,48 @@ Game rules are simple find two matching cards, find them all and game ends.
 
 </div>
 
+# Table of contents 
+
+- [UX](#ux)
+  * [Project Goals](#project-goals)
+    + [User Goals:](#user-goals-)
+    + [User Stories:](#user-stories-)
+    + [Developer Goals](#developer-goals)
+  * [Design](#design)
+    + [Fonts](#fonts)
+    + [Colours](#colours)
+    + [Buttons](#buttons)
+    + [Shadows](#shadows)
+    + [Card images](#card-images)
+    + [Audio files](#audio-files)
+    + [Layout](#layout)
+    + [Wireframes](#wireframes)
+- [Features](#features)
+  * [Existing Features](#existing-features)
+    + [Smaller devices](#smaller-devices)
+    + [Main menu](#main-menu)
+    + [Instructions](#instructions)
+    + [Settings](#settings)
+    + [Game difficulty](#game-difficulty)
+    + [Game screen](#game-screen)
+      - [Match indicator inform player about card match.](#match-indicator-inform-player-about-card-match)
+      - [Game buttons offer player three options:](#game-buttons-offer-player-three-options-)
+      - [Score counter](#score-counter)
+    + [End game screen](#end-game-screen)
+      - [Rewards](#rewards)
+    + [Features Left to Implement](#features-left-to-implement)
+- [Tehnologies used](#tehnologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  * [Media](#media)
+  * [Inspiration](#inspiration)
+- [Acknowledgements](#acknowledgements)
+  * [The content of this website is for educational purposes only.](#the-content-of-this-website-is-for-educational-purposes-only)
+  * [Thank you.](#thank-you)
+
+
+
 
 ## UX 
 
