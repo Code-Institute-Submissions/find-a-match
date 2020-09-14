@@ -33,11 +33,17 @@ The game has been designed to be as intutive and user friendly as possible. It a
 #### User Stories:
 
 - As a user i expect the game to work on intutive way.
-- As a user i expect cards to flip when i press them.
-- As a user i expect to have options to change my settings.
-- As a user i expect to get any feedback of my play.
-- As a user i expect that game challange me.
-- As a user i expect to be able to play this game on my favorite device.
+- As a user i want to be able to read game instructions.
+- As a user i want to be able to change background of game.
+- As a user i want to be able to choose difficulty of game.
+- As a user i want to be able to see my time of play.
+- As a user i want to be able to reset game and start over.
+- As a user i want to be able to control background sound of game.
+- As a user i want to be able to get feedback about my move match / miss
+- As a user i want to be able to restart my game.
+- As a user i want to be able to get any feedback about my play.
+- As a user i want to be able to return to main menu and choose differet          difficulty.
+- As a user i want to be able to play game on my favorite device.
 
 #### Developer Goals
 
@@ -226,7 +232,12 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 ## Tehnologies used
 
 - This project uses HTML, CSS, and JavaScript programming languages.
-
+- [HTML](https://www.w3.org/TR/html52/)
+    - Standard markup language for creating Web pages.
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+    - used for describing the presentation of a document written in a markup      language like HTML.
+- [JavaScript](https://www.w3.org/wiki/JavaScript)
+    - used for logic and interactive parts of game.
 - [JQuery](https://jquery.com)
     - The project uses JQuery to simplify DOM manipulation.
 - [Bootstrap](https://www.bootstrapcdn.com/)
