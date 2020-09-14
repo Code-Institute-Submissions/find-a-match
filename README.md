@@ -38,8 +38,8 @@ Game rules are simple find two matching cards, find them all and game ends.
     + [Settings](#settings)
     + [Game difficulty](#game-difficulty)
     + [Game screen](#game-screen)
-      - [Match indicator inform player about card match.](#match-indicator-inform-player-about-card-match)
-      - [Game buttons offer player three options:](#game-buttons-offer-player-three-options-)
+      - [Match indicator.](#match-indicator-inform-player-about-card-match)
+      - [Game buttons :](#game-buttons-offer-player-three-options-)
       - [Score counter](#score-counter)
     + [End game screen](#end-game-screen)
       - [Rewards](#rewards)
@@ -51,9 +51,6 @@ Game rules are simple find two matching cards, find them all and game ends.
   * [Media](#media)
   * [Inspiration](#inspiration)
 - [Acknowledgements](#acknowledgements)
-  * [The content of this website is for educational purposes only.](#the-content-of-this-website-is-for-educational-purposes-only)
-  * [Thank you.](#thank-you)
-
 
 
 

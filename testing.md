@@ -2,6 +2,18 @@
 
 [Main README.md file](README.md)
 
+
+# Table of contents
+- [Find-A-Match - Testing details](#find-a-match---testing-details)
+  * [Development](#development)
+  * [Browser used in testing](#browser-used-in-testing)
+  * [Validation services](#validation-services)
+  * [User stories testing](#user-stories-testing)
+  * [Testing functionality of the site on varied mobile devices.](#testing-functionality-of-the-site-on-varied-mobile-devices)
+    + [Landscape game mode](#landscape-game-mode)
+      - [**NOTE FOR CODE INSTITUTE ASSESSMENT TEAM**](#--note-for-code-institute-assessment-team--)
+  * [Known Bug](#known-bug)
+
 ## Development
 During the development of this project, I had the experience of facing some problems. Browser used for testing application during development was **[Google Chrome](https://www.google.com/chrome/)** and **[Dev Tools](https://developers.google.com/web/tools/chrome-devtools)** from same browser. For audit the site i have used **[Lighthouse](https://developers.google.com/web/tools/lighthouse/)** from **Chrome DevTools**. Exhaustively testing the functionality of each part of the application and managed to solve most of the problems that i have came across before writing this document. However how process of testing is being expanding on different browsers and different devices some problems are found and noticed. Some of them I have solved and corrected, some remained uncorrected until the end of the test.
 
