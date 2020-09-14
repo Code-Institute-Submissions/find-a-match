@@ -231,7 +231,6 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 ## Tehnologies used
 
-- This project uses HTML, CSS, and JavaScript programming languages.
 - [HTML](https://www.w3.org/TR/html52/)
     - Standard markup language for creating Web pages.
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
