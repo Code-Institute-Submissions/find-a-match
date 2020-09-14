@@ -74,12 +74,11 @@ The following validation services and used to check the validity of the website 
 - This mode create some unexpected behavior when is tested even feature working perfectly on real devices.
 
 
-
 #### **NOTE FOR CODE INSTITUTE ASSESSMENT TEAM**
 - Site require to be refresh before is tested for mobile screens,
 - Assumption is that when is switched to device view dev tool reproduce screen   from detsktop mode on device mode without load a mobile mode so site require    to be refresh on device mode so mobile mode can be loaded.(istruction below)
 
-- <div align="center">
+<div align="center">
 
 ![Mobile Testing](/readme_files/mobile-testing-instruction.gif)
 </div>
@@ -95,7 +94,14 @@ The following validation services and used to check the validity of the website 
 
 
 
-## Known Bugs
+## Known Bug
+
+- Only known bug that was notice is too fast play and cards stay open or face front when player make a miss.
+
+- This is fixed by reducing time for check for match and set up timeout on fliping cards back if player miss or press on same card.
+
+
+
 
 
 

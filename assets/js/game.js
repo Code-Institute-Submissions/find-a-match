@@ -327,10 +327,9 @@ $(document).ready(function () {
         this.setAttribute('src', cardsList[cardId].img);
         audio.flip();
         if (cardsChosen.length === 2) { // check if player choose 2 cards
-            setTimeout(checkForMatch, 500); // if check for match 500 ms
+            setTimeout(checkForMatch, 250); // if check for match 250 ms
         }
     }
-
 
     // Check for Match Cards
     function checkForMatch() {
@@ -341,13 +340,12 @@ $(document).ready(function () {
         const optionTwoId = cardsChosenId[1];
         // same cards
         if (optionOneId == optionTwoId) {
-            cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
-            cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
+            setTimeout(cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png'), 500);
+            setTimeout(cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png'), 500);
             // if cards are same show this message
             matchDisplay.textContent = 'SAME CARD!';
             document.getElementById("card-check").classList.add('same-card');
             document.getElementById("card-check").classList.remove('match-cards', 'no-match');
-
         }
         // If Match
         else if (cardsChosen[0] === cardsChosen[1]) {
@@ -368,8 +366,8 @@ $(document).ready(function () {
             // If not match
         } else {
             // flip cards back and show back card image
-            cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png');
-            cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png');
+            setTimeout(cards[optionOneId].setAttribute('src', 'assets/images/cards/card-back.png'), 500);
+            setTimeout(cards[optionTwoId].setAttribute('src', 'assets/images/cards/card-back.png'), 500);
             document.getElementById("card-check").classList.add('no-match');
             document.getElementById("card-check").classList.remove('same-card', 'match-cards');
             matchDisplay.textContent = 'NOPE!';
