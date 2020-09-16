@@ -5,7 +5,7 @@
 
 <div align="center"> 
 
-[Find-A-Match](https://ivantepes.github.io/find-a-match/) is an engaging and entertaining singe player memory card game with dose of humor, designed for pleasure and entertainment for all ages.
+[Find-A-Match](https://ivantepes.github.io/find-a-match/) is an engaging and entertaining single player memory card game with dose of humor, designed for pleasure and entertainment for all ages.
 Features of game are easy to operate and navigate buttons, 2 level of difficulty, game themes, card match indicator and reward based on score (time).
 Game rules are simple find two matching cards, find them all and game ends. 
 <br>
@@ -65,7 +65,7 @@ The game has been designed to be as intutive and user friendly as possible. It a
 
 - A website that offers an easily understandable memory game.
 - A website that offers good visual interaction.
-- A website that provide easily find and understand the controls for the game,    so that I can operate them easily.
+- A website that provide easily find and understand the controls for the game, so that I can operate them easily.
 - A website that provide audio and/or visual feedback when I play the game, so    that I know when I have clicked or not clicked something.
 - A website that i can interact on desktop, tablet or mobile.
 

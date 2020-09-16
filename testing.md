@@ -34,6 +34,7 @@ This was the primary method of testing the application. People were asked to vis
 - [Microsoft Edge](https://www.windowscentral.com/microsoft-edge)
     - Used for testing site and responsiveness and scaling.
 
+- During the testing of the site, no bugs or problems in the operation of the game     were noticed.
 
 ## Validation services
 The following validation services and used to check the validity of the website code.
@@ -74,7 +75,7 @@ The following validation services and used to check the validity of the website 
     - After user match all cards he get feedback about his play in form of 5 different messages.
 - As a user i want to be able to restart my game.
     - When user finish game on reward screen he get options to RESTART his game and start over.
-- As a user i want to be able to return to main menu and choose differet          difficulty.
+- As a user i want to be able to return to main menu and choose differet                 difficulty.
     - After user find all matching cards on reward screen he have options to go back on main menu and change difficulty of game.
 - As a user i want to be able to play game on my favorite device.
     - Game is playable on all scrren devices but on older and small devices cards are not render as ie expected.
@@ -83,12 +84,12 @@ The following validation services and used to check the validity of the website 
 
 ### Landscape game mode
 - Game required from user for start a game to rotate scren in landscape mode.
-- This mode create some unexpected behavior when is tested even feature working perfectly on real devices.
+- This mode create some unexpected behavior when is tested even feature working        perfectly on real devices.
 
 
 #### **NOTE FOR CODE INSTITUTE ASSESSMENT TEAM**
 - Site require to be refresh before is tested for mobile screens,
-- Assumption is that when is switched to device view dev tool reproduce screen   from detsktop mode on device mode without load a mobile mode so site require    to be refresh on device mode so mobile mode can be loaded.(istruction below)
+- Assumption is that when is switched to device view dev tool reproduce screen         from detsktop mode on device mode without load a mobile mode so site require    to   be refresh on device mode so mobile mode can be loaded.(istruction below)
 
 <div align="center">
 
@@ -97,14 +98,11 @@ The following validation services and used to check the validity of the website 
 
 
 
-- For this testing i choose [Troy](http://troy.labs.daum.net/) web page that has different devices in its database as well as different screen sizes.
+- For this testing i choose [Troy](http://troy.labs.daum.net/) web page that has       different devices in its database as well as different screen sizes.
 
-- Result from this testing shows that game working propery on mobile devices and tablets but have problem on very small devices screens like 
+- Result from this testing shows that game working propery on mobile devices and       tablets but have problem on very small devices screens like 
     - Samsung Galaxy S3, Note2, Note1, Galaxy S2, S1
     - Apple iPhone 4, 5, 5SE etc.
-
-
-
 
 ## Known Bug
 
