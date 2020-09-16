@@ -14,7 +14,8 @@ Game rules are simple find two matching cards, find them all and game ends.
 
 </div>
 
-# Table of contents 
+
+# Table of Content
 
 - [UX](#ux)
   * [Project Goals](#project-goals)
@@ -38,8 +39,8 @@ Game rules are simple find two matching cards, find them all and game ends.
     + [Settings](#settings)
     + [Game difficulty](#game-difficulty)
     + [Game screen](#game-screen)
-      - [Match indicator.](#match-indicator-inform-player-about-card-match)
-      - [Game buttons :](#game-buttons-offer-player-three-options-)
+      - [Match indicator](#match-indicator)
+      - [Game buttons](#game-buttons-offer-player-three-options-)
       - [Score counter](#score-counter)
     + [End game screen](#end-game-screen)
       - [Rewards](#rewards)
@@ -52,13 +53,11 @@ Game rules are simple find two matching cards, find them all and game ends.
   * [Inspiration](#inspiration)
 - [Acknowledgements](#acknowledgements)
 
-
-
 ## UX 
 
 ### Project Goals
 
-The game has been designed to be as intutive and user friendly as possible. It allow for user to find all matching cards because the game does not have a given time but uses time as a measure of reward.
+The game has been designed to be as intuitive and user friendly as possible. It allows the user to find all matching cards because the game does not have a time limitation but uses time as a measure of reward.
 
 
 #### User Goals:
@@ -73,16 +72,17 @@ The game has been designed to be as intutive and user friendly as possible. It a
 
 - As a user i expect the game to work on intutive way.
 - As a user i want to be able to read game instructions.
-- As a user i want to be able to change background of game.
+- As a user i want to be able to change background of the game.
 - As a user i want to be able to choose difficulty of game.
 - As a user i want to be able to see my time of play.
 - As a user i want to be able to reset game and start over.
-- As a user i want to be able to control background sound of game.
+- As a user i want to be able to control background sound of the game.
 - As a user i want to be able to get feedback about my move match / miss
 - As a user i want to be able to restart my game.
 - As a user i want to be able to get any feedback about my play.
-- As a user i want to be able to return to main menu and choose differet          difficulty.
-- As a user i want to be able to play game on my favorite device.
+- As a user i want to be able to return to main menu and choose different         level of difficulty.
+- As a user i want to be able to play the game on my favourite device.
+
 
 #### Developer Goals
 
@@ -104,15 +104,13 @@ Theme choose for this memory game are playing poker cards and emoji for rewards 
 
 - The primary font used in this game is [Goblin One](https://fonts.google.com/specimen/Goblin+One?query=Goblin+One+) 
 
-- I choose this font for game because fits in well with style of game.
+- I choose this font for the game because it fits in well with style of the game.
 
 #### Colours
 
-- In the colour scheme, i used black, red and yellow which combined together      gave me favoured the easy visualization of the information.
+- In the colour scheme i used black, red and yellow colour which combined together gave me favoured the easy visualization of the information.
 
-- Game uses three background themes red, green and yellow.
-
-- Color sheme and background themes can find [here.](/readme_files/readme/colors.png)
+- Game uses three background themes: Red, green and yellow.
 
 #### Buttons
 
@@ -124,19 +122,20 @@ Theme choose for this memory game are playing poker cards and emoji for rewards 
 
 #### Card images
 
-- Cards used for this project is poker playing cards however not a full deck      because game not use that much cards.
+- Cards used for this project are poker playing cards however not a full deck because the game does not use that much cards.
 
 #### Audio files
 
-- Audio files is matched with cards and use poker audio themes for      click buttons, match cards and miss cards.
-- Background music for game is taken from [Soundimage.org](https://soundimage.org/puzzle-music/).
+- Audio files are matched with whole poker themes and are using poker audio themes for click buttons, match cards and miss cards.
+
+- Background music for  the game is taken from [Soundimage.org](https://soundimage.org/puzzle-music/).
 
 #### Layout
 
 This is a multi-page layout, but designed with simplicity in mind.
 - The home page displays the menu with three options.
-    - New game - which on press transfer user to difficulty menu.
-    - Instructions - which on press show player game rules and instruction of game.
+    - New game - which on press transfers the user to difficulty menu.
+    - Instructions - which on press shows the player the game rules and instructions of the game.
     - Settings - which transfer player to settings menu where he can choose from three background option.
 
 #### Wireframes 
@@ -153,8 +152,11 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 ### Existing Features
 
 #### Smaller devices
-- This game is playing in landscape mode and require from player to rotate screen in landscape mode so that game can start.
-- If player rotate screen in middle of play music of game stops and player is asked to rotate screen back in landscape mode.
+
+- This game is played in landscape mode and requires from player to rotate the   screen in to landscape mode so that the game can start.
+
+- If player rotates the screen in the middle of the game, music of the game stops and the player is asked to rotate the screen back in to landscape mode.
+
 
 <div align="center">
 <img src="/readme_files/rotate-device.png" height="300" width="300" target="_blank" rel="noopener" alt="main-menu">
@@ -162,7 +164,7 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 #### Main menu
 
-- On arriving at the page for the first time player land on Main menu and have    chooice for futher actions what he want to make.
+- When arriving at the page for the first time, player lands on the main menu     and has a choice for further actions that he want`s to take.
 
 <div align="center">
 <img src="/readme_files/main-menu.png" width="500" target="_blank" rel="noopener" alt="main-menu">
@@ -170,7 +172,7 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 #### Instructions
 
-- Provide user with clear instruction what is expected from player and how to play a game.
+- To provide the user with clear instructions on what is expected from the player and how to play the game.
 
 <div align="center">
 <img src="/readme_files/instructions.png" width="500" target="_blank" rel="noopener" alt="instructions">
@@ -178,7 +180,7 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 #### Settings
 
-- Offer player three background theme to choose from.
+- Offer the player three background themes to choose from.
 
 <div align="center">
 <img src="/readme_files/settings.png" width="500" target="_blank" rel="noopener" alt="settings">
@@ -186,19 +188,23 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 #### Game difficulty
 
-- Offer player 2 level of difficulty easy and hard.
-- Easy level contain 12 cards.
-- Hard level contain 18 cards.
+- Offer`s the player 2 levels of difficulty. Easy and hard.
+- Easy level contains 12 cards.
+- Hard level contains 18 cards.
+
 
 <div align="center">
 <img src="/readme_files/levels.png" width="500" target="_blank" rel="noopener" alt="levels">
 </div>
 
 #### Game screen
-- Game screen contain game feedback indicators and buttons.
+- Game screen contains game feedback indicators and buttons.
 
-##### Match indicator inform player about card match.
-- There are three indicator with corresponding colors and message.
+
+##### Match indicator
+- Inform player about card match.
+- There are three indicators with corresponding colours and message.
+
 
 <div align="center">
 <img src="/readme_files/match.png" width="500" target="_blank" rel="noopener" alt="levels">
@@ -235,9 +241,9 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 ##### Rewards 
 
-- When player find all matching cards time spend on finding them is taken to      validate and show player feedback about his play.
-- There are 5 levels of rewards for player time of play.
-- Each reward give player corresponding message here is where humor part come     in.
+- When player find`s all matching cards, the time spent on finding them is taken to validate and to give to the player a feedback about his score.
+- There are 5 levels of rewards for player`s time of play.
+- Each reward gives to the player a corresponding message. Here is where the humour part comes in.
 
 <div align="center">
 <img src="/readme_files/reward-1.png" width="500" target="_blank" rel="noopener" alt="reward">
@@ -261,12 +267,11 @@ Flow Chart can be find [here.](/readme_files/find-a-match-flowchart.pdf)
 
 #### Features Left to Implement
 
-- Improvements on game play.
-- Additional difficulty level.
+- Improvements on the game play.
+- Additional difficulty levels.
 - Different themes for kids.
 - Change level button on end game screen.
-- Record Screen for store best records of game.
-
+- Record Screen for store best records of the game.
 
 ## Tehnologies used
 
